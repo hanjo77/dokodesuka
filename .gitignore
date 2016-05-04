@@ -1,0 +1,3 @@
+*.pyc
+django/dokodesuka/media
+django/dokodesuka/data/migrations
