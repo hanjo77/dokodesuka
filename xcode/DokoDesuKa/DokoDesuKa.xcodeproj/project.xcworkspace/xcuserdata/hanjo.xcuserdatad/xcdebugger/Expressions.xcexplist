@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "DokoDesuKaAPI.(loginUser(String, password : String, completion : (APIResult&lt;String&gt;) -&gt; ()) -&gt; ()).(closure #1):DokoDesuKaAPI.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "userName">
+            </PersistentString>
+            <PersistentString
+               value = "responseObject">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "APIConnector.performRequest(String, method : String, body : AnyObject?, completion : (APIResult&lt;protocol&lt;&gt;&gt;) -&gt; ()) -&gt; ():APIConnector.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "request.HTTPBody">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "APIConnector.handleHTTPErrors&lt;A&gt; (NSHTTPURLResponse, completion : (APIResult&lt;A&gt;) -&gt; ()) -&gt; ():APIConnector.swift">
+      </ContextState>
+      <ContextState
+         contextName = "APIConnector.(performRequest(String, method : String, body : AnyObject?, completion : (APIResult&lt;protocol&lt;&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1):APIConnector.swift">
+      </ContextState>
+      <ContextState
+         contextName = "LoginViewController.(tappedLogin(AnyObject) -&gt; ()).(closure #1):LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "user">
+            </PersistentString>
+            <PersistentString
+               value = "String(self.inputPassword.text)">
+            </PersistentString>
+            <PersistentString
+               value = "self.inputUsername.text!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

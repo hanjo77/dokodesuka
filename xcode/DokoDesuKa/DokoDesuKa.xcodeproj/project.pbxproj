@@ -1,0 +1,692 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57599E541CDCD96B006E1588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599E531CDCD96B006E1588 /* AppDelegate.swift */; };
+		57599E561CDCD96B006E1588 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599E551CDCD96B006E1588 /* LoginViewController.swift */; };
+		57599E591CDCD96B006E1588 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57599E571CDCD96B006E1588 /* Main.storyboard */; };
+		57599E5C1CDCD96B006E1588 /* DokoDesuKa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57599E5A1CDCD96B006E1588 /* DokoDesuKa.xcdatamodeld */; };
+		57599E5E1CDCD96B006E1588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57599E5D1CDCD96B006E1588 /* Assets.xcassets */; };
+		57599E611CDCD96B006E1588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57599E5F1CDCD96B006E1588 /* LaunchScreen.storyboard */; };
+		57599E6C1CDCD96B006E1588 /* DokoDesuKaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599E6B1CDCD96B006E1588 /* DokoDesuKaTests.swift */; };
+		57599E771CDCD96B006E1588 /* DokoDesuKaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599E761CDCD96B006E1588 /* DokoDesuKaUITests.swift */; };
+		57599E921CDCE28A006E1588 /* APIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599E901CDCE28A006E1588 /* APIConnector.swift */; };
+		57599E931CDCE28A006E1588 /* DokoDesuKaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599E911CDCE28A006E1588 /* DokoDesuKaAPI.swift */; };
+		57599E951CDCE2F3006E1588 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599E941CDCE2F3006E1588 /* User.swift */; };
+		57599E971CDCE3DF006E1588 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599E961CDCE3DF006E1588 /* Location.swift */; };
+		57599E991CDCED71006E1588 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599E981CDCED71006E1588 /* APIResult.swift */; };
+		57599EAA1CDCF0D9006E1588 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57599EA21CDCF0D9006E1588 /* Model.xcdatamodeld */; };
+		57599EAC1CDCF106006E1588 /* DokoDesuKaCoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599EAB1CDCF106006E1588 /* DokoDesuKaCoreDataStore.swift */; };
+		57599EAE1CDCF12A006E1588 /* DokoDesuKaInMemoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599EAD1CDCF12A006E1588 /* DokoDesuKaInMemoryStore.swift */; };
+		57599EB01CDCF139006E1588 /* DokoDesuKaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599EAF1CDCF139006E1588 /* DokoDesuKaStore.swift */; };
+		57599EBA1CDE0584006E1588 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599EB91CDE0584006E1588 /* CoreDataStack.swift */; };
+		57599EBF1CDE05F6006E1588 /* UserEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599EBB1CDE05F6006E1588 /* UserEntity+CoreDataProperties.swift */; };
+		57599EC01CDE05F6006E1588 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599EBC1CDE05F6006E1588 /* UserEntity.swift */; };
+		57599EC11CDE05F6006E1588 /* LocationEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599EBD1CDE05F6006E1588 /* LocationEntity+CoreDataProperties.swift */; };
+		57599EC21CDE05F6006E1588 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599EBE1CDE05F6006E1588 /* LocationEntity.swift */; };
+		57DBFABD1CDE90AE00766FE2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DBFABC1CDE90AE00766FE2 /* MapViewController.swift */; };
+		57DBFAC11CDE941700766FE2 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DBFAC01CDE941700766FE2 /* ViewUtil.swift */; };
+		57DBFAC31CDE9A9C00766FE2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DBFAC21CDE9A9C00766FE2 /* MapKit.framework */; };
+		57DBFAC61CDEA82200766FE2 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DBFAC51CDEA82200766FE2 /* AddUserViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57599E681CDCD96B006E1588 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57599E481CDCD96B006E1588 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57599E4F1CDCD96B006E1588;
+			remoteInfo = DokoDesuKa;
+		};
+		57599E731CDCD96B006E1588 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57599E481CDCD96B006E1588 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57599E4F1CDCD96B006E1588;
+			remoteInfo = DokoDesuKa;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		57599E501CDCD96B006E1588 /* DokoDesuKa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DokoDesuKa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57599E531CDCD96B006E1588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57599E551CDCD96B006E1588 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		57599E581CDCD96B006E1588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		57599E5B1CDCD96B006E1588 /* DokoDesuKa.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DokoDesuKa.xcdatamodel; sourceTree = "<group>"; };
+		57599E5D1CDCD96B006E1588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57599E601CDCD96B006E1588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57599E621CDCD96B006E1588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57599E671CDCD96B006E1588 /* DokoDesuKaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DokoDesuKaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57599E6B1CDCD96B006E1588 /* DokoDesuKaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokoDesuKaTests.swift; sourceTree = "<group>"; };
+		57599E6D1CDCD96B006E1588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57599E721CDCD96B006E1588 /* DokoDesuKaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DokoDesuKaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57599E761CDCD96B006E1588 /* DokoDesuKaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokoDesuKaUITests.swift; sourceTree = "<group>"; };
+		57599E781CDCD96B006E1588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57599E901CDCE28A006E1588 /* APIConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConnector.swift; sourceTree = "<group>"; };
+		57599E911CDCE28A006E1588 /* DokoDesuKaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DokoDesuKaAPI.swift; sourceTree = "<group>"; };
+		57599E941CDCE2F3006E1588 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		57599E961CDCE3DF006E1588 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		57599E981CDCED71006E1588 /* APIResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
+		57599EA31CDCF0D9006E1588 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		57599EAB1CDCF106006E1588 /* DokoDesuKaCoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DokoDesuKaCoreDataStore.swift; sourceTree = "<group>"; };
+		57599EAD1CDCF12A006E1588 /* DokoDesuKaInMemoryStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DokoDesuKaInMemoryStore.swift; sourceTree = "<group>"; };
+		57599EAF1CDCF139006E1588 /* DokoDesuKaStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DokoDesuKaStore.swift; sourceTree = "<group>"; };
+		57599EB91CDE0584006E1588 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		57599EBB1CDE05F6006E1588 /* UserEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		57599EBC1CDE05F6006E1588 /* UserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		57599EBD1CDE05F6006E1588 /* LocationEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocationEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		57599EBE1CDE05F6006E1588 /* LocationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
+		57DBFABC1CDE90AE00766FE2 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Scenes/MapViewController/MapViewController.swift; sourceTree = "<group>"; };
+		57DBFAC01CDE941700766FE2 /* ViewUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
+		57DBFAC21CDE9A9C00766FE2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		57DBFAC51CDEA82200766FE2 /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddUserViewController.swift; path = Scenes/AddUserView/AddUserViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57599E4D1CDCD96B006E1588 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57DBFAC31CDE9A9C00766FE2 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57599E641CDCD96B006E1588 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57599E6F1CDCD96B006E1588 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57599E471CDCD96B006E1588 = {
+			isa = PBXGroup;
+			children = (
+				57DBFAC21CDE9A9C00766FE2 /* MapKit.framework */,
+				57599E521CDCD96B006E1588 /* DokoDesuKa */,
+				57599E6A1CDCD96B006E1588 /* DokoDesuKaTests */,
+				57599E751CDCD96B006E1588 /* DokoDesuKaUITests */,
+				57599E511CDCD96B006E1588 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		57599E511CDCD96B006E1588 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57599E501CDCD96B006E1588 /* DokoDesuKa.app */,
+				57599E671CDCD96B006E1588 /* DokoDesuKaTests.xctest */,
+				57599E721CDCD96B006E1588 /* DokoDesuKaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57599E521CDCD96B006E1588 /* DokoDesuKa */ = {
+			isa = PBXGroup;
+			children = (
+				57DBFABF1CDE940300766FE2 /* Util */,
+				57599E9A1CDCF0D9006E1588 /* DataStore */,
+				57599E8F1CDCE28A006E1588 /* Webservice */,
+				57599E861CDCDFE1006E1588 /* DataStore */,
+				57599E851CDCDFD1006E1588 /* Scenes */,
+				57599E841CDCDFC3006E1588 /* Models */,
+				57599E531CDCD96B006E1588 /* AppDelegate.swift */,
+				57599E571CDCD96B006E1588 /* Main.storyboard */,
+				57599E5D1CDCD96B006E1588 /* Assets.xcassets */,
+				57599E5F1CDCD96B006E1588 /* LaunchScreen.storyboard */,
+				57599E621CDCD96B006E1588 /* Info.plist */,
+				57599E5A1CDCD96B006E1588 /* DokoDesuKa.xcdatamodeld */,
+			);
+			path = DokoDesuKa;
+			sourceTree = "<group>";
+		};
+		57599E6A1CDCD96B006E1588 /* DokoDesuKaTests */ = {
+			isa = PBXGroup;
+			children = (
+				57599E6B1CDCD96B006E1588 /* DokoDesuKaTests.swift */,
+				57599E6D1CDCD96B006E1588 /* Info.plist */,
+			);
+			path = DokoDesuKaTests;
+			sourceTree = "<group>";
+		};
+		57599E751CDCD96B006E1588 /* DokoDesuKaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				57599E761CDCD96B006E1588 /* DokoDesuKaUITests.swift */,
+				57599E781CDCD96B006E1588 /* Info.plist */,
+			);
+			path = DokoDesuKaUITests;
+			sourceTree = "<group>";
+		};
+		57599E841CDCDFC3006E1588 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57599E941CDCE2F3006E1588 /* User.swift */,
+				57599E961CDCE3DF006E1588 /* Location.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		57599E851CDCDFD1006E1588 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				57DBFAC41CDEA7DD00766FE2 /* AddUserView */,
+				57DBFABE1CDE90B500766FE2 /* MapViewController */,
+				57599E871CDCE0CB006E1588 /* LoginViewController */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		57599E861CDCDFE1006E1588 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataStore;
+			sourceTree = "<group>";
+		};
+		57599E871CDCE0CB006E1588 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				57599E551CDCD96B006E1588 /* LoginViewController.swift */,
+			);
+			name = LoginViewController;
+			sourceTree = "<group>";
+		};
+		57599E8F1CDCE28A006E1588 /* Webservice */ = {
+			isa = PBXGroup;
+			children = (
+				57599E901CDCE28A006E1588 /* APIConnector.swift */,
+				57599E911CDCE28A006E1588 /* DokoDesuKaAPI.swift */,
+				57599E981CDCED71006E1588 /* APIResult.swift */,
+			);
+			path = Webservice;
+			sourceTree = "<group>";
+		};
+		57599E9A1CDCF0D9006E1588 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				57599EAB1CDCF106006E1588 /* DokoDesuKaCoreDataStore.swift */,
+				57599EAD1CDCF12A006E1588 /* DokoDesuKaInMemoryStore.swift */,
+				57599EAF1CDCF139006E1588 /* DokoDesuKaStore.swift */,
+				57599E9E1CDCF0D9006E1588 /* CoreData */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		57599E9E1CDCF0D9006E1588 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				57599EBB1CDE05F6006E1588 /* UserEntity+CoreDataProperties.swift */,
+				57599EBC1CDE05F6006E1588 /* UserEntity.swift */,
+				57599EBD1CDE05F6006E1588 /* LocationEntity+CoreDataProperties.swift */,
+				57599EBE1CDE05F6006E1588 /* LocationEntity.swift */,
+				57599EB91CDE0584006E1588 /* CoreDataStack.swift */,
+				57599EA21CDCF0D9006E1588 /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		57DBFABE1CDE90B500766FE2 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				57DBFABC1CDE90AE00766FE2 /* MapViewController.swift */,
+			);
+			name = MapViewController;
+			sourceTree = "<group>";
+		};
+		57DBFABF1CDE940300766FE2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				57DBFAC01CDE941700766FE2 /* ViewUtil.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		57DBFAC41CDEA7DD00766FE2 /* AddUserView */ = {
+			isa = PBXGroup;
+			children = (
+				57DBFAC51CDEA82200766FE2 /* AddUserViewController.swift */,
+			);
+			name = AddUserView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57599E4F1CDCD96B006E1588 /* DokoDesuKa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57599E7B1CDCD96B006E1588 /* Build configuration list for PBXNativeTarget "DokoDesuKa" */;
+			buildPhases = (
+				57599E4C1CDCD96B006E1588 /* Sources */,
+				57599E4D1CDCD96B006E1588 /* Frameworks */,
+				57599E4E1CDCD96B006E1588 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DokoDesuKa;
+			productName = DokoDesuKa;
+			productReference = 57599E501CDCD96B006E1588 /* DokoDesuKa.app */;
+			productType = "com.apple.product-type.application";
+		};
+		57599E661CDCD96B006E1588 /* DokoDesuKaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57599E7E1CDCD96B006E1588 /* Build configuration list for PBXNativeTarget "DokoDesuKaTests" */;
+			buildPhases = (
+				57599E631CDCD96B006E1588 /* Sources */,
+				57599E641CDCD96B006E1588 /* Frameworks */,
+				57599E651CDCD96B006E1588 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57599E691CDCD96B006E1588 /* PBXTargetDependency */,
+			);
+			name = DokoDesuKaTests;
+			productName = DokoDesuKaTests;
+			productReference = 57599E671CDCD96B006E1588 /* DokoDesuKaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		57599E711CDCD96B006E1588 /* DokoDesuKaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57599E811CDCD96B006E1588 /* Build configuration list for PBXNativeTarget "DokoDesuKaUITests" */;
+			buildPhases = (
+				57599E6E1CDCD96B006E1588 /* Sources */,
+				57599E6F1CDCD96B006E1588 /* Frameworks */,
+				57599E701CDCD96B006E1588 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57599E741CDCD96B006E1588 /* PBXTargetDependency */,
+			);
+			name = DokoDesuKaUITests;
+			productName = DokoDesuKaUITests;
+			productReference = 57599E721CDCD96B006E1588 /* DokoDesuKaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57599E481CDCD96B006E1588 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Hansjürg Jaggi";
+				TargetAttributes = {
+					57599E4F1CDCD96B006E1588 = {
+						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					57599E661CDCD96B006E1588 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 57599E4F1CDCD96B006E1588;
+					};
+					57599E711CDCD96B006E1588 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 57599E4F1CDCD96B006E1588;
+					};
+				};
+			};
+			buildConfigurationList = 57599E4B1CDCD96B006E1588 /* Build configuration list for PBXProject "DokoDesuKa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57599E471CDCD96B006E1588;
+			productRefGroup = 57599E511CDCD96B006E1588 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57599E4F1CDCD96B006E1588 /* DokoDesuKa */,
+				57599E661CDCD96B006E1588 /* DokoDesuKaTests */,
+				57599E711CDCD96B006E1588 /* DokoDesuKaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57599E4E1CDCD96B006E1588 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57599E611CDCD96B006E1588 /* LaunchScreen.storyboard in Resources */,
+				57599E5E1CDCD96B006E1588 /* Assets.xcassets in Resources */,
+				57599E591CDCD96B006E1588 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57599E651CDCD96B006E1588 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57599E701CDCD96B006E1588 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57599E4C1CDCD96B006E1588 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57599E991CDCED71006E1588 /* APIResult.swift in Sources */,
+				57599E921CDCE28A006E1588 /* APIConnector.swift in Sources */,
+				57599EB01CDCF139006E1588 /* DokoDesuKaStore.swift in Sources */,
+				57599E971CDCE3DF006E1588 /* Location.swift in Sources */,
+				57599EC11CDE05F6006E1588 /* LocationEntity+CoreDataProperties.swift in Sources */,
+				57DBFAC61CDEA82200766FE2 /* AddUserViewController.swift in Sources */,
+				57DBFAC11CDE941700766FE2 /* ViewUtil.swift in Sources */,
+				57599E561CDCD96B006E1588 /* LoginViewController.swift in Sources */,
+				57599EC21CDE05F6006E1588 /* LocationEntity.swift in Sources */,
+				57599E5C1CDCD96B006E1588 /* DokoDesuKa.xcdatamodeld in Sources */,
+				57599EC01CDE05F6006E1588 /* UserEntity.swift in Sources */,
+				57599EBA1CDE0584006E1588 /* CoreDataStack.swift in Sources */,
+				57599E931CDCE28A006E1588 /* DokoDesuKaAPI.swift in Sources */,
+				57599EAA1CDCF0D9006E1588 /* Model.xcdatamodeld in Sources */,
+				57599E541CDCD96B006E1588 /* AppDelegate.swift in Sources */,
+				57DBFABD1CDE90AE00766FE2 /* MapViewController.swift in Sources */,
+				57599EAC1CDCF106006E1588 /* DokoDesuKaCoreDataStore.swift in Sources */,
+				57599EAE1CDCF12A006E1588 /* DokoDesuKaInMemoryStore.swift in Sources */,
+				57599EBF1CDE05F6006E1588 /* UserEntity+CoreDataProperties.swift in Sources */,
+				57599E951CDCE2F3006E1588 /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57599E631CDCD96B006E1588 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57599E6C1CDCD96B006E1588 /* DokoDesuKaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57599E6E1CDCD96B006E1588 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57599E771CDCD96B006E1588 /* DokoDesuKaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57599E691CDCD96B006E1588 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57599E4F1CDCD96B006E1588 /* DokoDesuKa */;
+			targetProxy = 57599E681CDCD96B006E1588 /* PBXContainerItemProxy */;
+		};
+		57599E741CDCD96B006E1588 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57599E4F1CDCD96B006E1588 /* DokoDesuKa */;
+			targetProxy = 57599E731CDCD96B006E1588 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		57599E571CDCD96B006E1588 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57599E581CDCD96B006E1588 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		57599E5F1CDCD96B006E1588 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57599E601CDCD96B006E1588 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		57599E791CDCD96B006E1588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		57599E7A1CDCD96B006E1588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57599E7C1CDCD96B006E1588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DokoDesuKa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanjo.DokoDesuKa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		57599E7D1CDCD96B006E1588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DokoDesuKa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanjo.DokoDesuKa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		57599E7F1CDCD96B006E1588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DokoDesuKaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanjo.DokoDesuKaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DokoDesuKa.app/DokoDesuKa";
+			};
+			name = Debug;
+		};
+		57599E801CDCD96B006E1588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DokoDesuKaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanjo.DokoDesuKaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DokoDesuKa.app/DokoDesuKa";
+			};
+			name = Release;
+		};
+		57599E821CDCD96B006E1588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DokoDesuKaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanjo.DokoDesuKaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DokoDesuKa;
+			};
+			name = Debug;
+		};
+		57599E831CDCD96B006E1588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DokoDesuKaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanjo.DokoDesuKaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DokoDesuKa;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57599E4B1CDCD96B006E1588 /* Build configuration list for PBXProject "DokoDesuKa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57599E791CDCD96B006E1588 /* Debug */,
+				57599E7A1CDCD96B006E1588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57599E7B1CDCD96B006E1588 /* Build configuration list for PBXNativeTarget "DokoDesuKa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57599E7C1CDCD96B006E1588 /* Debug */,
+				57599E7D1CDCD96B006E1588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57599E7E1CDCD96B006E1588 /* Build configuration list for PBXNativeTarget "DokoDesuKaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57599E7F1CDCD96B006E1588 /* Debug */,
+				57599E801CDCD96B006E1588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57599E811CDCD96B006E1588 /* Build configuration list for PBXNativeTarget "DokoDesuKaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57599E821CDCD96B006E1588 /* Debug */,
+				57599E831CDCD96B006E1588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		57599E5A1CDCD96B006E1588 /* DokoDesuKa.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				57599E5B1CDCD96B006E1588 /* DokoDesuKa.xcdatamodel */,
+			);
+			currentVersion = 57599E5B1CDCD96B006E1588 /* DokoDesuKa.xcdatamodel */;
+			path = DokoDesuKa.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		57599EA21CDCF0D9006E1588 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				57599EA31CDCF0D9006E1588 /* Model.xcdatamodel */,
+			);
+			currentVersion = 57599EA31CDCF0D9006E1588 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 57599E481CDCD96B006E1588 /* Project object */;
+}
