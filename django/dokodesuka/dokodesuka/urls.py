@@ -18,8 +18,10 @@ from django.conf.urls.static import static
 from django.conf.urls import include, url
 from django.contrib import admin
 from data import views
+from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^locations', views.LocationJsonView.as_view(), name='locations'),
+    url(r'^login', csrf_exempt(views.LoginView.as_view()), name='login'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
