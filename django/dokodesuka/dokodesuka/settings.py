@@ -75,15 +75,21 @@ WSGI_APPLICATION = 'dokodesuka.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'HOST': '127.0.0.1',
+#        'NAME': 'dokodesuka',
+#        'USER': 'root',
+#        'PASSWORD': '',
+#    }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': '127.0.0.1',
+        'HOST': '46.101.17.239',
         'NAME': 'dokodesuka',
-        'USER': 'root',
-        'PASSWORD': '',
+        'USER': 'dokodesuka',
+        'PASSWORD': 'D0k0D3$uK4',
     }
 }
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
