@@ -161,7 +161,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-6l-PuT" userLabel="btnSave">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-6l-PuT" userLabel="btnSave">
                                 <rect key="frame" x="540" y="298" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
@@ -226,7 +226,9 @@
                             <constraint firstItem="t5Y-kc-nwM" firstAttribute="leading" secondItem="unA-YA-EL4" secondAttribute="leading" id="2kz-ct-k7r"/>
                             <constraint firstItem="gb9-dt-Nxd" firstAttribute="leading" secondItem="ykK-Ws-yeJ" secondAttribute="leadingMargin" constant="-3" id="3gf-6Y-T0Q"/>
                             <constraint firstItem="AHE-mL-5X7" firstAttribute="leading" secondItem="7Xp-m3-Q7t" secondAttribute="leading" id="5DD-Y5-g3M"/>
+                            <constraint firstItem="4LP-6l-PuT" firstAttribute="top" secondItem="jFo-U9-C9c" secondAttribute="bottom" constant="22" id="8KE-U6-917"/>
                             <constraint firstItem="oEP-gs-opU" firstAttribute="centerX" secondItem="AHE-mL-5X7" secondAttribute="centerX" id="Ck8-YR-4OT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4LP-6l-PuT" secondAttribute="trailing" constant="6" id="DrA-MH-UHv"/>
                             <constraint firstItem="gb9-dt-Nxd" firstAttribute="centerX" secondItem="RzZ-TD-o7c" secondAttribute="centerX" id="H04-mM-GTj"/>
                             <constraint firstItem="unA-YA-EL4" firstAttribute="top" secondItem="zjB-f6-r4e" secondAttribute="bottom" constant="14" id="Hlv-Zc-shv"/>
                             <constraint firstItem="gb9-dt-Nxd" firstAttribute="top" secondItem="80Y-FL-bJb" secondAttribute="bottom" constant="22" id="IZv-VH-zV9"/>

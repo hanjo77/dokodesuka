@@ -34,12 +34,13 @@ class DokoDesuKaAPI {
                     createdDate: representation["created_date"] as! NSDate)
     }
     
-    func createUser(userName: String, email: String, firstName: String, lastName: String, completion:APIResult<User> -> Void) {
-        connector.performRequest(targetUrl, method: "POST", body: [
+    func createUser(userName: String, email: String, firstName: String, lastName: String, password: String, completion:APIResult<User> -> Void) {
+        connector.performRequest(targetUrl+"add_user", method: "POST", body: [
             "user_name": userName,
             "email": email,
             "first_name": firstName,
-            "last_name": lastName
+            "last_name": lastName,
+            "password": password
         ]) { result in
             switch(result) {
             case .Success(let responseObject):

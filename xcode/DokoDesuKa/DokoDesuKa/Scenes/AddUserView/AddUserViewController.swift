@@ -37,7 +37,7 @@ class AddUserViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tappedSave(sender: AnyObject) {
-        webservice.createUser(inputUsername.text!, email: inputEmail.text!, firstName: inputFirstname.text!, lastName: inputLastname.text!){ result in
+        webservice.createUser(inputUsername.text!, email: inputEmail.text!, firstName: inputFirstname.text!, lastName: inputLastname.text!, password: inputPassword.text!){ result in
             switch (result) {
             case .Success(let user):
                 dispatch_async(dispatch_get_main_queue()) {
