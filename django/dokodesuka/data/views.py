@@ -56,3 +56,33 @@ class LoginView(JSONDetailMixin, generic.DetailView):
                     "error": "The username and password were incorrect."
                 })
         return http.HttpResponse(message)
+
+class AddUserView(JSONDetailMixin, generic.DetailView):
+    def post(self, request, *args, **kwargs):
+        message = ""
+        postData = json.loads(request.body)
+        user = User.objects.filter(username=postData.get('user_name', ''))
+        if not user.exists():
+            user = User.objects.filter(email=postData.get('email', ''))
+        user_id = None;
+        obj = {}
+        if user.exists():
+            user_id = user.first().pk
+            user = user.first()
+        else:
+            user = User.objects.create_user(
+                postData.get('user_name', ''), 
+                postData.get('email', ''), 
+                postData.get('password', ''))
+            user.first_name=postData.get('first_name', '')
+            user.last_name=postData.get('last_name', '')
+            user.save()
+            user_id = user.pk
+        message = json.dumps({
+                "id": user.id,
+                "user_name": user.username,
+                "email": user.email,
+                "first_name": user.first_name,
+                "last_name": user.last_name
+            })
+        return http.HttpResponse(message)
