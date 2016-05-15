@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^locations', views.LocationJsonView.as_view(), name='locations'),
     url(r'^login', csrf_exempt(views.LoginView.as_view()), name='login'),
     url(r'^add_user', csrf_exempt(views.AddUserView.as_view()), name='add_user'),
+    url(r'^add_location', csrf_exempt(views.AddLocationView.as_view()), name='add_location'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
