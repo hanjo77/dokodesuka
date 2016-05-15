@@ -11,7 +11,7 @@ import UIKit
 class AddUserViewController: UIViewController, UITextFieldDelegate {
     
     let webservice = DokoDesuKaAPI(connector: APIConnector())
-    let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
+    // let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
     
     
     @IBOutlet var inputPwdRepeat: UITextField!
@@ -29,6 +29,39 @@ class AddUserViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func inputUsernameChanged(sender: AnyObject) {
+        if (inputUsername.text == "") {
+            inputUsername.backgroundColor = UIColor.redColor()
+        }
+        else {
+            inputUsername.backgroundColor = UIColor.whiteColor()
+        }
+    }
+    @IBAction func inputEmailChanged(sender: AnyObject) {
+        if (inputEmail.text == "") {
+            inputEmail.backgroundColor = UIColor.redColor()
+        }
+        else {
+            inputEmail.backgroundColor = UIColor.whiteColor()
+        }
+    }
+    @IBAction func inputPasswordChanged(sender: AnyObject) {
+        if (inputPassword.text == "") {
+            inputPassword.backgroundColor = UIColor.redColor()
+        }
+        else {
+            inputPassword.backgroundColor = UIColor.whiteColor()
+        }
+    }
+    @IBAction func inputPwdConfirmChanged(sender: AnyObject) {
+        if (inputPassword.text != inputPwdRepeat.text) {
+            inputPwdRepeat.backgroundColor = UIColor.redColor()
+        }
+        else {
+            inputPwdRepeat.backgroundColor = UIColor.whiteColor()
+        }
+    }
+
     @IBAction func tappedCancel(sender: AnyObject) {
         dispatch_async(dispatch_get_main_queue()) {
             () -> Void in
@@ -39,7 +72,7 @@ class AddUserViewController: UIViewController, UITextFieldDelegate {
     @IBAction func tappedSave(sender: AnyObject) {
         webservice.createUser(inputUsername.text!, email: inputEmail.text!, firstName: inputFirstname.text!, lastName: inputLastname.text!, password: inputPassword.text!){ result in
             switch (result) {
-            case .Success(let user):
+            case .Success(_):
                 dispatch_async(dispatch_get_main_queue()) {
                     () -> Void in
                     self.performSegueWithIdentifier("segLoginView", sender: nil)

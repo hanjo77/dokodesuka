@@ -13,7 +13,8 @@ import CoreLocation
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     let webservice = DokoDesuKaAPI(connector: APIConnector())
-    let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
+    var myTabBarController:TabBarController?
+    // let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
     @IBOutlet var mapView: MKMapView!
     
     @IBAction func tappedLogOut(sender: AnyObject) {
@@ -32,39 +33,45 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         self.mapView.delegate = self
-        let location = "1 Infinity Loop, Cupertino, CA"
-        let geocoder:CLGeocoder = CLGeocoder()
-        geocoder.geocodeAddressString(location, completionHandler: {(placemarks, error) -> Void in
-            
-            if((error) != nil){
-                
-                NSLog("Error"+(error?.localizedDescription)!)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        myTabBarController = self.tabBarController as? TabBarController
+        myTabBarController!.selectedLocation = -1
+        webservice.allLocations() { result in
+            switch (result) {
+            case .Success(let locations):
+                dispatch_async(dispatch_get_main_queue()) {
+                    () -> Void in
+                    self.myTabBarController!.locations = locations
+                    self.updateMarkers(self.myTabBarController!.locations!)
+                }
+            case .Failure(let errorMessage):
+                NSLog(errorMessage)
+            case .NetworkError:
+                NSLog(String(result))
             }
-                
-//            else if let placemark = placemarks?[0] as? CLPlacemark {
-//                
-//                var placemark:CLPlacemark = placemarks[0] as! CLPlacemark
-//                var coordinates:CLLocationCoordinate2D = placemark.location.coordinate
-//                
-//                var pointAnnotation:MKPointAnnotation = MKPointAnnotation()
-//                pointAnnotation.coordinate = coordinates
-//                pointAnnotation.title = "Apple HQ"
-//                
-//                self.mapView?.addAnnotation(pointAnnotation)
-//                self.mapView?.centerCoordinate = coordinates
-//                self.mapView?.selectAnnotation(pointAnnotation, animated: true)
-//                
-//                NSLog("Added annotation to map view")
-//            }
-            
-        })
+        }
+    }
+    
+    func updateMarkers(locations: [Location]) {
+        let annotations = self.mapView.annotations
+        mapView.removeAnnotations(annotations)
+        for location:Location in locations {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(
+                latitude: Double(location.latitude), longitude: Double(location.longitude))
+            annotation.title = location.title
+            annotation.subtitle = location.description
+            self.mapView.addAnnotation(annotation)
+        }
     }
     
     func mapView (mapView: MKMapView,
-                  viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        
+        viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+    
         let pinView:MKPinAnnotationView = MKPinAnnotationView()
         pinView.annotation = annotation
         pinView.pinTintColor = UIColor.redColor()

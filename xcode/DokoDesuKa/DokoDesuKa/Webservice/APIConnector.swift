@@ -38,24 +38,23 @@ class APIConnector {
             request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(HTTPBody, options:NSJSONWritingOptions(rawValue: 0))
         }
         let task = session.dataTaskWithRequest(request, completionHandler: { (let data, let response, let error) in
-                if let safeError = error {
-                    completion(.NetworkError(safeError))
-                } else if let httpResponse = response as! NSHTTPURLResponse! {
-                    if (httpResponse.statusCode >= 200 && httpResponse.statusCode < 300) {
-                        let responseObject: AnyObject?
-                        if let safeData = data {
-                            responseObject = try? NSJSONSerialization.JSONObjectWithData(safeData, options: NSJSONReadingOptions(rawValue: 0))
-                        } else {
-                            responseObject = nil
-                        }
-                        completion(.Success(responseObject))
+            if let safeError = error {
+                completion(.NetworkError(safeError))
+            } else if let httpResponse = response as! NSHTTPURLResponse! {
+                if (httpResponse.statusCode >= 200 && httpResponse.statusCode < 300) {
+                    let responseObject: AnyObject?
+                    if let safeData = data {
+                        responseObject = try? NSJSONSerialization.JSONObjectWithData(safeData, options: NSJSONReadingOptions(rawValue: 0))
                     } else {
-                        self.handleHTTPErrors(httpResponse, completion: completion)
+                        responseObject = nil
                     }
+                    completion(.Success(responseObject))
+                } else {
+                    self.handleHTTPErrors(httpResponse, completion: completion)
                 }
-
+            }
+            
         })
         task.resume()
     }
-    
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Location {
     let id:Int
@@ -14,7 +15,7 @@ struct Location {
     let description:String
     let latitude:Float
     let longitude:Float
+    let image:String
     let users:Array<User>
     let createdUser:User
-    let createdDate:NSDate
 }

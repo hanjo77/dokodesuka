@@ -11,16 +11,24 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     let webservice = DokoDesuKaAPI(connector: APIConnector())
-    let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
+    // let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
+    let userDefaults = NSUserDefaults.standardUserDefaults()
 
     @IBOutlet var inputUsername: UITextField!
     @IBOutlet var inputPassword: UITextField!
     @IBOutlet var imageView: UIImageView!
 
     override func viewDidLoad() {
+        let userId = userDefaults.integerForKey("autoLogin")
+        if (userId > 0) {
+            dispatch_async(dispatch_get_main_queue()) {
+                () -> Void in
+                self.performSegueWithIdentifier("segMapView", sender: nil)
+            }
+        }
         super.viewDidLoad()
         let newImg: UIImage? = UIImage(named: "dokodesuka-logo")
-        // imageView.image = newImg
+        imageView.image = newImg
         inputUsername.delegate = self
         inputPassword.delegate = self
     }
@@ -37,11 +45,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-//    func displayAlertWithMessage(message:String) {
-//        let alert = UIAlertController(title: nil, message: message, preferredStyle: .Alert)
-//        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-//        self.presentViewController(alert, animated: false, completion: nil)
-//    }
+    func displayAlertWithMessage(message:String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+        super.presentViewController(alert, animated: false, completion: nil)
+    }
     
     @IBAction func tappedLogin(sender: AnyObject) {
         webservice.loginUser(self.inputUsername.text!, password: self.inputPassword.text!) { result in
@@ -49,6 +57,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             case .Success(let user):
                 dispatch_async(dispatch_get_main_queue()) {
                     () -> Void in
+                    self.userDefaults.setInteger(user.id, forKey: "autoLogin")
                     self.performSegueWithIdentifier("segMapView", sender: nil)
                 }
             case .Failure(let errorMessage):

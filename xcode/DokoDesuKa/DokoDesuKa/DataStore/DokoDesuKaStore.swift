@@ -9,7 +9,7 @@
 import Foundation
 
 protocol DokoDesuKaStore {
-    func allLocations() -> [Location]
-    func saveLocation(buzzword: Location)
-    func syncLocations(buzzwords: [Location])
+//    func allLocations() -> [Location]
+//    func saveLocation(buzzword: Location)
+//    func syncLocations(buzzwords: [Location])
 }
