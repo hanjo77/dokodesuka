@@ -10,7 +10,7 @@ import UIKit
 
 class LocationListTableViewController: UITableViewController {
 
-    // let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
+    let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
     var imageCache = [UIImage]()
     var selectedLocation = -1
     var myTabBarController:TabBarController?
@@ -27,7 +27,7 @@ class LocationListTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         myTabBarController = self.tabBarController as? TabBarController
         myTabBarController!.selectedLocation = -1
-        if(myTabBarController!.selectedIndex >= 0 && myTabBarController!.locations?.count > 0) {
+        if(myTabBarController!.selectedIndex >= 0 && myTabBarController!.locations.count > 0) {
             self.tableView.reloadData()
         }
     }
@@ -46,23 +46,32 @@ class LocationListTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.myTabBarController!.locations!.count
+        return self.myTabBarController!.locations.count
+    }
+    
+    func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
+        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
+            completion(data: data, response: response, error: error)
+            }.resume()
+    }
+    
+    func downloadImage(url: NSURL, imageView: UIImageView){
+        getDataFromUrl(url) { (data, response, error)  in
+            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                guard let data = data where error == nil else { return }
+                imageView.image = UIImage(data:data)
+            }
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "LocationCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! LocationTableViewCell
-        let location = myTabBarController!.locations![indexPath.row]
+        let location = myTabBarController!.locations[indexPath.row]
         cell.labelTitle.text = location.title
         cell.labelDescription.text = location.description
-        cell.imgLocation?.image = UIImage(named: "placeholder")
-        if (location.image != "" && !myTabBarController!.images.keys.contains(location.image)) {
-            let url = NSURL(string: location.image)
-            myTabBarController!.downloadImage(url!, imageView: cell.imgLocation)
-        }
-        else if (myTabBarController!.images.keys.contains(location.image)) {
-            cell.imgLocation.image = myTabBarController?.images[location.image]
-        }
+        cell.imgLocation?.image = DokoDesuKaCoreDataStore().loadImage(location.image)
+        // downloadImage(NSURL(string: location.image)!, imageView:cell.imgLocation)
         return cell
     }
     
@@ -122,7 +131,7 @@ class LocationListTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segAddLocationView" {
             if let svc = segue.destinationViewController as? AddLocationViewController {
-                svc.location = myTabBarController?.locations![myTabBarController!.selectedLocation]
+                svc.location = myTabBarController?.locations[myTabBarController!.selectedLocation]
             }
         }
     }

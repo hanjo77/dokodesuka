@@ -44,7 +44,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Svz-IU-fEd" userLabel="UsernameInput">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Svz-IU-fEd" userLabel="UsernameInput" customClass="TextField" customModule="DokoDesuKa" customModuleProvider="target">
                                         <rect key="frame" x="8" y="37" width="544" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="MeM-SS-kOK"/>
@@ -61,7 +61,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4dp-ar-gvL" userLabel="PasswordInput">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4dp-ar-gvL" userLabel="PasswordInput" customClass="TextField" customModule="DokoDesuKa" customModuleProvider="target">
                                         <rect key="frame" x="8" y="96" width="544" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="DXZ-EG-hbX"/>
@@ -142,7 +142,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Na-rq-Kx5">
                                 <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="na9-5k-dOr" userLabel="inputUsername">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="na9-5k-dOr" userLabel="inputUsername" customClass="TextField" customModule="DokoDesuKa" customModuleProvider="target">
                                         <rect key="frame" x="8" y="37" width="544" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
@@ -150,7 +150,7 @@
                                             <action selector="inputUsernameChanged:" destination="2UC-IY-rO3" eventType="editingChanged" id="Wyt-tu-bJr"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wV8-5l-ReQ" userLabel="inputEmail">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wV8-5l-ReQ" userLabel="inputEmail" customClass="TextField" customModule="DokoDesuKa" customModuleProvider="target">
                                         <rect key="frame" x="8" y="96" width="544" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
@@ -158,17 +158,17 @@
                                             <action selector="inputEmailChanged:" destination="2UC-IY-rO3" eventType="editingChanged" id="uRu-dO-K0Z"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t5Y-kc-nwM" userLabel="inputFirstname">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t5Y-kc-nwM" userLabel="inputFirstname" customClass="TextField" customModule="DokoDesuKa" customModuleProvider="target">
                                         <rect key="frame" x="9" y="155" width="543" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zjB-f6-r4e" userLabel="InputLastname">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zjB-f6-r4e" userLabel="InputLastname" customClass="TextField" customModule="DokoDesuKa" customModuleProvider="target">
                                         <rect key="frame" x="8" y="214" width="544" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="unA-YA-EL4" userLabel="inputPassword">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="unA-YA-EL4" userLabel="inputPassword" customClass="TextField" customModule="DokoDesuKa" customModuleProvider="target">
                                         <rect key="frame" x="9" y="273" width="543" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
@@ -176,7 +176,7 @@
                                             <action selector="inputPasswordChanged:" destination="2UC-IY-rO3" eventType="editingChanged" id="Rjx-bu-uKS"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jFo-U9-C9c" userLabel="InputPwdRepeat">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jFo-U9-C9c" userLabel="InputPwdRepeat" customClass="TextField" customModule="DokoDesuKa" customModuleProvider="target">
                                         <rect key="frame" x="9" y="332" width="543" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
@@ -330,7 +330,7 @@
                                                 <constraint firstAttribute="width" constant="494" id="qb1-mQ-6f7"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uq-Nt-Ilz">
@@ -339,7 +339,7 @@
                                                 <constraint firstAttribute="height" constant="47" id="CHo-tY-94Y"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -397,7 +397,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2a-iL-IZX">
-                                <rect key="frame" x="20" y="20" width="560" height="531"/>
+                                <rect key="frame" x="20" y="20" width="560" height="482"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S46-G6-zzt">
                                         <rect key="frame" x="8" y="8" width="34" height="21"/>
@@ -405,7 +405,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k43-UJ-zJ4" userLabel="TitleInput">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k43-UJ-zJ4" userLabel="TitleInput" customClass="TextField" customModule="DokoDesuKa" customModuleProvider="target">
                                         <rect key="frame" x="8" y="37" width="544" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -416,14 +416,14 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CGi-3g-Pwa" userLabel="DescriptionInput">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CGi-3g-Pwa" userLabel="DescriptionInput" customClass="TextView" customModule="DokoDesuKa" customModuleProvider="target">
                                         <rect key="frame" x="8" y="96" width="544" height="127"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ffZ-q5-KRn">
-                                        <rect key="frame" x="8" y="265" width="544" height="212"/>
+                                        <rect key="frame" x="8" y="253" width="544" height="175"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fao-eI-W7e">
                                         <rect key="frame" x="8" y="231" width="47" height="21"/>
@@ -431,8 +431,22 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fp-kB-e76">
-                                        <rect key="frame" x="449" y="227" width="103" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKe-N9-b3t">
+                                        <rect key="frame" x="518" y="444" width="34" height="30"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="tappedSave:" destination="xTj-3x-BIW" eventType="touchUpInside" id="xKV-Sb-NGZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KT-P5-tHs">
+                                        <rect key="frame" x="8" y="444" width="48" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="tappedCancel:" destination="xTj-3x-BIW" eventType="touchUpInside" id="bci-y6-fL8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fp-kB-e76">
+                                        <rect key="frame" x="449" y="223" width="103" height="30"/>
                                         <state key="normal" title="Update picture">
                                             <color key="titleColor" red="0.072418845250724062" green="0.30808626196152178" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -440,25 +454,11 @@
                                             <action selector="tappedUpdateImage:" destination="xTj-3x-BIW" eventType="touchUpInside" id="UdJ-2q-6jn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKe-N9-b3t">
-                                        <rect key="frame" x="518" y="493" width="34" height="30"/>
-                                        <state key="normal" title="Save"/>
-                                        <connections>
-                                            <action selector="tappedSave:" destination="xTj-3x-BIW" eventType="touchUpInside" id="xKV-Sb-NGZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KT-P5-tHs">
-                                        <rect key="frame" x="8" y="493" width="48" height="30"/>
-                                        <state key="normal" title="Cancel"/>
-                                        <connections>
-                                            <action selector="tappedCancel:" destination="xTj-3x-BIW" eventType="touchUpInside" id="bci-y6-fL8"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="VKe-N9-b3t" secondAttribute="trailing" constant="8" id="1zC-uh-xLz"/>
-                                    <constraint firstItem="fao-eI-W7e" firstAttribute="baseline" secondItem="6fp-kB-e76" secondAttribute="baseline" id="2Vq-78-K3w"/>
+                                    <constraint firstItem="fao-eI-W7e" firstAttribute="baseline" secondItem="6fp-kB-e76" secondAttribute="baseline" constant="1" id="2Vq-78-K3w"/>
                                     <constraint firstItem="ffZ-q5-KRn" firstAttribute="leading" secondItem="b2a-iL-IZX" secondAttribute="leading" constant="8" id="3kD-jR-UXc"/>
                                     <constraint firstAttribute="trailing" secondItem="CGi-3g-Pwa" secondAttribute="trailing" constant="8" id="7p3-qs-sIy"/>
                                     <constraint firstItem="CGi-3g-Pwa" firstAttribute="top" secondItem="jgG-Gq-h4c" secondAttribute="bottom" constant="8" id="B9Y-Nq-Zem"/>
@@ -469,12 +469,13 @@
                                     <constraint firstAttribute="trailing" secondItem="ffZ-q5-KRn" secondAttribute="trailing" constant="8" id="QK3-DL-Nxu"/>
                                     <constraint firstItem="k43-UJ-zJ4" firstAttribute="leading" secondItem="b2a-iL-IZX" secondAttribute="leading" constant="8" id="RdQ-6v-nv3"/>
                                     <constraint firstItem="jgG-Gq-h4c" firstAttribute="top" secondItem="b2a-iL-IZX" secondAttribute="top" constant="67" id="Sj5-ET-ijd"/>
+                                    <constraint firstItem="fao-eI-W7e" firstAttribute="top" secondItem="CGi-3g-Pwa" secondAttribute="bottom" constant="8" id="VNh-4S-qCW"/>
                                     <constraint firstAttribute="bottom" secondItem="VKe-N9-b3t" secondAttribute="bottom" constant="8" id="VOF-Nn-Ztb"/>
                                     <constraint firstItem="jgG-Gq-h4c" firstAttribute="top" secondItem="k43-UJ-zJ4" secondAttribute="bottom" constant="8" symbolic="YES" id="ViT-oP-kFm"/>
                                     <constraint firstItem="k43-UJ-zJ4" firstAttribute="top" secondItem="S46-G6-zzt" secondAttribute="bottom" constant="8" id="d2g-ME-XX3"/>
-                                    <constraint firstItem="6fp-kB-e76" firstAttribute="top" secondItem="CGi-3g-Pwa" secondAttribute="bottom" constant="4" id="dXn-xK-d5D"/>
+                                    <constraint firstItem="6fp-kB-e76" firstAttribute="top" secondItem="CGi-3g-Pwa" secondAttribute="bottom" id="dXn-xK-d5D"/>
                                     <constraint firstItem="jgG-Gq-h4c" firstAttribute="leading" secondItem="k43-UJ-zJ4" secondAttribute="leading" id="fmx-ka-gjU"/>
-                                    <constraint firstItem="ffZ-q5-KRn" firstAttribute="top" secondItem="6fp-kB-e76" secondAttribute="bottom" constant="8" id="gam-Xi-RKR"/>
+                                    <constraint firstItem="ffZ-q5-KRn" firstAttribute="top" secondItem="6fp-kB-e76" secondAttribute="bottom" id="gam-Xi-RKR"/>
                                     <constraint firstItem="fao-eI-W7e" firstAttribute="top" secondItem="b2a-iL-IZX" secondAttribute="top" constant="231" id="grl-4b-h7c"/>
                                     <constraint firstItem="4KT-P5-tHs" firstAttribute="baseline" secondItem="VKe-N9-b3t" secondAttribute="baseline" id="h8T-PW-gPB"/>
                                     <constraint firstAttribute="trailing" secondItem="6fp-kB-e76" secondAttribute="trailing" constant="8" id="jzH-ZW-y0L"/>
@@ -483,6 +484,7 @@
                                     <constraint firstItem="ffZ-q5-KRn" firstAttribute="centerX" secondItem="CGi-3g-Pwa" secondAttribute="centerX" id="unN-oc-XbI"/>
                                     <constraint firstItem="jgG-Gq-h4c" firstAttribute="leading" secondItem="S46-G6-zzt" secondAttribute="leading" id="uzl-UJ-BxI"/>
                                     <constraint firstItem="jgG-Gq-h4c" firstAttribute="leading" secondItem="fao-eI-W7e" secondAttribute="leading" id="vmp-3u-91s"/>
+                                    <constraint firstItem="fao-eI-W7e" firstAttribute="top" secondItem="CGi-3g-Pwa" secondAttribute="bottom" constant="8" id="wEf-hm-PuJ"/>
                                 </constraints>
                             </view>
                         </subviews>

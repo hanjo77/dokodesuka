@@ -14,7 +14,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     let webservice = DokoDesuKaAPI(connector: APIConnector())
     var myTabBarController:TabBarController?
-    // let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
+    let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
     @IBOutlet var mapView: MKMapView!
     
     @IBAction func tappedLogOut(sender: AnyObject) {
@@ -40,20 +40,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         super.viewWillAppear(animated)
         myTabBarController = self.tabBarController as? TabBarController
         myTabBarController!.selectedLocation = -1
-        webservice.allLocations() { result in
-            switch (result) {
-            case .Success(let locations):
-                dispatch_async(dispatch_get_main_queue()) {
-                    () -> Void in
-                    self.myTabBarController!.locations = locations
-                    self.updateMarkers(self.myTabBarController!.locations!)
-                }
-            case .Failure(let errorMessage):
-                NSLog(errorMessage)
-            case .NetworkError:
-                NSLog(String(result))
-            }
-        }
+        updateMarkers((myTabBarController?.locations)!)
     }
     
     func updateMarkers(locations: [Location]) {

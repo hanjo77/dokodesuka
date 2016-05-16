@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 class DokoDesuKaInMemoryStore: DokoDesuKaStore {
 
     static var locations = [Location]()
     
     func allLocations() -> [Location] {
-        return DokoDesuKaInMemoryStore.locations.sort() {(let first, second) in
+        return DokoDesuKaCoreDataStore().allLocations().sort() {(let first, second) in
             let isBefore: Bool
             if first.title == second.title {
                 let comparisonResult = first.description.localizedCaseInsensitiveCompare(second.description)
@@ -29,6 +30,10 @@ class DokoDesuKaInMemoryStore: DokoDesuKaStore {
         return DokoDesuKaInMemoryStore.locations.indexOf() {existingLocation in
             existingLocation.id == location.id
         }
+    }
+
+    func loadImage(url:String)->UIImage {
+        return UIImage(contentsOfFile: (DokoDesuKaCoreDataStore().getDocUrl()?.URLByAppendingPathComponent(url).absoluteString)!)!
     }
     
     func saveLocation(location: Location) {

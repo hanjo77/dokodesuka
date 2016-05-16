@@ -12,7 +12,7 @@ import CoreLocation
 class AddLocationViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, CLLocationManagerDelegate {
     
     let webservice = DokoDesuKaAPI(connector: APIConnector())
-    // let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
+    let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
     let imagePicker = UIImagePickerController()
     let locationManager = CLLocationManager()
     var currentLocation:CLLocation?
@@ -56,18 +56,12 @@ class AddLocationViewController: UIViewController, UIImagePickerControllerDelega
         if(imagePicker.isBeingDismissed()) {
             NSLog("Dismissed picker")
         }
-        else if(myTabBarController!.selectedLocation >= 0 && myTabBarController!.locations?.count > 0) {
-            self.location = myTabBarController!.locations![myTabBarController!.selectedLocation]
+        else if(myTabBarController!.selectedLocation >= 0 && myTabBarController!.locations.count > 0) {
+            self.location = myTabBarController!.locations[myTabBarController!.selectedLocation]
             inputTitle.text = self.location?.title
             inputDescription.text = self.location?.description
-            if ((self.location?.image) != "" && !myTabBarController!.images.keys.contains((self.location?.image)!)) {
-                let url = NSURL(string: (self.location?.image)!)
-                let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
-                imgImage.image = UIImage(data: data!)
-                myTabBarController?.images[location!.image] = imgImage.image
-            }
-            else if (myTabBarController!.images.keys.contains((self.location?.image)!)) {
-                imgImage.image = myTabBarController?.images[(self.location?.image)!]
+            if ((self.location?.image) != "") {
+                imgImage.image = DokoDesuKaCoreDataStore().loadImage((location?.image)!)
             }
         }
         else if (myTabBarController!.selectedLocation < 0) {
@@ -89,9 +83,6 @@ class AddLocationViewController: UIViewController, UIImagePickerControllerDelega
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.imgImage.contentMode = .ScaleAspectFit
             self.imgImage.image = pickedImage
-            if (location!.image != "") {
-                myTabBarController?.images[location!.image] = pickedImage
-            }
         }
         
         dismissViewControllerAnimated(true, completion: nil)
@@ -108,6 +99,7 @@ class AddLocationViewController: UIViewController, UIImagePickerControllerDelega
             webservice.createLocation(inputTitle.text!, description: inputDescription.text!, image: imgImage.image!, latitude: latitude, longitude: longitude){ result in
                 switch (result) {
                 case .Success(_):
+                    DokoDesuKaCoreDataStore().saveImage((self.location?.image)!, imageData: UIImageJPEGRepresentation(self.imgImage.image!, 0.9)!)
                     self.myTabBarController?.selectedLocation = -1
                     self.myTabBarController?.selectedIndex = 2
                 case .Failure(let errorMessage):

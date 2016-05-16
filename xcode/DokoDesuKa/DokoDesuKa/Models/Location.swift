@@ -16,6 +16,6 @@ struct Location {
     let latitude:Float
     let longitude:Float
     let image:String
-    let users:Array<User>
-    let createdUser:User
+    var users:Array<User>?
+    var createdUser:User?
 }

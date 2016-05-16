@@ -11,7 +11,7 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     let webservice = DokoDesuKaAPI(connector: APIConnector())
-    // let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
+    let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
     let userDefaults = NSUserDefaults.standardUserDefaults()
 
     @IBOutlet var inputUsername: UITextField!
@@ -19,6 +19,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var imageView: UIImageView!
 
     override func viewDidLoad() {
+        webservice.allLocations() { result in
+            switch (result) {
+            case .Success(let locations):
+                dispatch_async(dispatch_get_main_queue()) {
+                    () -> Void in
+                    for location in locations {
+                        self.store.saveLocation(location)
+                    }
+                }
+            case .Failure(let errorMessage):
+                NSLog(errorMessage)
+            case .NetworkError:
+                NSLog(String(result))
+            }
+        }
         let userId = userDefaults.integerForKey("autoLogin")
         if (userId > 0) {
             dispatch_async(dispatch_get_main_queue()) {

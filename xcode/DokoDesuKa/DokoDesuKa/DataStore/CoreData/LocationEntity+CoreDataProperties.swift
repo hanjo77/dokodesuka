@@ -15,7 +15,7 @@ import CoreData
 extension LocationEntity {
 
     @NSManaged var createdDate: NSDate?
-    @NSManaged var createdUser: NSObject?
+    @NSManaged var createdUser: NSNumber?
     @NSManaged var desc: String?
     @NSManaged var id: NSNumber?
     @NSManaged var image: String?

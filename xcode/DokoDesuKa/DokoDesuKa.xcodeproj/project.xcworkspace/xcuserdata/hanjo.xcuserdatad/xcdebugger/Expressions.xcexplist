@@ -31,7 +31,7 @@
          contextName = "TabBarController.(viewDidLoad() -&gt; ()).(closure #1):TabBarController.swift">
       </ContextState>
       <ContextState
-         contextName = "TabBarController.(viewWillAppear(Bool) -&gt; ()).(closure #1).(closure #1):TabBarController.swift">
+         contextName = "TabBarController.(viewDidLoad() -&gt; ()).(closure #1).(closure #1):TabBarController.swift">
          <PersistentStrings>
             <PersistentString
                value = "self.presentedViewController">
@@ -47,6 +47,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "TabBarController.(viewWillAppear(Bool) -&gt; ()).(closure #1).(closure #1):TabBarController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.presentedViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "DokoDesuKaAPI.location([String : AnyObject]) -&gt; Location:DokoDesuKaAPI.swift">
          <PersistentStrings>
             <PersistentString
@@ -55,16 +63,30 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "APIConnector.handleHTTPErrors&lt;A&gt; (NSHTTPURLResponse, completion : (APIResult&lt;A&gt;) -&gt; ()) -&gt; ():APIConnector.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaAPI.(loginUser(String, password : String, completion : (APIResult&lt;String&gt;) -&gt; ()) -&gt; ()).(closure #1):DokoDesuKaAPI.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "userName">
+            </PersistentString>
+            <PersistentString
+               value = "responseObject">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "LoginViewController.(tappedLogin(AnyObject) -&gt; ()).(closure #1):LoginViewController.swift">
          <PersistentStrings>
+            <PersistentString
+               value = "user">
+            </PersistentString>
             <PersistentString
                value = "String(self.inputPassword.text)">
             </PersistentString>
             <PersistentString
                value = "self.inputUsername.text!">
-            </PersistentString>
-            <PersistentString
-               value = "user">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -77,24 +99,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "DokoDesuKaAPI.(loginUser(String, password : String, completion : (APIResult&lt;String&gt;) -&gt; ()) -&gt; ()).(closure #1):DokoDesuKaAPI.swift">
+         contextName = "DokoDesuKaCoreDataStore.loadImage(String) -&gt; UIImage:DokoDesuKaCoreDataStore.swift">
          <PersistentStrings>
             <PersistentString
-               value = "responseObject">
-            </PersistentString>
-            <PersistentString
-               value = "userName">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "APIConnector.handleHTTPErrors&lt;A&gt; (NSHTTPURLResponse, completion : (APIResult&lt;A&gt;) -&gt; ()) -&gt; ():APIConnector.swift">
-      </ContextState>
-      <ContextState
-         contextName = "TabBarController.(viewDidLoad() -&gt; ()).(closure #1).(closure #1):TabBarController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.presentedViewController">
+               value = "self.getDocUrl()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -102,12 +110,36 @@
          contextName = "LocationListTableViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:LocationListTableViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "cell.imgLocation">
+               value = "self.locations">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "APIConnector.(performRequest(String, method : String, body : AnyObject?, completion : (APIResult&lt;protocol&lt;&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1):APIConnector.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaCoreDataStore.allLocations() -&gt; [Location]:DokoDesuKaCoreDataStore.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "entity.image">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaCoreDataStore.saveImage(String, image : UIImage) -&gt; ():DokoDesuKaCoreDataStore.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.getDocUrl(url)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaCoreDataStore.saveImage(String, imageData : NSData) -&gt; ():DokoDesuKaCoreDataStore.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "getDocUrl()">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "AddLocationViewController.imagePickerController(UIImagePickerController, didFinishPickingMediaWithInfo : [String : AnyObject]) -&gt; ():AddLocationViewController.swift">
