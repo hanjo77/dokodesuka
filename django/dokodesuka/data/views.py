@@ -25,7 +25,7 @@ class DokoDesuKaMixin(object):
     def get_location_dict(self, obj):
         request = None
         _dict = model_to_dict(obj, exclude="picture")
-        _dict["picture"] = ''.join(['http://46.101.17.239/media', obj.picture.name.replace("./", "/")])
+        _dict["picture"] = obj.picture.name.replace("./", "")
         _dict["created_user"] = self.get_user_dict(User.objects.get(id=obj.created_user_id))
         return _dict
     def get_user_dict(self, obj):
