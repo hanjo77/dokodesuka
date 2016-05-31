@@ -106,12 +106,12 @@
                   moduleName = "DokoDesuKa"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hanjo/Workspace/DokoDesuKa/xcode/DokoDesuKa/DokoDesuKa/Scenes/LocationListTableViewController.swift"
-                  timestampString = "486401031.610517"
+                  timestampString = "486410315.632723"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "134"
                   endingLineNumber = "134"
-                  offsetFromSymbolStart = "320">
+                  offsetFromSymbolStart = "360">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -121,12 +121,12 @@
                   moduleName = "DokoDesuKa"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hanjo/Workspace/DokoDesuKa/xcode/DokoDesuKa/DokoDesuKa/Scenes/LocationListTableViewController.swift"
-                  timestampString = "486401031.610747"
+                  timestampString = "486410315.633645"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "134"
                   endingLineNumber = "134"
-                  offsetFromSymbolStart = "444">
+                  offsetFromSymbolStart = "515">
                </Location>
             </Locations>
          </BreakpointContent>

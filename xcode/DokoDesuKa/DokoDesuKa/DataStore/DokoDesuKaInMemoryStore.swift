@@ -45,17 +45,17 @@ class DokoDesuKaInMemoryStore: DokoDesuKaStore {
         }
     }
     
-    func syncLocations(users: [Location]) {
+    func syncLocations(locations: [Location]) {
         // save all users
-        for user in users {
-            self.saveLocation(user)
+        for location in locations {
+            self.saveLocation(location)
         }
         
         // remove users not in list
         var removeIndices = [Int]()
-        for (i, user) in DokoDesuKaInMemoryStore.locations.enumerate() {
-            let foundIndex = users.indexOf() {existingUser in
-                existingUser.id == user.id
+        for (i, location) in DokoDesuKaInMemoryStore.locations.enumerate() {
+            let foundIndex = locations.indexOf() {existingLocation in
+                existingLocation.id == location.id
             }
             if foundIndex == nil {
                 removeIndices.append(i)
