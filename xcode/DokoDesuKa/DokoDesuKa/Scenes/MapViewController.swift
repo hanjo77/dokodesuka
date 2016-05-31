@@ -16,10 +16,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var myTabBarController:TabBarController?
     let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
     @IBOutlet var mapView: MKMapView!
+    @IBOutlet weak var detailView: UIView!
+    @IBOutlet weak var detailTitle: UILabel!
+    @IBOutlet weak var detailImage: UIImageView!
     
-    @IBAction func tappedLogOut(sender: AnyObject) {
-        // Go to Login Screen & logout
-    }
+    @IBOutlet weak var detailDesc: UITextView!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -28,6 +29,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     required init?(coder aDecoder: NSCoder)  {
         super.init(coder: aDecoder)
+    }
+    
+    @IBAction func tappedCloseDetail(sender: AnyObject) {
+        detailView.hidden = true;
     }
     
     override func viewDidLoad() {
@@ -47,11 +52,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let annotations = self.mapView.annotations
         mapView.removeAnnotations(annotations)
         for location:Location in locations {
-            let annotation = MKPointAnnotation()
+            let annotation = DetailPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(
                 latitude: Double(location.latitude), longitude: Double(location.longitude))
             annotation.title = location.title
             annotation.subtitle = location.description
+            annotation.imageName = location.image
             self.mapView.addAnnotation(annotation)
         }
     }
@@ -63,14 +69,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         pinView.annotation = annotation
         pinView.pinTintColor = UIColor.redColor()
         pinView.animatesDrop = true
-        pinView.canShowCallout = true
+        pinView.canShowCallout = false
         
         return pinView
     }
     
     func mapView(mapView: MKMapView,
                  didSelectAnnotationView view: MKAnnotationView){
-        
+        let annotation:DetailPointAnnotation = view.annotation as! DetailPointAnnotation
+        detailView.hidden = false;
+        detailTitle.text = (annotation.title)!
+        detailDesc.text = (annotation.subtitle)!
+        detailImage.image = DokoDesuKaCoreDataStore().loadImage((annotation.imageName)!)
         NSLog("Selected annotation")
     }
     
@@ -79,4 +89,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         // Dispose of any resources that can be recreated.
     }
     
+}
+
+class DetailPointAnnotation: MKPointAnnotation {
+    var imageName: String!
 }

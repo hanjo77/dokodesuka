@@ -23,6 +23,7 @@ class AddLocationViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet var inputDescription: UITextView!
     @IBOutlet var imgImage: UIImageView!
     @IBOutlet var btnSave: UIButton!
+    @IBOutlet weak var loaderView: UIView!
     
     @IBAction func tappedCancel(sender: AnyObject) {
         dispatch_async(dispatch_get_main_queue()) {
@@ -33,6 +34,7 @@ class AddLocationViewController: UIViewController, UIImagePickerControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
         
         imagePicker.delegate = self
         imagePicker.allowsEditing = false
@@ -93,9 +95,11 @@ class AddLocationViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func tappedSave(sender: AnyObject) {
+        // Display loading animation
         if (currentLocation != nil) {
             let latitude = Float((currentLocation?.coordinate.latitude)!)
             let longitude = Float((currentLocation?.coordinate.longitude)!)
+            loaderView.hidden = false
             webservice.createLocation(inputTitle.text!, description: inputDescription.text!, image: imgImage.image!, latitude: latitude, longitude: longitude){ result in
                 switch (result) {
                 case .Success(_):
@@ -107,6 +111,8 @@ class AddLocationViewController: UIViewController, UIImagePickerControllerDelega
                 case .NetworkError:
                     NSLog(String(result))
                 }
+                // Hide loading animation
+                self.loaderView.hidden = true
             }
         }
     }

@@ -22,6 +22,7 @@ class AddUserViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var inputUsername: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
     }
     
     override func didReceiveMemoryWarning() {

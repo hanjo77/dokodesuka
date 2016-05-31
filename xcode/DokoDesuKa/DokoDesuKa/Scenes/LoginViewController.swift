@@ -42,6 +42,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         }
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
         let newImg: UIImage? = UIImage(named: "dokodesuka-logo")
         imageView.image = newImg
         inputUsername.delegate = self
