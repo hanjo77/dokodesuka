@@ -124,8 +124,8 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
                     }
                     DokoDesuKaCoreDataStore().saveImage((self.location?.image)!, imageData: UIImageJPEGRepresentation(self.imgImage.image!, 0.9)!)
                     self.myTabBarController?.selectedLocation = -1
-                    self.myTabBarController?.selectedIndex = 2
                 }
+                self.myTabBarController?.selectedIndex = 2
             case .Failure(let errorMessage):
                 NSLog(errorMessage)
             case .NetworkError:

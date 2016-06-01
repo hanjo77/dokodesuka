@@ -106,12 +106,12 @@
                   moduleName = "DokoDesuKa"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hanjo/Workspace/DokoDesuKa/xcode/DokoDesuKa/DokoDesuKa/Scenes/LocationListTableViewController.swift"
-                  timestampString = "486478047.168804"
+                  timestampString = "486482208.331929"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "111"
                   endingLineNumber = "111"
-                  offsetFromSymbolStart = "360">
+                  offsetFromSymbolStart = "320">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -121,12 +121,12 @@
                   moduleName = "DokoDesuKa"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hanjo/Workspace/DokoDesuKa/xcode/DokoDesuKa/DokoDesuKa/Scenes/LocationListTableViewController.swift"
-                  timestampString = "486478047.169023"
+                  timestampString = "486482208.332068"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "111"
                   endingLineNumber = "111"
-                  offsetFromSymbolStart = "515">
+                  offsetFromSymbolStart = "444">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -362,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DokoDesuKa/Scenes/AddLocationViewController.swift"
-            timestampString = "486428140.87833"
+            timestampString = "486482208.218312"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "tappedSave(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -384,6 +384,22 @@
             startingLineNumber = "85"
             endingLineNumber = "85"
             landmarkName = "saveLocation(_:title:description:image:latitude:longitude:completion:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DokoDesuKa/Scenes/AddLocationViewController.swift"
+            timestampString = "486482102.351726"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "tappedSave(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
