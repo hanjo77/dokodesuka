@@ -17,7 +17,7 @@
 		5714CE901CE62F65004BF7B3 /* LocationListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714CE8F1CE62F65004BF7B3 /* LocationListTableViewController.swift */; };
 		572BC7861CE9E1B4004DFA9D /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572BC7851CE9E1B4004DFA9D /* TextView.swift */; };
 		572BC7891CE9E1FF004DFA9D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572BC7871CE9E1FF004DFA9D /* TextField.swift */; };
-		572BC78A1CE9E1FF004DFA9D /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572BC7881CE9E1FF004DFA9D /* ViewUtil.swift */; };
+		572BC78A1CE9E1FF004DFA9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572BC7881CE9E1FF004DFA9D /* ViewController.swift */; };
 		572BC78D1CE9E219004DFA9D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572BC78B1CE9E219004DFA9D /* Location.swift */; };
 		572BC78E1CE9E219004DFA9D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572BC78C1CE9E219004DFA9D /* User.swift */; };
 		573BDA5E1CE508E2002C527F /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573BDA5A1CE508E2002C527F /* AddLocationViewController.swift */; };
@@ -70,7 +70,7 @@
 		5714CE8F1CE62F65004BF7B3 /* LocationListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationListTableViewController.swift; path = Scenes/LocationListTableViewController.swift; sourceTree = "<group>"; };
 		572BC7851CE9E1B4004DFA9D /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextView.swift; path = Util/TextView.swift; sourceTree = "<group>"; };
 		572BC7871CE9E1FF004DFA9D /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextField.swift; path = Util/TextField.swift; sourceTree = "<group>"; };
-		572BC7881CE9E1FF004DFA9D /* ViewUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewUtil.swift; path = Util/ViewUtil.swift; sourceTree = "<group>"; };
+		572BC7881CE9E1FF004DFA9D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Util/ViewController.swift; sourceTree = "<group>"; };
 		572BC78B1CE9E219004DFA9D /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
 		572BC78C1CE9E219004DFA9D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		573BDA5A1CE508E2002C527F /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddLocationViewController.swift; path = Scenes/AddLocationViewController.swift; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				572BC7871CE9E1FF004DFA9D /* TextField.swift */,
-				572BC7881CE9E1FF004DFA9D /* ViewUtil.swift */,
+				572BC7881CE9E1FF004DFA9D /* ViewController.swift */,
 				572BC7851CE9E1B4004DFA9D /* TextView.swift */,
 			);
 			name = Util;
@@ -408,7 +408,7 @@
 				57599E541CDCD96B006E1588 /* AppDelegate.swift in Sources */,
 				572BC78E1CE9E219004DFA9D /* User.swift in Sources */,
 				570B5FC01CE7F9BC004C284D /* LocationEntity.swift in Sources */,
-				572BC78A1CE9E1FF004DFA9D /* ViewUtil.swift in Sources */,
+				572BC78A1CE9E1FF004DFA9D /* ViewController.swift in Sources */,
 				57599EAC1CDCF106006E1588 /* DokoDesuKaCoreDataStore.swift in Sources */,
 				57599EAE1CDCF12A006E1588 /* DokoDesuKaInMemoryStore.swift in Sources */,
 				5714CE901CE62F65004BF7B3 /* LocationListTableViewController.swift in Sources */,

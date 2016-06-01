@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddUserViewController: UIViewController, UITextFieldDelegate {
+class AddUserViewController: ViewController, UITextFieldDelegate {
     
     let webservice = DokoDesuKaAPI(connector: APIConnector())
     // let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
@@ -22,7 +22,6 @@ class AddUserViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var inputUsername: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround() 
     }
     
     override func didReceiveMemoryWarning() {
@@ -84,25 +83,6 @@ class AddUserViewController: UIViewController, UITextFieldDelegate {
                 NSLog(String(result))
             }
         }
-    }
-    
-    func textFieldDidBeginEditing(textField: UITextField) {
-        animateViewMoving(true, moveValue: 250)
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField) {
-        animateViewMoving(false, moveValue: 250)
-    }
-    
-    // Lifting the view up
-    func animateViewMoving (up:Bool, moveValue :CGFloat){
-        let movementDuration:NSTimeInterval = 0.3
-        let movement:CGFloat = ( up ? -moveValue : moveValue)
-        UIView.beginAnimations( "animateView", context: nil)
-        UIView.setAnimationBeginsFromCurrentState(true)
-        UIView.setAnimationDuration(movementDuration )
-        self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
-        UIView.commitAnimations()
     }
 }
 

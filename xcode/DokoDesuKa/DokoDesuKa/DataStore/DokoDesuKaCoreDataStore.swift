@@ -52,7 +52,6 @@ class DokoDesuKaCoreDataStore:DokoDesuKaStore {
         getDataFromUrl(NSURL(string:mediaUrl+url)!) { (data, response, error)  in
             dispatch_async(dispatch_get_main_queue()) { () -> Void in
                 guard let data = data where error == nil else { return }
-                print(response?.suggestedFilename ?? "")
                 locationEntity.image = url
                 self.saveImage(url, imageData: data)
             }

@@ -22,6 +22,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^locations/(?P<pk>[0-9]*)', views.UserLocationJsonView.as_view(), name='user_locations'),
     url(r'^locations', views.LocationJsonView.as_view(), name='locations'),
     url(r'^login', csrf_exempt(views.LoginView.as_view()), name='login'),
     url(r'^add_user', csrf_exempt(views.AddUserView.as_view()), name='add_user'),
