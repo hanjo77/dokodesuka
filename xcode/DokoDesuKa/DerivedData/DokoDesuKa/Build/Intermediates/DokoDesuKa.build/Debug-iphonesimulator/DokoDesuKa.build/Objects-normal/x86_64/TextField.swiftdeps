@@ -1,0 +1,274 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "TextField"
+provides-nominal:
+- "C10DokoDesuKa9TextField"
+provides-member:
+- ["C10DokoDesuKa9TextField", ""]
+provides-dynamic-lookup:
+- "drawRect"
+depends-top-level:
+- "CGRect"
+- "TextField"
+- !private "UIColor"
+- "UITextField"
+- !private "BooleanLiteralType"
+depends-member:
+- !private ["Ps9AnyObject", "CGColor"]
+- !private ["Ps9AnyObject", "UIColor"]
+- !private ["Ps9AnyObject", "borderColor"]
+- !private ["Ps9AnyObject", "borderWidth"]
+- !private ["Ps9AnyObject", "clipsToBounds"]
+- !private ["Ps9AnyObject", "cornerRadius"]
+- !private ["Ps9AnyObject", "darkGrayColor"]
+- ["Ps9AnyObject", "drawRect"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "layer"]
+- ["Ps9AnyObject", ""]
+- !private ["CSo7CALayer", "borderColor"]
+- !private ["CSo7CALayer", "borderWidth"]
+- !private ["CSo7CALayer", "cornerRadius"]
+- !private ["PSo13CAMediaTiming", "borderColor"]
+- !private ["PSo13CAMediaTiming", "borderWidth"]
+- !private ["PSo13CAMediaTiming", "cornerRadius"]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["Ps11CVarArgType", "CGColor"]
+- !private ["Ps11CVarArgType", "UIColor"]
+- !private ["Ps11CVarArgType", "borderColor"]
+- !private ["Ps11CVarArgType", "borderWidth"]
+- !private ["Ps11CVarArgType", "clipsToBounds"]
+- !private ["Ps11CVarArgType", "cornerRadius"]
+- !private ["Ps11CVarArgType", "darkGrayColor"]
+- ["Ps11CVarArgType", "drawRect"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "layer"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps28CustomDebugStringConvertible", "CGColor"]
+- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
+- !private ["Ps28CustomDebugStringConvertible", "borderColor"]
+- !private ["Ps28CustomDebugStringConvertible", "borderWidth"]
+- !private ["Ps28CustomDebugStringConvertible", "clipsToBounds"]
+- !private ["Ps28CustomDebugStringConvertible", "cornerRadius"]
+- !private ["Ps28CustomDebugStringConvertible", "darkGrayColor"]
+- ["Ps28CustomDebugStringConvertible", "drawRect"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "layer"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "CGColor"]
+- !private ["Ps23CustomStringConvertible", "UIColor"]
+- !private ["Ps23CustomStringConvertible", "borderColor"]
+- !private ["Ps23CustomStringConvertible", "borderWidth"]
+- !private ["Ps23CustomStringConvertible", "clipsToBounds"]
+- !private ["Ps23CustomStringConvertible", "cornerRadius"]
+- !private ["Ps23CustomStringConvertible", "darkGrayColor"]
+- ["Ps23CustomStringConvertible", "drawRect"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "layer"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "CGColor"]
+- !private ["Ps9Equatable", "UIColor"]
+- !private ["Ps9Equatable", "borderColor"]
+- !private ["Ps9Equatable", "borderWidth"]
+- !private ["Ps9Equatable", "clipsToBounds"]
+- !private ["Ps9Equatable", "cornerRadius"]
+- !private ["Ps9Equatable", "darkGrayColor"]
+- ["Ps9Equatable", "drawRect"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "layer"]
+- ["Ps9Equatable", ""]
+- !private ["Ps8Hashable", "CGColor"]
+- !private ["Ps8Hashable", "UIColor"]
+- !private ["Ps8Hashable", "borderColor"]
+- !private ["Ps8Hashable", "borderWidth"]
+- !private ["Ps8Hashable", "clipsToBounds"]
+- !private ["Ps8Hashable", "cornerRadius"]
+- !private ["Ps8Hashable", "darkGrayColor"]
+- ["Ps8Hashable", "drawRect"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "layer"]
+- ["Ps8Hashable", ""]
+- !private ["PSo8NSCoding", "CGColor"]
+- !private ["PSo8NSCoding", "UIColor"]
+- !private ["PSo8NSCoding", "borderColor"]
+- !private ["PSo8NSCoding", "borderWidth"]
+- !private ["PSo8NSCoding", "clipsToBounds"]
+- !private ["PSo8NSCoding", "cornerRadius"]
+- !private ["PSo8NSCoding", "darkGrayColor"]
+- ["PSo8NSCoding", "drawRect"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "layer"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "CGColor"]
+- !private ["PSo9NSCopying", "darkGrayColor"]
+- !private ["CSo8NSObject", "CGColor"]
+- ["CSo8NSObject", "CGRect"]
+- !private ["CSo8NSObject", "UIColor"]
+- !private ["CSo8NSObject", "borderColor"]
+- !private ["CSo8NSObject", "borderWidth"]
+- !private ["CSo8NSObject", "clipsToBounds"]
+- !private ["CSo8NSObject", "cornerRadius"]
+- !private ["CSo8NSObject", "darkGrayColor"]
+- ["CSo8NSObject", "drawRect"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "layer"]
+- !private ["PSo16NSObjectProtocol", "CGColor"]
+- !private ["PSo16NSObjectProtocol", "UIColor"]
+- !private ["PSo16NSObjectProtocol", "borderColor"]
+- !private ["PSo16NSObjectProtocol", "borderWidth"]
+- !private ["PSo16NSObjectProtocol", "clipsToBounds"]
+- !private ["PSo16NSObjectProtocol", "cornerRadius"]
+- !private ["PSo16NSObjectProtocol", "darkGrayColor"]
+- ["PSo16NSObjectProtocol", "drawRect"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "layer"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "CGColor"]
+- !private ["PSo14NSSecureCoding", "darkGrayColor"]
+- ["C10DokoDesuKa9TextField", "CGRect"]
+- !private ["C10DokoDesuKa9TextField", "UIColor"]
+- !private ["C10DokoDesuKa9TextField", "clipsToBounds"]
+- ["C10DokoDesuKa9TextField", "deinit"]
+- ["C10DokoDesuKa9TextField", "drawRect"]
+- ["C10DokoDesuKa9TextField", "init"]
+- !private ["C10DokoDesuKa9TextField", "layer"]
+- !private ["PSo29UIAccessibilityIdentification", "UIColor"]
+- !private ["PSo29UIAccessibilityIdentification", "clipsToBounds"]
+- ["PSo29UIAccessibilityIdentification", "drawRect"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "layer"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- !private ["PSo12UIAppearance", "UIColor"]
+- !private ["PSo12UIAppearance", "clipsToBounds"]
+- ["PSo12UIAppearance", "drawRect"]
+- ["PSo12UIAppearance", "init"]
+- !private ["PSo12UIAppearance", "layer"]
+- ["PSo12UIAppearance", ""]
+- !private ["PSo21UIAppearanceContainer", "UIColor"]
+- !private ["PSo21UIAppearanceContainer", "clipsToBounds"]
+- ["PSo21UIAppearanceContainer", "drawRect"]
+- ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "layer"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo7UIColor", "CGColor"]
+- !private ["CSo7UIColor", "darkGrayColor"]
+- ["CSo9UIControl", "CGRect"]
+- !private ["CSo9UIControl", "UIColor"]
+- !private ["CSo9UIControl", "clipsToBounds"]
+- ["CSo9UIControl", "drawRect"]
+- ["CSo9UIControl", "init"]
+- !private ["CSo9UIControl", "layer"]
+- !private ["PSo17UICoordinateSpace", "UIColor"]
+- !private ["PSo17UICoordinateSpace", "clipsToBounds"]
+- ["PSo17UICoordinateSpace", "drawRect"]
+- ["PSo17UICoordinateSpace", "init"]
+- !private ["PSo17UICoordinateSpace", "layer"]
+- ["PSo17UICoordinateSpace", ""]
+- !private ["PSo13UIDynamicItem", "UIColor"]
+- !private ["PSo13UIDynamicItem", "clipsToBounds"]
+- ["PSo13UIDynamicItem", "drawRect"]
+- ["PSo13UIDynamicItem", "init"]
+- !private ["PSo13UIDynamicItem", "layer"]
+- ["PSo13UIDynamicItem", ""]
+- !private ["PSo18UIFocusEnvironment", "UIColor"]
+- !private ["PSo18UIFocusEnvironment", "clipsToBounds"]
+- ["PSo18UIFocusEnvironment", "drawRect"]
+- ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "layer"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo10UIKeyInput", "UIColor"]
+- !private ["PSo10UIKeyInput", "clipsToBounds"]
+- ["PSo10UIKeyInput", "drawRect"]
+- ["PSo10UIKeyInput", "init"]
+- !private ["PSo10UIKeyInput", "layer"]
+- ["PSo10UIKeyInput", ""]
+- ["CSo11UIResponder", "CGRect"]
+- !private ["CSo11UIResponder", "UIColor"]
+- !private ["CSo11UIResponder", "clipsToBounds"]
+- ["CSo11UIResponder", "drawRect"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "layer"]
+- ["CSo11UITextField", "CGRect"]
+- !private ["CSo11UITextField", "UIColor"]
+- !private ["CSo11UITextField", "clipsToBounds"]
+- ["CSo11UITextField", "drawRect"]
+- ["CSo11UITextField", "init"]
+- !private ["CSo11UITextField", "layer"]
+- ["CSo11UITextField", ""]
+- !private ["PSo11UITextInput", "UIColor"]
+- !private ["PSo11UITextInput", "clipsToBounds"]
+- ["PSo11UITextInput", "drawRect"]
+- ["PSo11UITextInput", "init"]
+- !private ["PSo11UITextInput", "layer"]
+- ["PSo11UITextInput", ""]
+- !private ["PSo17UITextInputTraits", "UIColor"]
+- !private ["PSo17UITextInputTraits", "clipsToBounds"]
+- ["PSo17UITextInputTraits", "drawRect"]
+- ["PSo17UITextInputTraits", "init"]
+- !private ["PSo17UITextInputTraits", "layer"]
+- ["PSo17UITextInputTraits", ""]
+- !private ["PSo18UITraitEnvironment", "UIColor"]
+- !private ["PSo18UITraitEnvironment", "clipsToBounds"]
+- ["PSo18UITraitEnvironment", "drawRect"]
+- ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "layer"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo6UIView", "CGRect"]
+- !private ["CSo6UIView", "UIColor"]
+- !private ["CSo6UIView", "clipsToBounds"]
+- ["CSo6UIView", "drawRect"]
+- ["CSo6UIView", "init"]
+- !private ["CSo6UIView", "layer"]
+- !private ["Ps24_ColorLiteralConvertible", "CGColor"]
+- !private ["Ps24_ColorLiteralConvertible", "darkGrayColor"]
+- !private ["Ps12_Reflectable", "UIColor"]
+- !private ["Ps12_Reflectable", "clipsToBounds"]
+- ["Ps12_Reflectable", "drawRect"]
+- ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "layer"]
+- ["Ps12_Reflectable", ""]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "CSo7CALayer"
+- !private "PSo13CAMediaTiming"
+- !private "V12CoreGraphics7CGFloat"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- "C10DokoDesuKa9TextField"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo7UIColor"
+- "CSo9UIControl"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "PSo10UIKeyInput"
+- "CSo11UIResponder"
+- "CSo11UITextField"
+- "PSo11UITextInput"
+- "PSo17UITextInputTraits"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- !private "Ps24_ColorLiteralConvertible"
+- "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+interface-hash: "7991b3113cdf3b4a2d1c17f9e9b713ac"

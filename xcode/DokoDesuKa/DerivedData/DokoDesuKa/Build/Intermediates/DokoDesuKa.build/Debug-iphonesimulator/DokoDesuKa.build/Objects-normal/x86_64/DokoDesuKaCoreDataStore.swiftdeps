@@ -1,0 +1,757 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "DokoDesuKaCoreDataStore"
+provides-nominal:
+- "C10DokoDesuKa23DokoDesuKaCoreDataStore"
+provides-member:
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "NSError"
+- !private "UIImageJPEGRepresentation"
+- "DokoDesuKaCoreDataStore"
+- "LocationEntity"
+- !private "NSPredicate"
+- !private "NSFetchRequest"
+- !private "??"
+- "UIImage"
+- "DokoDesuKaStore"
+- "StringLiteralType"
+- !private "=="
+- !private "dispatch_async"
+- !private "NSSortDescriptor"
+- !private "dispatch_get_main_queue"
+- !private "CoreDataStack"
+- "NSManagedObjectContext"
+- !private "NSFileManager"
+- !private "+"
+- "NSURL"
+- "NSURLResponse"
+- "NSData"
+- !private "Int"
+- !private ">"
+- !private "NSEntityDescription"
+- "String"
+- !private "NSURLSession"
+- "Void"
+- !private "print"
+- "Location"
+- !private "Array"
+- !private "BooleanLiteralType"
+- !private "Float"
+- !private "User"
+depends-member:
+- !private ["Ps16AbsoluteValuable", "init"]
+- !private ["Ps9AnyObject", "CoreDataStack"]
+- !private ["Ps9AnyObject", "Float"]
+- !private ["Ps9AnyObject", "Int"]
+- !private ["Ps9AnyObject", "Location"]
+- !private ["Ps9AnyObject", "NSEntityDescription"]
+- !private ["Ps9AnyObject", "NSFetchRequest"]
+- !private ["Ps9AnyObject", "NSFileManager"]
+- !private ["Ps9AnyObject", "NSPredicate"]
+- !private ["Ps9AnyObject", "NSSortDescriptor"]
+- !private ["Ps9AnyObject", "NSURL"]
+- !private ["Ps9AnyObject", "NSURLSession"]
+- !private ["Ps9AnyObject", "UIImage"]
+- !private ["Ps9AnyObject", "UIImageJPEGRepresentation"]
+- !private ["Ps9AnyObject", "URLByAppendingPathComponent"]
+- !private ["Ps9AnyObject", "URLForDirectory"]
+- !private ["Ps9AnyObject", "User"]
+- ["Ps9AnyObject", "allLocations"]
+- !private ["Ps9AnyObject", "context"]
+- !private ["Ps9AnyObject", "dataTaskWithURL"]
+- !private ["Ps9AnyObject", "deleteObject"]
+- !private ["Ps9AnyObject", "desc"]
+- !private ["Ps9AnyObject", "dispatch_async"]
+- !private ["Ps9AnyObject", "dispatch_get_main_queue"]
+- !private ["Ps9AnyObject", "downloadImage"]
+- !private ["Ps9AnyObject", "executeFetchRequest"]
+- !private ["Ps9AnyObject", "getDataFromUrl"]
+- !private ["Ps9AnyObject", "getDocUrl"]
+- !private ["Ps9AnyObject", "id"]
+- !private ["Ps9AnyObject", "image"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "insertNewObjectForEntityForName"]
+- !private ["Ps9AnyObject", "latitude"]
+- ["Ps9AnyObject", "loadImage"]
+- !private ["Ps9AnyObject", "longitude"]
+- !private ["Ps9AnyObject", "mainContext"]
+- !private ["Ps9AnyObject", "mediaUrl"]
+- !private ["Ps9AnyObject", "path"]
+- !private ["Ps9AnyObject", "predicate"]
+- !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "resume"]
+- !private ["Ps9AnyObject", "save"]
+- !private ["Ps9AnyObject", "saveImage"]
+- ["Ps9AnyObject", "saveLocation"]
+- !private ["Ps9AnyObject", "sharedInstance"]
+- !private ["Ps9AnyObject", "sharedSession"]
+- !private ["Ps9AnyObject", "sortDescriptors"]
+- !private ["Ps9AnyObject", "suggestedFilename"]
+- ["Ps9AnyObject", "syncLocations"]
+- !private ["Ps9AnyObject", "title"]
+- !private ["Ps9AnyObject", "writeToURL"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "Element"]
+- !private ["Sa", "Generator"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "SubSequence"]
+- !private ["Sa", "_Element"]
+- !private ["Sa", "append"]
+- !private ["Sa", "count"]
+- !private ["Sa", "deinit"]
+- !private ["Sa", "init"]
+- !private ["Sa", "map"]
+- !private ["Sa", "subscript"]
+- !private ["Ps23ArrayLiteralConvertible", "Element"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
+- !private ["Ps23ArrayLiteralConvertible", "UserDomainMask"]
+- !private ["Ps23ArrayLiteralConvertible", "_Element"]
+- !private ["Ps23ArrayLiteralConvertible", "append"]
+- !private ["Ps23ArrayLiteralConvertible", "count"]
+- !private ["Ps23ArrayLiteralConvertible", "init"]
+- !private ["Ps23ArrayLiteralConvertible", "map"]
+- !private ["Ps23ArrayLiteralConvertible", "subscript"]
+- !private ["Vs10ArraySlice", "Generator"]
+- !private ["Vs10ArraySlice", "Index"]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps22BidirectionalIndexType", "init"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "URLByAppendingPathComponent"]
+- !private ["Ps11CVarArgType", "URLForDirectory"]
+- !private ["Ps11CVarArgType", "dataTaskWithURL"]
+- !private ["Ps11CVarArgType", "deleteObject"]
+- !private ["Ps11CVarArgType", "desc"]
+- !private ["Ps11CVarArgType", "executeFetchRequest"]
+- !private ["Ps11CVarArgType", "id"]
+- !private ["Ps11CVarArgType", "image"]
+- !private ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "insertNewObjectForEntityForName"]
+- !private ["Ps11CVarArgType", "latitude"]
+- !private ["Ps11CVarArgType", "longitude"]
+- !private ["Ps11CVarArgType", "path"]
+- !private ["Ps11CVarArgType", "predicate"]
+- !private ["Ps11CVarArgType", "resume"]
+- !private ["Ps11CVarArgType", "save"]
+- !private ["Ps11CVarArgType", "sharedSession"]
+- !private ["Ps11CVarArgType", "sortDescriptors"]
+- !private ["Ps11CVarArgType", "suggestedFilename"]
+- !private ["Ps11CVarArgType", "title"]
+- !private ["Ps11CVarArgType", "writeToURL"]
+- !private ["Ps14CollectionType", "Element"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "append"]
+- !private ["Ps14CollectionType", "count"]
+- !private ["Ps14CollectionType", "init"]
+- !private ["Ps14CollectionType", "map"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps10Comparable", "init"]
+- !private ["C10DokoDesuKa13CoreDataStack", "mainContext"]
+- !private ["C10DokoDesuKa13CoreDataStack", "sharedInstance"]
+- !private ["Ps28CustomDebugStringConvertible", "Element"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "URLByAppendingPathComponent"]
+- !private ["Ps28CustomDebugStringConvertible", "URLForDirectory"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- !private ["Ps28CustomDebugStringConvertible", "append"]
+- !private ["Ps28CustomDebugStringConvertible", "count"]
+- !private ["Ps28CustomDebugStringConvertible", "dataTaskWithURL"]
+- !private ["Ps28CustomDebugStringConvertible", "deleteObject"]
+- !private ["Ps28CustomDebugStringConvertible", "desc"]
+- !private ["Ps28CustomDebugStringConvertible", "executeFetchRequest"]
+- !private ["Ps28CustomDebugStringConvertible", "id"]
+- !private ["Ps28CustomDebugStringConvertible", "image"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "insertNewObjectForEntityForName"]
+- !private ["Ps28CustomDebugStringConvertible", "latitude"]
+- !private ["Ps28CustomDebugStringConvertible", "longitude"]
+- !private ["Ps28CustomDebugStringConvertible", "map"]
+- !private ["Ps28CustomDebugStringConvertible", "path"]
+- !private ["Ps28CustomDebugStringConvertible", "predicate"]
+- !private ["Ps28CustomDebugStringConvertible", "resume"]
+- !private ["Ps28CustomDebugStringConvertible", "save"]
+- !private ["Ps28CustomDebugStringConvertible", "sharedSession"]
+- !private ["Ps28CustomDebugStringConvertible", "sortDescriptors"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "suggestedFilename"]
+- !private ["Ps28CustomDebugStringConvertible", "title"]
+- !private ["Ps28CustomDebugStringConvertible", "writeToURL"]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "Element"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "URLByAppendingPathComponent"]
+- !private ["Ps23CustomStringConvertible", "URLForDirectory"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "append"]
+- !private ["Ps23CustomStringConvertible", "count"]
+- !private ["Ps23CustomStringConvertible", "dataTaskWithURL"]
+- !private ["Ps23CustomStringConvertible", "deleteObject"]
+- !private ["Ps23CustomStringConvertible", "desc"]
+- !private ["Ps23CustomStringConvertible", "executeFetchRequest"]
+- !private ["Ps23CustomStringConvertible", "id"]
+- !private ["Ps23CustomStringConvertible", "image"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "insertNewObjectForEntityForName"]
+- !private ["Ps23CustomStringConvertible", "latitude"]
+- !private ["Ps23CustomStringConvertible", "longitude"]
+- !private ["Ps23CustomStringConvertible", "map"]
+- !private ["Ps23CustomStringConvertible", "path"]
+- !private ["Ps23CustomStringConvertible", "predicate"]
+- !private ["Ps23CustomStringConvertible", "resume"]
+- !private ["Ps23CustomStringConvertible", "save"]
+- !private ["Ps23CustomStringConvertible", "sharedSession"]
+- !private ["Ps23CustomStringConvertible", "sortDescriptors"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "suggestedFilename"]
+- !private ["Ps23CustomStringConvertible", "title"]
+- !private ["Ps23CustomStringConvertible", "writeToURL"]
+- !private ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "CoreDataStack"]
+- !private ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "Float"]
+- !private ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "Int"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "Location"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "LocationEntity"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "NSData"]
+- !private ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "NSEntityDescription"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "NSError"]
+- !private ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "NSFetchRequest"]
+- !private ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "NSFileManager"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "NSManagedObjectContext"]
+- !private ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "NSPredicate"]
+- !private ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "NSSortDescriptor"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "NSURL"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "NSURLResponse"]
+- !private ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "NSURLSession"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "String"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "UIImage"]
+- !private ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "UIImageJPEGRepresentation"]
+- !private ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "User"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "Void"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "allLocations"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "context"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "deinit"]
+- !private ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "dispatch_async"]
+- !private ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "dispatch_get_main_queue"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "downloadImage"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "getDataFromUrl"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "getDocUrl"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "init"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "loadImage"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "mediaUrl"]
+- !private ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "print"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "saveImage"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "saveLocation"]
+- ["C10DokoDesuKa23DokoDesuKaCoreDataStore", "syncLocations"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "CoreDataStack"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "Float"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "Int"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "Location"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "NSEntityDescription"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "NSFetchRequest"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "NSFileManager"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "NSPredicate"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "NSSortDescriptor"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "NSURL"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "NSURLSession"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "UIImage"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "UIImageJPEGRepresentation"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "User"]
+- ["P10DokoDesuKa15DokoDesuKaStore", "allLocations"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "context"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "dispatch_async"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "dispatch_get_main_queue"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "downloadImage"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "getDataFromUrl"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "getDocUrl"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "init"]
+- ["P10DokoDesuKa15DokoDesuKaStore", "loadImage"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "mediaUrl"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "print"]
+- !private ["P10DokoDesuKa15DokoDesuKaStore", "saveImage"]
+- ["P10DokoDesuKa15DokoDesuKaStore", "saveLocation"]
+- ["P10DokoDesuKa15DokoDesuKaStore", "syncLocations"]
+- ["P10DokoDesuKa15DokoDesuKaStore", ""]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "DocumentDirectory"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "URLByAppendingPathComponent"]
+- !private ["Ps9Equatable", "URLForDirectory"]
+- !private ["Ps9Equatable", "UserDomainMask"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "dataTaskWithURL"]
+- !private ["Ps9Equatable", "deleteObject"]
+- !private ["Ps9Equatable", "desc"]
+- !private ["Ps9Equatable", "executeFetchRequest"]
+- !private ["Ps9Equatable", "id"]
+- !private ["Ps9Equatable", "image"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "insertNewObjectForEntityForName"]
+- !private ["Ps9Equatable", "latitude"]
+- !private ["Ps9Equatable", "longitude"]
+- !private ["Ps9Equatable", "path"]
+- !private ["Ps9Equatable", "predicate"]
+- !private ["Ps9Equatable", "resume"]
+- !private ["Ps9Equatable", "save"]
+- !private ["Ps9Equatable", "sharedSession"]
+- !private ["Ps9Equatable", "sortDescriptors"]
+- !private ["Ps9Equatable", "suggestedFilename"]
+- !private ["Ps9Equatable", "title"]
+- !private ["Ps9Equatable", "writeToURL"]
+- !private ["Sf", "init"]
+- !private ["Ps23FloatLiteralConvertible", "init"]
+- !private ["Ps17FloatingPointType", "init"]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps16ForwardIndexType", "init"]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "DocumentDirectory"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "URLByAppendingPathComponent"]
+- !private ["Ps8Hashable", "URLForDirectory"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "dataTaskWithURL"]
+- !private ["Ps8Hashable", "deleteObject"]
+- !private ["Ps8Hashable", "desc"]
+- !private ["Ps8Hashable", "executeFetchRequest"]
+- !private ["Ps8Hashable", "id"]
+- !private ["Ps8Hashable", "image"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "insertNewObjectForEntityForName"]
+- !private ["Ps8Hashable", "latitude"]
+- !private ["Ps8Hashable", "longitude"]
+- !private ["Ps8Hashable", "path"]
+- !private ["Ps8Hashable", "predicate"]
+- !private ["Ps8Hashable", "resume"]
+- !private ["Ps8Hashable", "save"]
+- !private ["Ps8Hashable", "sharedSession"]
+- !private ["Ps8Hashable", "sortDescriptors"]
+- !private ["Ps8Hashable", "suggestedFilename"]
+- !private ["Ps8Hashable", "title"]
+- !private ["Ps8Hashable", "writeToURL"]
+- !private ["SQ", "deinit"]
+- !private ["Ps9Indexable", "Element"]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "append"]
+- !private ["Ps9Indexable", "count"]
+- !private ["Ps9Indexable", "init"]
+- !private ["Ps9Indexable", "map"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "init"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps21IntegerArithmeticType", "init"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "init"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "init"]
+- !private ["V10DokoDesuKa8Location", "description"]
+- !private ["V10DokoDesuKa8Location", "id"]
+- !private ["V10DokoDesuKa8Location", "image"]
+- !private ["V10DokoDesuKa8Location", "init"]
+- !private ["V10DokoDesuKa8Location", "latitude"]
+- !private ["V10DokoDesuKa8Location", "longitude"]
+- !private ["V10DokoDesuKa8Location", "title"]
+- !private ["C10DokoDesuKa14LocationEntity", "desc"]
+- !private ["C10DokoDesuKa14LocationEntity", "id"]
+- !private ["C10DokoDesuKa14LocationEntity", "image"]
+- !private ["C10DokoDesuKa14LocationEntity", "latitude"]
+- !private ["C10DokoDesuKa14LocationEntity", "longitude"]
+- !private ["C10DokoDesuKa14LocationEntity", "title"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "init"]
+- !private ["Ps21MutableCollectionType", "Element"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "SubSequence"]
+- !private ["Ps21MutableCollectionType", "_Element"]
+- !private ["Ps21MutableCollectionType", "append"]
+- !private ["Ps21MutableCollectionType", "count"]
+- !private ["Ps21MutableCollectionType", "init"]
+- !private ["Ps21MutableCollectionType", "map"]
+- !private ["Ps21MutableCollectionType", "subscript"]
+- !private ["Ps16MutableIndexable", "Element"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "append"]
+- !private ["Ps16MutableIndexable", "count"]
+- !private ["Ps16MutableIndexable", "init"]
+- !private ["Ps16MutableIndexable", "map"]
+- !private ["Ps16MutableIndexable", "subscript"]
+- !private ["Ps16MutableSliceable", "Element"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "SubSequence"]
+- !private ["Ps16MutableSliceable", "_Element"]
+- !private ["Ps16MutableSliceable", "append"]
+- !private ["Ps16MutableSliceable", "count"]
+- !private ["Ps16MutableSliceable", "init"]
+- !private ["Ps16MutableSliceable", "map"]
+- !private ["Ps16MutableSliceable", "subscript"]
+- !private ["PSo8NSCoding", "URLByAppendingPathComponent"]
+- !private ["PSo8NSCoding", "deleteObject"]
+- !private ["PSo8NSCoding", "executeFetchRequest"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "insertNewObjectForEntityForName"]
+- !private ["PSo8NSCoding", "path"]
+- !private ["PSo8NSCoding", "predicate"]
+- !private ["PSo8NSCoding", "save"]
+- !private ["PSo8NSCoding", "sortDescriptors"]
+- !private ["PSo8NSCoding", "suggestedFilename"]
+- !private ["PSo8NSCoding", "writeToURL"]
+- !private ["PSo9NSCopying", "URLByAppendingPathComponent"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "insertNewObjectForEntityForName"]
+- !private ["PSo9NSCopying", "path"]
+- !private ["PSo9NSCopying", "predicate"]
+- !private ["PSo9NSCopying", "resume"]
+- !private ["PSo9NSCopying", "sortDescriptors"]
+- !private ["PSo9NSCopying", "suggestedFilename"]
+- !private ["PSo9NSCopying", "writeToURL"]
+- !private ["CSo6NSData", "writeToURL"]
+- !private ["CSo19NSEntityDescription", "insertNewObjectForEntityForName"]
+- !private ["PSo17NSFastEnumeration", "insertNewObjectForEntityForName"]
+- !private ["CSo14NSFetchRequest", "init"]
+- !private ["CSo14NSFetchRequest", "predicate"]
+- !private ["CSo14NSFetchRequest", "sortDescriptors"]
+- !private ["CSo13NSFileManager", "URLForDirectory"]
+- !private ["CSo13NSFileManager", "init"]
+- !private ["PSo9NSLocking", "deleteObject"]
+- !private ["PSo9NSLocking", "executeFetchRequest"]
+- !private ["PSo9NSLocking", "save"]
+- !private ["CSo15NSManagedObject", "deinit"]
+- !private ["CSo15NSManagedObject", "desc"]
+- !private ["CSo15NSManagedObject", "id"]
+- !private ["CSo15NSManagedObject", "image"]
+- !private ["CSo15NSManagedObject", "latitude"]
+- !private ["CSo15NSManagedObject", "longitude"]
+- !private ["CSo15NSManagedObject", "title"]
+- !private ["CSo22NSManagedObjectContext", "deleteObject"]
+- !private ["CSo22NSManagedObjectContext", "executeFetchRequest"]
+- !private ["CSo22NSManagedObjectContext", "save"]
+- !private ["PSo16NSMutableCopying", "writeToURL"]
+- !private ["CSo8NSObject", "URLByAppendingPathComponent"]
+- !private ["CSo8NSObject", "URLForDirectory"]
+- !private ["CSo8NSObject", "dataTaskWithURL"]
+- !private ["CSo8NSObject", "deleteObject"]
+- !private ["CSo8NSObject", "desc"]
+- !private ["CSo8NSObject", "executeFetchRequest"]
+- !private ["CSo8NSObject", "id"]
+- !private ["CSo8NSObject", "image"]
+- !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "insertNewObjectForEntityForName"]
+- !private ["CSo8NSObject", "latitude"]
+- !private ["CSo8NSObject", "longitude"]
+- !private ["CSo8NSObject", "path"]
+- !private ["CSo8NSObject", "predicate"]
+- !private ["CSo8NSObject", "resume"]
+- !private ["CSo8NSObject", "save"]
+- !private ["CSo8NSObject", "sharedSession"]
+- !private ["CSo8NSObject", "sortDescriptors"]
+- !private ["CSo8NSObject", "suggestedFilename"]
+- !private ["CSo8NSObject", "title"]
+- !private ["CSo8NSObject", "writeToURL"]
+- !private ["PSo16NSObjectProtocol", "URLByAppendingPathComponent"]
+- !private ["PSo16NSObjectProtocol", "URLForDirectory"]
+- !private ["PSo16NSObjectProtocol", "dataTaskWithURL"]
+- !private ["PSo16NSObjectProtocol", "deleteObject"]
+- !private ["PSo16NSObjectProtocol", "desc"]
+- !private ["PSo16NSObjectProtocol", "executeFetchRequest"]
+- !private ["PSo16NSObjectProtocol", "id"]
+- !private ["PSo16NSObjectProtocol", "image"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "insertNewObjectForEntityForName"]
+- !private ["PSo16NSObjectProtocol", "latitude"]
+- !private ["PSo16NSObjectProtocol", "longitude"]
+- !private ["PSo16NSObjectProtocol", "path"]
+- !private ["PSo16NSObjectProtocol", "predicate"]
+- !private ["PSo16NSObjectProtocol", "resume"]
+- !private ["PSo16NSObjectProtocol", "save"]
+- !private ["PSo16NSObjectProtocol", "sharedSession"]
+- !private ["PSo16NSObjectProtocol", "sortDescriptors"]
+- !private ["PSo16NSObjectProtocol", "suggestedFilename"]
+- !private ["PSo16NSObjectProtocol", "title"]
+- !private ["PSo16NSObjectProtocol", "writeToURL"]
+- !private ["CSo24NSPersistentStoreRequest", "init"]
+- !private ["CSo24NSPersistentStoreRequest", "predicate"]
+- !private ["CSo24NSPersistentStoreRequest", "sortDescriptors"]
+- !private ["CSo11NSPredicate", "init"]
+- !private ["OSC21NSSearchPathDirectory", "DocumentDirectory"]
+- !private ["VSC22NSSearchPathDomainMask", "UserDomainMask"]
+- !private ["PSo14NSSecureCoding", "URLByAppendingPathComponent"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "path"]
+- !private ["PSo14NSSecureCoding", "suggestedFilename"]
+- !private ["PSo14NSSecureCoding", "writeToURL"]
+- !private ["CSo16NSSortDescriptor", "init"]
+- !private ["CSo5NSURL", "URLByAppendingPathComponent"]
+- !private ["CSo5NSURL", "init"]
+- !private ["CSo5NSURL", "path"]
+- !private ["CSo13NSURLResponse", "suggestedFilename"]
+- !private ["CSo12NSURLSession", "dataTaskWithURL"]
+- !private ["CSo12NSURLSession", "sharedSession"]
+- !private ["CSo20NSURLSessionDataTask", "resume"]
+- !private ["CSo16NSURLSessionTask", "resume"]
+- ["Ps21NilLiteralConvertible", "Some"]
+- !private ["Ps13OptionSetType", "UserDomainMask"]
+- ["Sq", "Some"]
+- !private ["Sq", "deinit"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps21RandomAccessIndexType", "init"]
+- !private ["Ps30RangeReplaceableCollectionType", "Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["Ps30RangeReplaceableCollectionType", "_Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "append"]
+- !private ["Ps30RangeReplaceableCollectionType", "count"]
+- !private ["Ps30RangeReplaceableCollectionType", "init"]
+- !private ["Ps30RangeReplaceableCollectionType", "map"]
+- !private ["Ps30RangeReplaceableCollectionType", "subscript"]
+- !private ["Ps16RawRepresentable", "DocumentDirectory"]
+- !private ["Ps16RawRepresentable", "UserDomainMask"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "append"]
+- !private ["Ps12SequenceType", "count"]
+- !private ["Ps12SequenceType", "init"]
+- !private ["Ps12SequenceType", "map"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Ps14SetAlgebraType", "UserDomainMask"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps17SignedIntegerType", "init"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "init"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["Ps10Strideable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["CSo7UIImage", "init"]
+- !private ["Ps10_ArrayType", "Element"]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "SubSequence"]
+- !private ["Ps10_ArrayType", "_Element"]
+- !private ["Ps10_ArrayType", "append"]
+- !private ["Ps10_ArrayType", "count"]
+- !private ["Ps10_ArrayType", "init"]
+- !private ["Ps10_ArrayType", "map"]
+- !private ["Ps10_ArrayType", "subscript"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps31_BuiltinFloatLiteralConvertible", "init"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "init"]
+- !private ["Ps19_CVarArgAlignedType", "init"]
+- !private ["Ps22_CVarArgPassedAsDouble", "init"]
+- !private ["Ps24_DestructorSafeContainer", "Element"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "append"]
+- !private ["Ps24_DestructorSafeContainer", "count"]
+- !private ["Ps24_DestructorSafeContainer", "init"]
+- !private ["Ps24_DestructorSafeContainer", "map"]
+- !private ["Ps24_DestructorSafeContainer", "subscript"]
+- !private ["Ps32_FileReferenceLiteralConvertible", "URLByAppendingPathComponent"]
+- !private ["Ps32_FileReferenceLiteralConvertible", "init"]
+- !private ["Ps32_FileReferenceLiteralConvertible", "path"]
+- !private ["Ps24_ImageLiteralConvertible", "init"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps14_Incrementable", "init"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "init"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "append"]
+- !private ["Ps21_ObjectiveCBridgeable", "count"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "map"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps22_RandomAccessAmbiguity", "init"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "Element"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "SubSequence"]
+- !private ["Ps12_Reflectable", "URLByAppendingPathComponent"]
+- !private ["Ps12_Reflectable", "_Element"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "append"]
+- !private ["Ps12_Reflectable", "count"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "map"]
+- !private ["Ps12_Reflectable", "path"]
+- !private ["Ps12_Reflectable", "subscript"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps18_SignedIntegerType", "init"]
+depends-nominal:
+- !private "Ps16AbsoluteValuable"
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Vs10ArraySlice"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "V12CoreGraphics7CGFloat"
+- !private "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
+- !private "C10DokoDesuKa13CoreDataStack"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps23CustomStringConvertible"
+- "C10DokoDesuKa23DokoDesuKaCoreDataStore"
+- "P10DokoDesuKa15DokoDesuKaStore"
+- !private "Ps9Equatable"
+- !private "Sf"
+- !private "Ps23FloatLiteralConvertible"
+- !private "Ps17FloatingPointType"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
+- !private "Ps8Hashable"
+- !private "SQ"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- !private "Si"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "V10DokoDesuKa8Location"
+- !private "C10DokoDesuKa14LocationEntity"
+- !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo6NSData"
+- !private "CSo19NSEntityDescription"
+- !private "PSo17NSFastEnumeration"
+- !private "CSo14NSFetchRequest"
+- !private "CSo13NSFileManager"
+- !private "PSo9NSLocking"
+- !private "CSo15NSManagedObject"
+- !private "CSo22NSManagedObjectContext"
+- !private "PSo16NSMutableCopying"
+- !private "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
+- !private "CSo24NSPersistentStoreRequest"
+- !private "CSo11NSPredicate"
+- !private "OSC21NSSearchPathDirectory"
+- !private "VSC22NSSearchPathDomainMask"
+- !private "PSo14NSSecureCoding"
+- !private "CSo16NSSortDescriptor"
+- !private "CSo5NSURL"
+- !private "CSo13NSURLResponse"
+- !private "CSo12NSURLSession"
+- !private "CSo20NSURLSessionDataTask"
+- !private "CSo16NSURLSessionTask"
+- "Ps21NilLiteralConvertible"
+- !private "Ps13OptionSetType"
+- "Sq"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps30RangeReplaceableCollectionType"
+- !private "Ps16RawRepresentable"
+- !private "Ps12SequenceType"
+- !private "Ps14SetAlgebraType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Vs5Slice"
+- !private "Ps10Strideable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "CSo7UIImage"
+- !private "Ps10_ArrayType"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps31_BuiltinFloatLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps19_CVarArgAlignedType"
+- !private "Ps22_CVarArgPassedAsDouble"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps32_FileReferenceLiteralConvertible"
+- !private "Ps24_ImageLiteralConvertible"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps22_RandomAccessAmbiguity"
+- "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+interface-hash: "a966d9abc99495f5b234a1552383ede9"

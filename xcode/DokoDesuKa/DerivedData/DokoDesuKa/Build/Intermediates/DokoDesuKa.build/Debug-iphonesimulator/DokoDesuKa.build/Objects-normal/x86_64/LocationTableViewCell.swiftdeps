@@ -1,0 +1,294 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "LocationTableViewCell"
+provides-nominal:
+- "C10DokoDesuKa21LocationTableViewCell"
+provides-member:
+- ["C10DokoDesuKa21LocationTableViewCell", ""]
+provides-dynamic-lookup:
+- "setSelected"
+- "labelTitle"
+- "labelDescription"
+- "awakeFromNib"
+- "imgLocation"
+depends-top-level:
+- "UILabel"
+- "DokoDesuKaAPI"
+- "Bool"
+- "UIImageView"
+- "APIConnector"
+- "UITableViewCell"
+- "LocationTableViewCell"
+depends-member:
+- ["C10DokoDesuKa12APIConnector", "init"]
+- ["Ps9AnyObject", "APIConnector"]
+- ["Ps9AnyObject", "DokoDesuKaAPI"]
+- ["Ps9AnyObject", "awakeFromNib"]
+- ["Ps9AnyObject", "imgLocation"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "labelDescription"]
+- ["Ps9AnyObject", "labelTitle"]
+- ["Ps9AnyObject", "setSelected"]
+- ["Ps9AnyObject", "webservice"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "APIConnector"]
+- ["Ps11CVarArgType", "DokoDesuKaAPI"]
+- ["Ps11CVarArgType", "awakeFromNib"]
+- ["Ps11CVarArgType", "imgLocation"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "labelDescription"]
+- ["Ps11CVarArgType", "labelTitle"]
+- ["Ps11CVarArgType", "setSelected"]
+- ["Ps11CVarArgType", "webservice"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "APIConnector"]
+- ["Ps28CustomDebugStringConvertible", "DokoDesuKaAPI"]
+- ["Ps28CustomDebugStringConvertible", "awakeFromNib"]
+- ["Ps28CustomDebugStringConvertible", "imgLocation"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "labelDescription"]
+- ["Ps28CustomDebugStringConvertible", "labelTitle"]
+- ["Ps28CustomDebugStringConvertible", "setSelected"]
+- ["Ps28CustomDebugStringConvertible", "webservice"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "APIConnector"]
+- ["Ps23CustomStringConvertible", "DokoDesuKaAPI"]
+- ["Ps23CustomStringConvertible", "awakeFromNib"]
+- ["Ps23CustomStringConvertible", "imgLocation"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "labelDescription"]
+- ["Ps23CustomStringConvertible", "labelTitle"]
+- ["Ps23CustomStringConvertible", "setSelected"]
+- ["Ps23CustomStringConvertible", "webservice"]
+- ["Ps23CustomStringConvertible", ""]
+- ["C10DokoDesuKa13DokoDesuKaAPI", "init"]
+- ["Ps9Equatable", "APIConnector"]
+- ["Ps9Equatable", "DokoDesuKaAPI"]
+- ["Ps9Equatable", "awakeFromNib"]
+- ["Ps9Equatable", "imgLocation"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "labelDescription"]
+- ["Ps9Equatable", "labelTitle"]
+- ["Ps9Equatable", "setSelected"]
+- ["Ps9Equatable", "webservice"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "APIConnector"]
+- ["Ps8Hashable", "DokoDesuKaAPI"]
+- ["Ps8Hashable", "awakeFromNib"]
+- ["Ps8Hashable", "imgLocation"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "labelDescription"]
+- ["Ps8Hashable", "labelTitle"]
+- ["Ps8Hashable", "setSelected"]
+- ["Ps8Hashable", "webservice"]
+- ["Ps8Hashable", ""]
+- ["C10DokoDesuKa21LocationTableViewCell", "APIConnector"]
+- ["C10DokoDesuKa21LocationTableViewCell", "Bool"]
+- ["C10DokoDesuKa21LocationTableViewCell", "DokoDesuKaAPI"]
+- ["C10DokoDesuKa21LocationTableViewCell", "UIImageView"]
+- ["C10DokoDesuKa21LocationTableViewCell", "UILabel"]
+- ["C10DokoDesuKa21LocationTableViewCell", "awakeFromNib"]
+- ["C10DokoDesuKa21LocationTableViewCell", "deinit"]
+- ["C10DokoDesuKa21LocationTableViewCell", "imgLocation"]
+- ["C10DokoDesuKa21LocationTableViewCell", "init"]
+- ["C10DokoDesuKa21LocationTableViewCell", "labelDescription"]
+- ["C10DokoDesuKa21LocationTableViewCell", "labelTitle"]
+- ["C10DokoDesuKa21LocationTableViewCell", "setSelected"]
+- ["C10DokoDesuKa21LocationTableViewCell", "webservice"]
+- ["PSo8NSCoding", "APIConnector"]
+- ["PSo8NSCoding", "DokoDesuKaAPI"]
+- ["PSo8NSCoding", "awakeFromNib"]
+- ["PSo8NSCoding", "imgLocation"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "labelDescription"]
+- ["PSo8NSCoding", "labelTitle"]
+- ["PSo8NSCoding", "setSelected"]
+- ["PSo8NSCoding", "webservice"]
+- ["PSo8NSCoding", ""]
+- ["CSo8NSObject", "APIConnector"]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "DokoDesuKaAPI"]
+- ["CSo8NSObject", "UIImageView"]
+- ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "awakeFromNib"]
+- ["CSo8NSObject", "imgLocation"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "labelDescription"]
+- ["CSo8NSObject", "labelTitle"]
+- ["CSo8NSObject", "setSelected"]
+- ["CSo8NSObject", "webservice"]
+- ["PSo16NSObjectProtocol", "APIConnector"]
+- ["PSo16NSObjectProtocol", "DokoDesuKaAPI"]
+- ["PSo16NSObjectProtocol", "awakeFromNib"]
+- ["PSo16NSObjectProtocol", "imgLocation"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "labelDescription"]
+- ["PSo16NSObjectProtocol", "labelTitle"]
+- ["PSo16NSObjectProtocol", "setSelected"]
+- ["PSo16NSObjectProtocol", "webservice"]
+- ["PSo16NSObjectProtocol", ""]
+- ["PSo29UIAccessibilityIdentification", "APIConnector"]
+- ["PSo29UIAccessibilityIdentification", "DokoDesuKaAPI"]
+- ["PSo29UIAccessibilityIdentification", "awakeFromNib"]
+- ["PSo29UIAccessibilityIdentification", "imgLocation"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- ["PSo29UIAccessibilityIdentification", "labelDescription"]
+- ["PSo29UIAccessibilityIdentification", "labelTitle"]
+- ["PSo29UIAccessibilityIdentification", "setSelected"]
+- ["PSo29UIAccessibilityIdentification", "webservice"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- ["PSo12UIAppearance", "APIConnector"]
+- ["PSo12UIAppearance", "DokoDesuKaAPI"]
+- ["PSo12UIAppearance", "awakeFromNib"]
+- ["PSo12UIAppearance", "imgLocation"]
+- ["PSo12UIAppearance", "init"]
+- ["PSo12UIAppearance", "labelDescription"]
+- ["PSo12UIAppearance", "labelTitle"]
+- ["PSo12UIAppearance", "setSelected"]
+- ["PSo12UIAppearance", "webservice"]
+- ["PSo12UIAppearance", ""]
+- ["PSo21UIAppearanceContainer", "APIConnector"]
+- ["PSo21UIAppearanceContainer", "DokoDesuKaAPI"]
+- ["PSo21UIAppearanceContainer", "awakeFromNib"]
+- ["PSo21UIAppearanceContainer", "imgLocation"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "labelDescription"]
+- ["PSo21UIAppearanceContainer", "labelTitle"]
+- ["PSo21UIAppearanceContainer", "setSelected"]
+- ["PSo21UIAppearanceContainer", "webservice"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo17UICoordinateSpace", "APIConnector"]
+- ["PSo17UICoordinateSpace", "DokoDesuKaAPI"]
+- ["PSo17UICoordinateSpace", "awakeFromNib"]
+- ["PSo17UICoordinateSpace", "imgLocation"]
+- ["PSo17UICoordinateSpace", "init"]
+- ["PSo17UICoordinateSpace", "labelDescription"]
+- ["PSo17UICoordinateSpace", "labelTitle"]
+- ["PSo17UICoordinateSpace", "setSelected"]
+- ["PSo17UICoordinateSpace", "webservice"]
+- ["PSo17UICoordinateSpace", ""]
+- ["PSo13UIDynamicItem", "APIConnector"]
+- ["PSo13UIDynamicItem", "DokoDesuKaAPI"]
+- ["PSo13UIDynamicItem", "awakeFromNib"]
+- ["PSo13UIDynamicItem", "imgLocation"]
+- ["PSo13UIDynamicItem", "init"]
+- ["PSo13UIDynamicItem", "labelDescription"]
+- ["PSo13UIDynamicItem", "labelTitle"]
+- ["PSo13UIDynamicItem", "setSelected"]
+- ["PSo13UIDynamicItem", "webservice"]
+- ["PSo13UIDynamicItem", ""]
+- ["PSo18UIFocusEnvironment", "APIConnector"]
+- ["PSo18UIFocusEnvironment", "DokoDesuKaAPI"]
+- ["PSo18UIFocusEnvironment", "awakeFromNib"]
+- ["PSo18UIFocusEnvironment", "imgLocation"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "labelDescription"]
+- ["PSo18UIFocusEnvironment", "labelTitle"]
+- ["PSo18UIFocusEnvironment", "setSelected"]
+- ["PSo18UIFocusEnvironment", "webservice"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["PSo27UIGestureRecognizerDelegate", "APIConnector"]
+- ["PSo27UIGestureRecognizerDelegate", "DokoDesuKaAPI"]
+- ["PSo27UIGestureRecognizerDelegate", "awakeFromNib"]
+- ["PSo27UIGestureRecognizerDelegate", "imgLocation"]
+- ["PSo27UIGestureRecognizerDelegate", "init"]
+- ["PSo27UIGestureRecognizerDelegate", "labelDescription"]
+- ["PSo27UIGestureRecognizerDelegate", "labelTitle"]
+- ["PSo27UIGestureRecognizerDelegate", "setSelected"]
+- ["PSo27UIGestureRecognizerDelegate", "webservice"]
+- ["PSo27UIGestureRecognizerDelegate", ""]
+- ["CSo11UIResponder", "APIConnector"]
+- ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "DokoDesuKaAPI"]
+- ["CSo11UIResponder", "UIImageView"]
+- ["CSo11UIResponder", "UILabel"]
+- ["CSo11UIResponder", "awakeFromNib"]
+- ["CSo11UIResponder", "imgLocation"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "labelDescription"]
+- ["CSo11UIResponder", "labelTitle"]
+- ["CSo11UIResponder", "setSelected"]
+- ["CSo11UIResponder", "webservice"]
+- ["CSo15UITableViewCell", "APIConnector"]
+- ["CSo15UITableViewCell", "Bool"]
+- ["CSo15UITableViewCell", "DokoDesuKaAPI"]
+- ["CSo15UITableViewCell", "UIImageView"]
+- ["CSo15UITableViewCell", "UILabel"]
+- ["CSo15UITableViewCell", "awakeFromNib"]
+- ["CSo15UITableViewCell", "imgLocation"]
+- ["CSo15UITableViewCell", "init"]
+- ["CSo15UITableViewCell", "labelDescription"]
+- ["CSo15UITableViewCell", "labelTitle"]
+- ["CSo15UITableViewCell", "setSelected"]
+- ["CSo15UITableViewCell", "webservice"]
+- ["CSo15UITableViewCell", ""]
+- ["PSo18UITraitEnvironment", "APIConnector"]
+- ["PSo18UITraitEnvironment", "DokoDesuKaAPI"]
+- ["PSo18UITraitEnvironment", "awakeFromNib"]
+- ["PSo18UITraitEnvironment", "imgLocation"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "labelDescription"]
+- ["PSo18UITraitEnvironment", "labelTitle"]
+- ["PSo18UITraitEnvironment", "setSelected"]
+- ["PSo18UITraitEnvironment", "webservice"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo6UIView", "APIConnector"]
+- ["CSo6UIView", "Bool"]
+- ["CSo6UIView", "DokoDesuKaAPI"]
+- ["CSo6UIView", "UIImageView"]
+- ["CSo6UIView", "UILabel"]
+- ["CSo6UIView", "awakeFromNib"]
+- ["CSo6UIView", "imgLocation"]
+- ["CSo6UIView", "init"]
+- ["CSo6UIView", "labelDescription"]
+- ["CSo6UIView", "labelTitle"]
+- ["CSo6UIView", "setSelected"]
+- ["CSo6UIView", "webservice"]
+- ["Ps12_Reflectable", "APIConnector"]
+- ["Ps12_Reflectable", "DokoDesuKaAPI"]
+- ["Ps12_Reflectable", "awakeFromNib"]
+- ["Ps12_Reflectable", "imgLocation"]
+- ["Ps12_Reflectable", "init"]
+- ["Ps12_Reflectable", "labelDescription"]
+- ["Ps12_Reflectable", "labelTitle"]
+- ["Ps12_Reflectable", "setSelected"]
+- ["Ps12_Reflectable", "webservice"]
+- ["Ps12_Reflectable", ""]
+depends-nominal:
+- "C10DokoDesuKa12APIConnector"
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "C10DokoDesuKa13DokoDesuKaAPI"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "C10DokoDesuKa21LocationTableViewCell"
+- "PSo8NSCoding"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "PSo27UIGestureRecognizerDelegate"
+- "CSo11UIResponder"
+- "CSo15UITableViewCell"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+interface-hash: "bf2bf0ff5476d13329c7d082da2ada0d"
