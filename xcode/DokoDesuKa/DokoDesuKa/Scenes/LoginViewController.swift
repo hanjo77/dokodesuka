@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: ViewController, UITextFieldDelegate {
     
     let webservice = DokoDesuKaAPI(connector: APIConnector())
     let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
@@ -19,6 +19,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var imageView: UIImageView!
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         webservice.allLocations() { result in
             switch (result) {
             case .Success(let locations):
@@ -34,15 +35,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 NSLog(String(result))
             }
         }
-        let userId = userDefaults.integerForKey("autoLogin")
+        let userId = userDefaults.integerForKey("userId")
         if (userId > 0) {
             dispatch_async(dispatch_get_main_queue()) {
                 () -> Void in
                 self.performSegueWithIdentifier("segMapView", sender: nil)
             }
         }
-        super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround() 
         let newImg: UIImage? = UIImage(named: "dokodesuka-logo")
         imageView.image = newImg
         inputUsername.delegate = self
@@ -73,7 +72,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             case .Success(let user):
                 dispatch_async(dispatch_get_main_queue()) {
                     () -> Void in
-                    self.userDefaults.setInteger(user.id, forKey: "autoLogin")
+                    self.userDefaults.setInteger(user.id, forKey: "userId")
                     self.performSegueWithIdentifier("segMapView", sender: nil)
                 }
             case .Failure(let errorMessage):
@@ -82,25 +81,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 NSLog(String(result))
             }
         }
-    }
-    
-    func textFieldDidBeginEditing(textField: UITextField) {
-        animateViewMoving(true, moveValue: 250)
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField) {
-        animateViewMoving(false, moveValue: 250)
-    }
-    
-    // Lifting the view up
-    func animateViewMoving (up:Bool, moveValue :CGFloat){
-        let movementDuration:NSTimeInterval = 0.3
-        let movement:CGFloat = ( up ? -moveValue : moveValue)
-        UIView.beginAnimations( "animateView", context: nil)
-        UIView.setAnimationBeginsFromCurrentState(true)
-        UIView.setAnimationDuration(movementDuration )
-        self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
-        UIView.commitAnimations()
     }
 }
 

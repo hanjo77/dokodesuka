@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class AddLocationViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, CLLocationManagerDelegate {
+class AddLocationViewController: ViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, CLLocationManagerDelegate {
     
     let webservice = DokoDesuKaAPI(connector: APIConnector())
     let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
@@ -18,6 +18,7 @@ class AddLocationViewController: UIViewController, UIImagePickerControllerDelega
     var currentLocation:CLLocation?
     var location:Location?
     var myTabBarController:TabBarController?
+    let userDefaults = NSUserDefaults.standardUserDefaults()
     
     @IBOutlet var inputTitle: UITextField!
     @IBOutlet var inputDescription: UITextView!
@@ -34,7 +35,6 @@ class AddLocationViewController: UIViewController, UIImagePickerControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround() 
         
         imagePicker.delegate = self
         imagePicker.allowsEditing = false
@@ -54,6 +54,8 @@ class AddLocationViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.location = nil
         myTabBarController = self.tabBarController as? TabBarController
         if(imagePicker.isBeingDismissed()) {
             NSLog("Dismissed picker")
@@ -96,44 +98,42 @@ class AddLocationViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func tappedSave(sender: AnyObject) {
         // Display loading animation
+        var latitude:Float = 46.7598823
+        var longitude:Float = 7.6237494
+        
         if (currentLocation != nil) {
-            let latitude = Float((currentLocation?.coordinate.latitude)!)
-            let longitude = Float((currentLocation?.coordinate.longitude)!)
-            loaderView.hidden = false
-            webservice.createLocation(inputTitle.text!, description: inputDescription.text!, image: imgImage.image!, latitude: latitude, longitude: longitude){ result in
-                switch (result) {
-                case .Success(_):
+            latitude = Float((currentLocation?.coordinate.latitude)!)
+            longitude = Float((currentLocation?.coordinate.longitude)!)
+        }
+        loaderView.hidden = false
+        var id = -1;
+        if self.location != nil {
+            id = self.location!.id
+        }
+        webservice.saveLocation(id, title:inputTitle.text!, description: inputDescription.text!, image: imgImage.image!, latitude: latitude, longitude: longitude){ result in
+            switch (result) {
+            case .Success(let location):
+                if (self.location == nil) {
+                    self.location = location
+                }
+                dispatch_async(dispatch_get_main_queue()) {
+                    () -> Void in
+                    self.myTabBarController?.store.saveLocation(location)
+                    if (self.myTabBarController?.selectedLocation > -1) {
+                        self.myTabBarController?.locations[(self.myTabBarController?.selectedLocation)!] = location
+                    }
                     DokoDesuKaCoreDataStore().saveImage((self.location?.image)!, imageData: UIImageJPEGRepresentation(self.imgImage.image!, 0.9)!)
                     self.myTabBarController?.selectedLocation = -1
-                    self.myTabBarController?.selectedIndex = 2
-                case .Failure(let errorMessage):
-                    NSLog(errorMessage)
-                case .NetworkError:
-                    NSLog(String(result))
                 }
-                // Hide loading animation
-                self.loaderView.hidden = true
+                self.myTabBarController?.selectedIndex = 2
+            case .Failure(let errorMessage):
+                NSLog(errorMessage)
+            case .NetworkError:
+                NSLog(String(result))
             }
+            // Hide loading animation
+            self.loaderView.hidden = true
         }
-    }
-    
-    func textFieldDidBeginEditing(textField: UITextField) {
-        animateViewMoving(true, moveValue: 250)
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField) {
-        animateViewMoving(false, moveValue: 250)
-    }
-    
-    // Lifting the view up
-    func animateViewMoving (up:Bool, moveValue :CGFloat){
-        let movementDuration:NSTimeInterval = 0.3
-        let movement:CGFloat = ( up ? -moveValue : moveValue)
-        UIView.beginAnimations( "animateView", context: nil)
-        UIView.setAnimationBeginsFromCurrentState(true)
-        UIView.setAnimationDuration(movementDuration )
-        self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
-        UIView.commitAnimations()
     }
 }
 

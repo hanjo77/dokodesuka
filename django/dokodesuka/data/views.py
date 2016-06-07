@@ -44,6 +44,14 @@ class LocationJsonView(DokoDesuKaMixin, generic.View):
             locations.append(self.get_location_dict(location))
         return http.HttpResponse(self.json_dumps(locations))
 
+class UserLocationJsonView(DokoDesuKaMixin, generic.View):
+    def get(self, request, *args, **kwargs):
+        queryset = Location.objects.filter(created_user_id=self.kwargs['pk'])
+        locations = []
+        for location in queryset:
+            locations.append(self.get_location_dict(location))
+        return http.HttpResponse(self.json_dumps(locations))
+
 class LoginView(DokoDesuKaMixin, generic.DetailView):
     def get_queryset(self):
         queryset = User.objects.all()
@@ -95,7 +103,7 @@ class AddLocationView(DokoDesuKaMixin, generic.DetailView):
     def post(self, request, *args, **kwargs):
         message = ""
         postData = json.loads(request.body)
-        location = Location.objects.filter(title=postData.get('title', ''))
+        location = Location.objects.filter(id=int(postData.get('id', '-1')))
         location_id = None;
         obj = {}
         if location.exists():

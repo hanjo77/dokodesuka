@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     let webservice = DokoDesuKaAPI(connector: APIConnector())
     var myTabBarController:TabBarController?

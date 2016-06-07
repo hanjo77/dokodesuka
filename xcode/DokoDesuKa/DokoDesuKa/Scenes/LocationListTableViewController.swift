@@ -26,6 +26,7 @@ class LocationListTableViewController: UITableViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         myTabBarController = self.tabBarController as? TabBarController
         myTabBarController!.selectedLocation = -1
         if(myTabBarController!.selectedIndex >= 0 && myTabBarController!.locations.count > 0) {
@@ -50,21 +51,6 @@ class LocationListTableViewController: UITableViewController {
         return self.myTabBarController!.locations.count
     }
     
-    func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
-        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
-            completion(data: data, response: response, error: error)
-            }.resume()
-    }
-    
-    func downloadImage(url: NSURL, imageView: UIImageView){
-        getDataFromUrl(url) { (data, response, error)  in
-            dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                guard let data = data where error == nil else { return }
-                imageView.image = UIImage(data:data)
-            }
-        }
-    }
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "LocationCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! LocationTableViewCell
@@ -72,15 +58,7 @@ class LocationListTableViewController: UITableViewController {
         cell.labelTitle.text = location.title
         cell.labelDescription.text = location.description
         cell.imgLocation?.image = DokoDesuKaCoreDataStore().loadImage(location.image)
-        // downloadImage(NSURL(string: location.image)!, imageView:cell.imgLocation)
         return cell
-    }
-    
-    // Helper function called after file successfully downloaded
-    private func doFileDownloaded(fileURL: NSURL, localFilename: String) {
-        
-        // Do stuff with downloaded image
-        
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -88,10 +66,9 @@ class LocationListTableViewController: UITableViewController {
         
         dispatch_async(dispatch_get_main_queue()) {
             () -> Void in
-            let tabBarController = self.tabBarController  as! TabBarController
             self.selectedLocation = indexPath.row
-            tabBarController.selectedLocation = indexPath.row
-            tabBarController.selectedIndex = 1
+            self.myTabBarController!.selectedLocation = indexPath.row
+            self.myTabBarController!.selectedIndex = 1
         }
     }
 

@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DokoDesuKa/Scenes/LocationListTableViewController.swift"
-            timestampString = "486394780.507836"
+            timestampString = "486426015.134363"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
             <Locations>
@@ -106,12 +106,12 @@
                   moduleName = "DokoDesuKa"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hanjo/Workspace/DokoDesuKa/xcode/DokoDesuKa/DokoDesuKa/Scenes/LocationListTableViewController.swift"
-                  timestampString = "486410315.632723"
+                  timestampString = "486482208.331929"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "134"
-                  endingLineNumber = "134"
-                  offsetFromSymbolStart = "360">
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "320">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -121,12 +121,12 @@
                   moduleName = "DokoDesuKa"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hanjo/Workspace/DokoDesuKa/xcode/DokoDesuKa/DokoDesuKa/Scenes/LocationListTableViewController.swift"
-                  timestampString = "486410315.633645"
+                  timestampString = "486482208.332068"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "134"
-                  endingLineNumber = "134"
-                  offsetFromSymbolStart = "515">
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "444">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DokoDesuKa/Scenes/LocationListTableViewController.swift"
-            timestampString = "486394780.507836"
+            timestampString = "486426015.134363"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -176,6 +176,230 @@
             startingLineNumber = "36"
             endingLineNumber = "36"
             landmarkName = "loadImage(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DokoDesuKa/Scenes/AddLocationViewController.swift"
+            timestampString = "486428046.916115"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DokoDesuKa/Scenes/AddLocationViewController.swift"
+            timestampString = "486428046.916115"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "tappedSave(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DokoDesuKa/DataStore/DokoDesuKaCoreDataStore.swift"
+            timestampString = "486426639.883929"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "saveLocation(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DokoDesuKa/Scenes/AddLocationViewController.swift"
+            timestampString = "486428046.916115"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "tappedSave(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DokoDesuKa.AddLocationViewController.tappedSave (Swift.AnyObject) -&gt; ()"
+                  moduleName = "DokoDesuKa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hanjo/Workspace/DokoDesuKa/xcode/DokoDesuKa/DokoDesuKa/Scenes/AddLocationViewController.swift"
+                  timestampString = "486427276.341542"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "667">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DokoDesuKa.AddLocationViewController.(tappedSave (Swift.AnyObject) -&gt; ()).(closure #1)"
+                  moduleName = "DokoDesuKa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hanjo/Workspace/DokoDesuKa/xcode/DokoDesuKa/DokoDesuKa/Scenes/AddLocationViewController.swift"
+                  timestampString = "486427276.341775"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "576">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DokoDesuKa/Scenes/AddLocationViewController.swift"
+            timestampString = "486428046.916115"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "tappedSave(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DokoDesuKa/Scenes/AddLocationViewController.swift"
+            timestampString = "486428046.916115"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "tappedSave(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DokoDesuKa/DataStore/DokoDesuKaCoreDataStore.swift"
+            timestampString = "486428057.805538"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "saveLocation(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DokoDesuKa.DokoDesuKaCoreDataStore.saveLocation (DokoDesuKa.Location) -&gt; ()"
+                  moduleName = "DokoDesuKa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hanjo/Workspace/DokoDesuKa/xcode/DokoDesuKa/DokoDesuKa/DataStore/DokoDesuKaCoreDataStore.swift"
+                  timestampString = "486428057.807956"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "510">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "protocol witness for DokoDesuKa.DokoDesuKaStore.saveLocation (DokoDesuKa.Location) -&gt; () in conformance DokoDesuKa.DokoDesuKaCoreDataStore : DokoDesuKa.DokoDesuKaStore in DokoDesuKa"
+                  moduleName = "DokoDesuKa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hanjo/Workspace/DokoDesuKa/xcode/DokoDesuKa/DokoDesuKa/DataStore/DokoDesuKaCoreDataStore.swift"
+                  timestampString = "486428057.808168"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "250">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DokoDesuKa/Scenes/AddLocationViewController.swift"
+            timestampString = "486482208.218312"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "tappedSave(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DokoDesuKa/Webservice/DokoDesuKaAPI.swift"
+            timestampString = "486477361.556359"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "saveLocation(_:title:description:image:latitude:longitude:completion:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DokoDesuKa/Scenes/AddLocationViewController.swift"
+            timestampString = "486482102.351726"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "tappedSave(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -6,6 +6,7 @@ class DokoDesuKaAPI {
     
     let connector:APIConnector
     let targetUrl = "http://46.101.17.239/data/"
+    let userDefaults = NSUserDefaults.standardUserDefaults()
     
     convenience init () {
         self.init(connector:APIConnector())
@@ -71,14 +72,15 @@ class DokoDesuKaAPI {
         }
     }
     
-    func createLocation(title: String, description: String, image: UIImage, latitude: Float, longitude: Float, completion:APIResult<Location> -> Void) {
+    func saveLocation(id:Int, title: String, description: String, image: UIImage, latitude: Float, longitude: Float, completion:APIResult<Location> -> Void) {
         connector.performRequest(targetUrl+"add_location", method: "POST", body: [
+            "id": id,
             "title": title,
             "description": description,
             "latitude": latitude,
             "longitude": longitude,
             "image": self.convertImageToBase64(image),
-            "created_user_id": 1
+            "created_user_id": self.userDefaults.integerForKey("userId")
         ]) { result in
             switch(result) {
             case .Success(let responseObject):

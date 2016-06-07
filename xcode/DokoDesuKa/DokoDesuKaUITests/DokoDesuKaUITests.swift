@@ -28,9 +28,43 @@ class DokoDesuKaUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    /*
+     Login user and check that the user-id is stored in session
+     */
+    func testLogin() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    /*
+     Create new user and check that it was created properly
+     */
+    func testAddUser() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    /*
+     Create new location and check that it was created properly
+     */
+    func testAddLocation() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    /*
+     Edit location and check that location list is updated
+     */
+    func testEditLocation() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    /*
+     Update picture
+     */
+    func testEditPicture() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
 }
