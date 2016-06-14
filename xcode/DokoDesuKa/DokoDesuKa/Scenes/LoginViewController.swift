@@ -17,7 +17,8 @@ class LoginViewController: ViewController, UITextFieldDelegate {
     @IBOutlet var inputUsername: UITextField!
     @IBOutlet var inputPassword: UITextField!
     @IBOutlet var imageView: UIImageView!
-
+    @IBOutlet weak var toggleRememberMe: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         webservice.allLocations() { result in
@@ -36,11 +37,15 @@ class LoginViewController: ViewController, UITextFieldDelegate {
             }
         }
         let userId = userDefaults.integerForKey("userId")
-        if (userId > 0) {
+        let rememberMe = userDefaults.boolForKey("rememberMe")
+        if (rememberMe && userId > 0) {
             dispatch_async(dispatch_get_main_queue()) {
                 () -> Void in
                 self.performSegueWithIdentifier("segMapView", sender: nil)
             }
+        }
+        if (!rememberMe) {
+            self.userDefaults.setBool(toggleRememberMe.on, forKey: "rememberMe");
         }
         let newImg: UIImage? = UIImage(named: "dokodesuka-logo")
         imageView.image = newImg
@@ -51,6 +56,10 @@ class LoginViewController: ViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction func toggleRememberMeChanged(sender: AnyObject) {
+        self.userDefaults.setBool(toggleRememberMe.on, forKey: "rememberMe");
     }
 
     @IBAction func tappedAddUser(sender: AnyObject) {
