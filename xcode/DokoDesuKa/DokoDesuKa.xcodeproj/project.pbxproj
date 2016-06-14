@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		570B5FB91CE73A1D004C284D /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B5FB81CE73A1D004C284D /* LocationDetailViewController.swift */; };
 		570B5FBB1CE75795004C284D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B5FBA1CE75795004C284D /* TabBarController.swift */; };
 		570B5FC01CE7F9BC004C284D /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B5FBC1CE7F9BC004C284D /* LocationEntity.swift */; };
 		570B5FC11CE7F9BC004C284D /* LocationEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B5FBD1CE7F9BC004C284D /* LocationEntity+CoreDataProperties.swift */; };
 		570B5FC21CE7F9BC004C284D /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B5FBE1CE7F9BC004C284D /* UserEntity.swift */; };
 		570B5FC31CE7F9BC004C284D /* UserEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B5FBF1CE7F9BC004C284D /* UserEntity+CoreDataProperties.swift */; };
 		5714CE8E1CE62E58004BF7B3 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714CE8D1CE62E58004BF7B3 /* LocationTableViewCell.swift */; };
-		5714CE901CE62F65004BF7B3 /* LocationListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714CE8F1CE62F65004BF7B3 /* LocationListTableViewController.swift */; };
 		572BC7861CE9E1B4004DFA9D /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572BC7851CE9E1B4004DFA9D /* TextView.swift */; };
 		572BC7891CE9E1FF004DFA9D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572BC7871CE9E1FF004DFA9D /* TextField.swift */; };
 		572BC78A1CE9E1FF004DFA9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572BC7881CE9E1FF004DFA9D /* ViewController.swift */; };
@@ -24,6 +22,7 @@
 		573BDA5F1CE508E2002C527F /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573BDA5B1CE508E2002C527F /* AddUserViewController.swift */; };
 		573BDA601CE508E2002C527F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573BDA5C1CE508E2002C527F /* LoginViewController.swift */; };
 		573BDA611CE508E2002C527F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573BDA5D1CE508E2002C527F /* MapViewController.swift */; };
+		574D1BBA1D109B6A006D8681 /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D1BB91D109B6A006D8681 /* LocationListViewController.swift */; };
 		57599E541CDCD96B006E1588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599E531CDCD96B006E1588 /* AppDelegate.swift */; };
 		57599E591CDCD96B006E1588 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57599E571CDCD96B006E1588 /* Main.storyboard */; };
 		57599E5E1CDCD96B006E1588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57599E5D1CDCD96B006E1588 /* Assets.xcassets */; };
@@ -59,7 +58,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		570B5FB81CE73A1D004C284D /* LocationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationDetailViewController.swift; path = Scenes/LocationDetailViewController.swift; sourceTree = "<group>"; };
 		570B5FBA1CE75795004C284D /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = Scenes/TabBarController.swift; sourceTree = "<group>"; };
 		570B5FBC1CE7F9BC004C284D /* LocationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
 		570B5FBD1CE7F9BC004C284D /* LocationEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocationEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 		570B5FBF1CE7F9BC004C284D /* UserEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		570B5FC41CE7FB6F004C284D /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		5714CE8D1CE62E58004BF7B3 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationTableViewCell.swift; path = Scenes/LocationTableViewCell.swift; sourceTree = "<group>"; };
-		5714CE8F1CE62F65004BF7B3 /* LocationListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationListTableViewController.swift; path = Scenes/LocationListTableViewController.swift; sourceTree = "<group>"; };
 		572BC7851CE9E1B4004DFA9D /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextView.swift; path = Util/TextView.swift; sourceTree = "<group>"; };
 		572BC7871CE9E1FF004DFA9D /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextField.swift; path = Util/TextField.swift; sourceTree = "<group>"; };
 		572BC7881CE9E1FF004DFA9D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Util/ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +74,7 @@
 		573BDA5B1CE508E2002C527F /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddUserViewController.swift; path = Scenes/AddUserViewController.swift; sourceTree = "<group>"; };
 		573BDA5C1CE508E2002C527F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Scenes/LoginViewController.swift; sourceTree = "<group>"; };
 		573BDA5D1CE508E2002C527F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Scenes/MapViewController.swift; sourceTree = "<group>"; };
+		574D1BB91D109B6A006D8681 /* LocationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationListViewController.swift; path = Scenes/LocationListViewController.swift; sourceTree = "<group>"; };
 		57599E501CDCD96B006E1588 /* DokoDesuKa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DokoDesuKa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57599E531CDCD96B006E1588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57599E581CDCD96B006E1588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -198,9 +196,8 @@
 				573BDA5B1CE508E2002C527F /* AddUserViewController.swift */,
 				573BDA5C1CE508E2002C527F /* LoginViewController.swift */,
 				573BDA5D1CE508E2002C527F /* MapViewController.swift */,
-				5714CE8F1CE62F65004BF7B3 /* LocationListTableViewController.swift */,
 				5714CE8D1CE62E58004BF7B3 /* LocationTableViewCell.swift */,
-				570B5FB81CE73A1D004C284D /* LocationDetailViewController.swift */,
+				574D1BB91D109B6A006D8681 /* LocationListViewController.swift */,
 				570B5FBA1CE75795004C284D /* TabBarController.swift */,
 			);
 			name = Scenes;
@@ -395,7 +392,6 @@
 				573BDA5F1CE508E2002C527F /* AddUserViewController.swift in Sources */,
 				573BDA5E1CE508E2002C527F /* AddLocationViewController.swift in Sources */,
 				573BDA611CE508E2002C527F /* MapViewController.swift in Sources */,
-				570B5FB91CE73A1D004C284D /* LocationDetailViewController.swift in Sources */,
 				5714CE8E1CE62E58004BF7B3 /* LocationTableViewCell.swift in Sources */,
 				573BDA601CE508E2002C527F /* LoginViewController.swift in Sources */,
 				57599EBA1CDE0584006E1588 /* CoreDataStack.swift in Sources */,
@@ -408,10 +404,10 @@
 				57599E541CDCD96B006E1588 /* AppDelegate.swift in Sources */,
 				572BC78E1CE9E219004DFA9D /* User.swift in Sources */,
 				570B5FC01CE7F9BC004C284D /* LocationEntity.swift in Sources */,
+				574D1BBA1D109B6A006D8681 /* LocationListViewController.swift in Sources */,
 				572BC78A1CE9E1FF004DFA9D /* ViewController.swift in Sources */,
 				57599EAC1CDCF106006E1588 /* DokoDesuKaCoreDataStore.swift in Sources */,
 				57599EAE1CDCF12A006E1588 /* DokoDesuKaInMemoryStore.swift in Sources */,
-				5714CE901CE62F65004BF7B3 /* LocationListTableViewController.swift in Sources */,
 				570B5FC11CE7F9BC004C284D /* LocationEntity+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
