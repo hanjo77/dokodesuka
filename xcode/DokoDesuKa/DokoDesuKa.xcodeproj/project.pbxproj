@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075704BBA838422524ACD519 /* Pods_DokoDesuKa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BA106D34F1174BBBED80A2 /* Pods_DokoDesuKa.framework */; };
 		570B5FBB1CE75795004C284D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B5FBA1CE75795004C284D /* TabBarController.swift */; };
 		570B5FC01CE7F9BC004C284D /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B5FBC1CE7F9BC004C284D /* LocationEntity.swift */; };
 		570B5FC11CE7F9BC004C284D /* LocationEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B5FBD1CE7F9BC004C284D /* LocationEntity+CoreDataProperties.swift */; };
@@ -38,6 +39,8 @@
 		57599EB01CDCF139006E1588 /* DokoDesuKaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599EAF1CDCF139006E1588 /* DokoDesuKaStore.swift */; };
 		57599EBA1CDE0584006E1588 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599EB91CDE0584006E1588 /* CoreDataStack.swift */; };
 		57DBFAC31CDE9A9C00766FE2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DBFAC21CDE9A9C00766FE2 /* MapKit.framework */; };
+		7556A3DD1D7A3DE4E312B498 /* Pods_DokoDesuKaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373EB01072ACD8295DCA4016 /* Pods_DokoDesuKaUITests.framework */; };
+		B1154D35A090746A1BD78B7E /* Pods_DokoDesuKaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5983F5296DAC7C27B7AC7933 /* Pods_DokoDesuKaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35BB1C8596E0AA441531152D /* Pods-DokoDesuKaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokoDesuKaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DokoDesuKaTests/Pods-DokoDesuKaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		373EB01072ACD8295DCA4016 /* Pods_DokoDesuKaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DokoDesuKaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		570B5FBA1CE75795004C284D /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = Scenes/TabBarController.swift; sourceTree = "<group>"; };
 		570B5FBC1CE7F9BC004C284D /* LocationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
 		570B5FBD1CE7F9BC004C284D /* LocationEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocationEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -96,6 +101,13 @@
 		57599EAF1CDCF139006E1588 /* DokoDesuKaStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DokoDesuKaStore.swift; sourceTree = "<group>"; };
 		57599EB91CDE0584006E1588 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		57DBFAC21CDE9A9C00766FE2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5983F5296DAC7C27B7AC7933 /* Pods_DokoDesuKaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DokoDesuKaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67680A114A4D79AF41BFE480 /* Pods-DokoDesuKaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokoDesuKaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DokoDesuKaTests/Pods-DokoDesuKaTests.release.xcconfig"; sourceTree = "<group>"; };
+		A3BA106D34F1174BBBED80A2 /* Pods_DokoDesuKa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DokoDesuKa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2CD1F1CDC66E4227724CA70 /* Pods-DokoDesuKa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokoDesuKa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DokoDesuKa/Pods-DokoDesuKa.debug.xcconfig"; sourceTree = "<group>"; };
+		C7B0503905E9AB62DC3B1328 /* Pods-DokoDesuKaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokoDesuKaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DokoDesuKaUITests/Pods-DokoDesuKaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C8A05322F05E965FB61EFF0F /* Pods-DokoDesuKa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokoDesuKa.release.xcconfig"; path = "Pods/Target Support Files/Pods-DokoDesuKa/Pods-DokoDesuKa.release.xcconfig"; sourceTree = "<group>"; };
+		D7CAEAE8C3155467EE7ADF37 /* Pods-DokoDesuKaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokoDesuKaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DokoDesuKaUITests/Pods-DokoDesuKaUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57DBFAC31CDE9A9C00766FE2 /* MapKit.framework in Frameworks */,
+				075704BBA838422524ACD519 /* Pods_DokoDesuKa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1154D35A090746A1BD78B7E /* Pods_DokoDesuKaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,12 +132,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7556A3DD1D7A3DE4E312B498 /* Pods_DokoDesuKaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B18F51169E552BC90CE6EE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2CD1F1CDC66E4227724CA70 /* Pods-DokoDesuKa.debug.xcconfig */,
+				C8A05322F05E965FB61EFF0F /* Pods-DokoDesuKa.release.xcconfig */,
+				35BB1C8596E0AA441531152D /* Pods-DokoDesuKaTests.debug.xcconfig */,
+				67680A114A4D79AF41BFE480 /* Pods-DokoDesuKaTests.release.xcconfig */,
+				C7B0503905E9AB62DC3B1328 /* Pods-DokoDesuKaUITests.debug.xcconfig */,
+				D7CAEAE8C3155467EE7ADF37 /* Pods-DokoDesuKaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		57599E471CDCD96B006E1588 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +160,8 @@
 				57599E6A1CDCD96B006E1588 /* DokoDesuKaTests */,
 				57599E751CDCD96B006E1588 /* DokoDesuKaUITests */,
 				57599E511CDCD96B006E1588 /* Products */,
+				1B18F51169E552BC90CE6EE6 /* Pods */,
+				86BDC26E4E12174160201A70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -247,6 +277,16 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		86BDC26E4E12174160201A70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3BA106D34F1174BBBED80A2 /* Pods_DokoDesuKa.framework */,
+				5983F5296DAC7C27B7AC7933 /* Pods_DokoDesuKaTests.framework */,
+				373EB01072ACD8295DCA4016 /* Pods_DokoDesuKaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,9 +294,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57599E7B1CDCD96B006E1588 /* Build configuration list for PBXNativeTarget "DokoDesuKa" */;
 			buildPhases = (
+				C8FBEEE8ED5C959D7B643623 /* [CP] Check Pods Manifest.lock */,
 				57599E4C1CDCD96B006E1588 /* Sources */,
 				57599E4D1CDCD96B006E1588 /* Frameworks */,
 				57599E4E1CDCD96B006E1588 /* Resources */,
+				6A49FFA79D93BA2BF3457893 /* [CP] Embed Pods Frameworks */,
+				B775CB7FF3EA97982552A9B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,9 +314,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57599E7E1CDCD96B006E1588 /* Build configuration list for PBXNativeTarget "DokoDesuKaTests" */;
 			buildPhases = (
+				28B3E940DDE70F7E77602708 /* [CP] Check Pods Manifest.lock */,
 				57599E631CDCD96B006E1588 /* Sources */,
 				57599E641CDCD96B006E1588 /* Frameworks */,
 				57599E651CDCD96B006E1588 /* Resources */,
+				F90EB081DFA29BFBCB6B2BB3 /* [CP] Embed Pods Frameworks */,
+				E3C805033BBE07CF4AAF9035 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -289,9 +335,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57599E811CDCD96B006E1588 /* Build configuration list for PBXNativeTarget "DokoDesuKaUITests" */;
 			buildPhases = (
+				9A7651DF669F5C176FE4B9B7 /* [CP] Check Pods Manifest.lock */,
 				57599E6E1CDCD96B006E1588 /* Sources */,
 				57599E6F1CDCD96B006E1588 /* Frameworks */,
 				57599E701CDCD96B006E1588 /* Resources */,
+				CA2D1D2F3661383A4ADF1701 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -378,6 +426,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28B3E940DDE70F7E77602708 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6A49FFA79D93BA2BF3457893 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DokoDesuKa/Pods-DokoDesuKa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A7651DF669F5C176FE4B9B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B775CB7FF3EA97982552A9B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DokoDesuKa/Pods-DokoDesuKa-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8FBEEE8ED5C959D7B643623 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CA2D1D2F3661383A4ADF1701 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DokoDesuKaUITests/Pods-DokoDesuKaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3C805033BBE07CF4AAF9035 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DokoDesuKaTests/Pods-DokoDesuKaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F90EB081DFA29BFBCB6B2BB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DokoDesuKaTests/Pods-DokoDesuKaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		57599E4C1CDCD96B006E1588 /* Sources */ = {
@@ -548,6 +719,7 @@
 		};
 		57599E7C1CDCD96B006E1588 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2CD1F1CDC66E4227724CA70 /* Pods-DokoDesuKa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -565,6 +737,7 @@
 		};
 		57599E7D1CDCD96B006E1588 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8A05322F05E965FB61EFF0F /* Pods-DokoDesuKa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -580,6 +753,7 @@
 		};
 		57599E7F1CDCD96B006E1588 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35BB1C8596E0AA441531152D /* Pods-DokoDesuKaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DokoDesuKaTests/Info.plist;
@@ -592,6 +766,7 @@
 		};
 		57599E801CDCD96B006E1588 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67680A114A4D79AF41BFE480 /* Pods-DokoDesuKaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DokoDesuKaTests/Info.plist;
@@ -604,6 +779,7 @@
 		};
 		57599E821CDCD96B006E1588 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7B0503905E9AB62DC3B1328 /* Pods-DokoDesuKaUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DokoDesuKaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -615,6 +791,7 @@
 		};
 		57599E831CDCD96B006E1588 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7CAEAE8C3155467EE7ADF37 /* Pods-DokoDesuKaUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DokoDesuKaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

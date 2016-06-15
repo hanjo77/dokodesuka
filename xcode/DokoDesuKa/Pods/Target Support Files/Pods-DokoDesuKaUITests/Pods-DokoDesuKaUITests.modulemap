@@ -1,0 +1,6 @@
+framework module Pods_DokoDesuKaUITests {
+  umbrella header "Pods-DokoDesuKaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

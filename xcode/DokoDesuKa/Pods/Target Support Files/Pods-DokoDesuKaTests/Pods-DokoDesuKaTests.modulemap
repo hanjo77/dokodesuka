@@ -1,0 +1,6 @@
+framework module Pods_DokoDesuKaTests {
+  umbrella header "Pods-DokoDesuKaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
