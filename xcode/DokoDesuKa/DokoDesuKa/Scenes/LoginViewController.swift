@@ -21,21 +21,40 @@ class LoginViewController: ViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        webservice.allLocations() { result in
-            switch (result) {
-            case .Success(let locations):
+        self.webservice.allUsers() { userResult in
+            switch (userResult) {
+            case .Success(let users):
                 dispatch_async(dispatch_get_main_queue()) {
                     () -> Void in
-                    for location in locations {
-                        self.store.saveLocation(location)
+                    for user in users {
+                        self.store.saveUser(user)
+                    }
+                }
+                self.webservice.allLocations() { result in
+                    switch (result) {
+                    case .Success(let locations):
+                        dispatch_async(dispatch_get_main_queue()) {
+                            () -> Void in
+                            for location in locations {
+                                self.store.saveLocation(location)
+                            }
+                            self.startup()
+                        }
+                    case .Failure(let errorMessage):
+                        NSLog(errorMessage)
+                    case .NetworkError:
+                        NSLog(String(result))
                     }
                 }
             case .Failure(let errorMessage):
                 NSLog(errorMessage)
             case .NetworkError:
-                NSLog(String(result))
+                NSLog(String(userResult))
             }
         }
+    }
+    
+    func startup() {
         let userId = userDefaults.integerForKey("userId")
         let rememberMe = userDefaults.boolForKey("rememberMe")
         if (rememberMe && userId > 0) {
@@ -45,7 +64,7 @@ class LoginViewController: ViewController, UITextFieldDelegate {
             }
         }
         if (!rememberMe) {
-            self.userDefaults.setBool(toggleRememberMe.on, forKey: "rememberMe");
+            userDefaults.setBool(self.toggleRememberMe.on, forKey: "rememberMe");
         }
         let newImg: UIImage? = UIImage(named: "dokodesuka-logo")
         imageView.image = newImg

@@ -44,6 +44,14 @@ class LocationJsonView(DokoDesuKaMixin, generic.View):
             locations.append(self.get_location_dict(location))
         return http.HttpResponse(self.json_dumps(locations))
 
+class UserJsonView(DokoDesuKaMixin, generic.View):
+    def get(self, request, *args, **kwargs):
+        queryset = User.objects.all()
+        users = []
+        for user in queryset:
+            users.append(self.get_user_dict(user))
+        return http.HttpResponse(self.json_dumps(users))
+
 class UserLocationJsonView(DokoDesuKaMixin, generic.View):
     def get(self, request, *args, **kwargs):
         queryset = Location.objects.filter(created_user_id=self.kwargs['pk'])

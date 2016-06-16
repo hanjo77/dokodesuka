@@ -14,11 +14,15 @@ class TabBarController: UITabBarController {
     let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
     var user:User?
     var locations:[Location] = DokoDesuKaCoreDataStore().allLocations()
+    var myLocations:[Location] = []
     var images = [String:UIImage]()
     var selectedLocation:Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        myLocations = locations.filter({ (location:Location) -> Bool in
+            return (location.createdUser!.id == 9)
+        })
     }
     
     override func viewWillAppear(animated: Bool) {

@@ -13,6 +13,13 @@ import UIKit
 class DokoDesuKaCoreDataStore:DokoDesuKaStore {
     let context: NSManagedObjectContext
     let mediaUrl = "http://46.101.17.239/media/"
+    let defaultUser = User(
+        id:0,
+        userName:"Anonymous",
+        email:"me@localhost",
+        firstName:"No",
+        lastName:"Name"
+    )
     
     convenience init() {
         self.init(context:CoreDataStack.sharedInstance.mainContext)
@@ -58,6 +65,30 @@ class DokoDesuKaCoreDataStore:DokoDesuKaStore {
         }
     }
     
+    func userEntityById(id:NSNumber) -> UserEntity {
+        let fetchRequest = NSFetchRequest(entityName: "UserEntity")
+        fetchRequest.predicate = NSPredicate(format: "id = %ld", id)
+        let entities = try! self.context.executeFetchRequest(fetchRequest) as! [UserEntity]
+        if (entities.count > 0) {
+            return entities[0]
+        }
+        return NSEntityDescription.insertNewObjectForEntityForName("UserEntity", inManagedObjectContext: self.context) as! UserEntity
+    }
+    
+    func userById(id:NSNumber) -> User {
+        let entity = userEntityById(id)
+        if (entity.id?.integerValue <= 0) {
+            return defaultUser
+        }
+        return User(
+            id:Int(entity.id!),
+            userName:entity.userName!,
+            email:entity.email!,
+            firstName:entity.firstName!,
+            lastName:entity.lastName!
+        )
+    }
+    
     func allLocations() -> [Location] {
         let fetchRequest = NSFetchRequest(entityName: "LocationEntity")
         fetchRequest.sortDescriptors = [
@@ -75,12 +106,33 @@ class DokoDesuKaCoreDataStore:DokoDesuKaStore {
                 longitude:Float(entity.longitude!),
                 image:entity.image!,
                 users: [User](),
-                createdUser: nil
+                createdUser: (Int(entity.createdUser!) > 0 ? userById(entity.createdUser!) : nil)
             )
             locations.append(location)
             downloadImage(entity.image!, locationEntity: entity)
         }
         return locations
+    }
+    
+    func allUsers() -> [User] {
+        let fetchRequest = NSFetchRequest(entityName: "UserEntity")
+        fetchRequest.sortDescriptors = [
+            NSSortDescriptor(key: "id", ascending: true),
+            // NSSortDescriptor(key: "name", ascending: true),
+        ]
+        let entities = try! self.context.executeFetchRequest(fetchRequest) as! [UserEntity]
+        var users = [User]()
+        for entity in entities {
+            let user = User(
+                id:Int(entity.id!),
+                userName:entity.userName!,
+                email:entity.email!,
+                firstName:entity.firstName!,
+                lastName:entity.lastName!
+            )
+            users.append(user)
+        }
+        return users
     }
     
     func saveLocation(location: Location) {
@@ -101,7 +153,18 @@ class DokoDesuKaCoreDataStore:DokoDesuKaStore {
         entity.latitude = location.latitude
         entity.longitude = location.longitude
         entity.image = location.image
+        entity.createdUser = location.createdUser!.id
         downloadImage(location.image, locationEntity: entity)
+        try! context.save()
+    }
+    
+    func saveUser(user: User) {
+        let entity = userEntityById(user.id)
+        entity.id = user.id
+        entity.userName = user.userName
+        entity.email = user.email
+        entity.firstName = user.firstName
+        entity.lastName = user.lastName
         try! context.save()
     }
     
@@ -115,6 +178,19 @@ class DokoDesuKaCoreDataStore:DokoDesuKaStore {
         }
         for location in locations {
             self.saveLocation(location)
+        }
+    }
+    
+    func syncUsers(users: [User]) {
+        let idsToKeep = users.map() {user in return user.id}
+        let fetchRequest = NSFetchRequest(entityName: "UserEntity")
+        fetchRequest.predicate = NSPredicate(format: "NOT (id IN %@)", idsToKeep)
+        let entitesToRemove = try! self.context.executeFetchRequest(fetchRequest) as! [UserEntity]
+        for entity in entitesToRemove {
+            self.context.deleteObject(entity)
+        }
+        for user in users {
+            self.saveUser(user)
         }
     }
 }

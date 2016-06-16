@@ -10,7 +10,6 @@ import UIKit
 
 class LocationListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
     var imageCache = [UIImage]()
     var selectedLocation = -1
     var myTabBarController:TabBarController?

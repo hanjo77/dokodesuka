@@ -86,15 +86,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DokoDesuKa/DataStore/DokoDesuKaInMemoryStore.swift"
-            timestampString = "485041375.609712"
+            timestampString = "487802057.143735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "saveLocation(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DokoDesuKa/DataStore/DokoDesuKaInMemoryStore.swift"
-            timestampString = "485049453.915388"
+            timestampString = "487802057.143735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "loadImage(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DokoDesuKa/DataStore/DokoDesuKaCoreDataStore.swift"
-            timestampString = "486426639.883929"
+            timestampString = "487807884.556064"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "saveLocation(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,12 +138,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DokoDesuKa/DataStore/DokoDesuKaCoreDataStore.swift"
-            timestampString = "486428057.805538"
+            timestampString = "487807884.556064"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "saveLocation(_:)"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "userById(_:)"
             landmarkType = "5">
             <Locations>
                <Location
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DokoDesuKa/Webservice/DokoDesuKaAPI.swift"
-            timestampString = "486477361.556359"
+            timestampString = "487793420.289455"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "saveLocation(_:title:description:image:latitude:longitude:completion:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DokoDesuKa/Scenes/LoginViewController.swift"
-            timestampString = "487608334.993225"
+            timestampString = "487799710.021542"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "toggleRememberMeChanged(_:)"
             landmarkType = "5">
          </BreakpointContent>

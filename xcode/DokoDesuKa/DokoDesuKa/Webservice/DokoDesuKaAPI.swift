@@ -25,6 +25,7 @@ class DokoDesuKaAPI {
     }
     
     func location(representation:[String: AnyObject]) -> Location {
+        let userObj = (representation["created_user"] as! [String: AnyObject])
         let location = Location(id:representation["id"] as! Int,
                                 title: representation["title"] as! String,
                                 description: representation["description"] as! String,
@@ -32,7 +33,7 @@ class DokoDesuKaAPI {
                                 longitude: representation["longitude"] as! Float,
                                 image: representation["picture"] as! String,
                                 users: [User](),
-                                createdUser: self.user((representation["created_user"] as! [String: AnyObject])))
+                                createdUser: self.user(userObj))
         return location
     }
     
@@ -129,6 +130,26 @@ class DokoDesuKaAPI {
                     locations.append(location)
                 }
                 completion(.Success(locations))
+            case .Failure(let errorMessage):
+                completion(.Failure(errorMessage))
+            case .NetworkError(let error):
+                completion(.NetworkError(error))
+            }
+        }
+    }
+    
+    func allUsers(completion: APIResult<[User]> -> Void) {
+        connector.performRequest(targetUrl+"users", method: "GET", body: nil) { result in
+            switch(result) {
+            case .Success(let responseObject):
+                var users = [User]()
+                let userList = responseObject as! [AnyObject]
+                for userUncasted in userList {
+                    let userEntry = userUncasted as! [String: AnyObject]
+                    let user = self.user(userEntry)
+                    users.append(user)
+                }
+                completion(.Success(users))
             case .Failure(let errorMessage):
                 completion(.Failure(errorMessage))
             case .NetworkError(let error):

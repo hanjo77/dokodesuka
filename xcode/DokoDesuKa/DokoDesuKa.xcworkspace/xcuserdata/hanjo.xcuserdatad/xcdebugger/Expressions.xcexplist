@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "DokoDesuKaCoreDataStore.saveUser(User) -&gt; ():DokoDesuKaCoreDataStore.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "user.id">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaCoreDataStore.userById(NSNumber) -&gt; User:DokoDesuKaCoreDataStore.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaAPI.(allLocations((APIResult&lt;[Location]&gt;) -&gt; ()) -&gt; ()).(closure #1):DokoDesuKaAPI.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaCoreDataStore.allLocations() -&gt; [Location]:DokoDesuKaCoreDataStore.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "entity.createdUser">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaAPI.location([String : AnyObject]) -&gt; Location:DokoDesuKaAPI.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "userObj">
+            </PersistentString>
+            <PersistentString
+               value = "locations">
+            </PersistentString>
+            <PersistentString
+               value = "userObj[&quot;id&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LoginViewController.(viewDidLoad() -&gt; ()).(closure #1).(closure #1):LoginViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaAPI.allUsers((APIResult&lt;[User]&gt;) -&gt; ()) -&gt; ():DokoDesuKaAPI.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "targetUrl+&quot;users&quot;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaAPI.user([String : AnyObject]) -&gt; User:DokoDesuKaAPI.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

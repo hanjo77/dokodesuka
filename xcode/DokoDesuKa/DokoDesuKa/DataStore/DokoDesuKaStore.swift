@@ -11,7 +11,11 @@ import UIKit
 
 protocol DokoDesuKaStore {
     func allLocations() -> [Location]
+    func allUsers() -> [User]
+    func userById(id:NSNumber) -> User
     func saveLocation(location: Location)
+    func saveUser(user: User)
     func syncLocations(locations: [Location])
+    func syncUsers(users: [User])
     func loadImage(url:String) -> UIImage
 }

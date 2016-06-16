@@ -11,8 +11,6 @@ import CoreLocation
 
 class AddLocationViewController: ViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, CLLocationManagerDelegate {
     
-    let webservice = DokoDesuKaAPI(connector: APIConnector())
-    let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
     let imagePicker = UIImagePickerController()
     let locationManager = CLLocationManager()
     var currentLocation:CLLocation?
@@ -110,7 +108,7 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
         if self.location != nil {
             id = self.location!.id
         }
-        webservice.saveLocation(id, title:inputTitle.text!, description: inputDescription.text!, image: imgImage.image!, latitude: latitude, longitude: longitude){ result in
+        myTabBarController!.webservice.saveLocation(id, title:inputTitle.text!, description: inputDescription.text!, image: imgImage.image!, latitude: latitude, longitude: longitude){ result in
             switch (result) {
             case .Success(let location):
                 if (self.location == nil) {

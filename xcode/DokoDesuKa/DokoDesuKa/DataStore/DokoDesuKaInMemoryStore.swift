@@ -11,6 +11,7 @@ import UIKit
 
 class DokoDesuKaInMemoryStore: DokoDesuKaStore {
 
+    static var users = [User]()
     static var locations = [Location]()
     
     func allLocations() -> [Location] {
@@ -26,12 +27,37 @@ class DokoDesuKaInMemoryStore: DokoDesuKaStore {
         }
     }
     
+    func allUsers() -> [User] {
+        return DokoDesuKaCoreDataStore().allUsers().sort() {(let first, second) in
+            let isBefore: Bool
+            if first.userName == second.userName {
+                let comparisonResult = first.firstName.localizedCaseInsensitiveCompare(second.firstName)
+                isBefore = comparisonResult == NSComparisonResult.OrderedAscending
+            } else {
+                isBefore = first.userName > second.userName
+            }
+            return isBefore
+        }
+    }
+    
+    func userById(id: NSNumber) -> User {
+        return DokoDesuKaCoreDataStore().allUsers().filter({ (user:User) -> Bool in
+            return user.id == id;
+        }).first!
+    }
+    
     func locationIndex(location:Location) -> Int? {
         return DokoDesuKaInMemoryStore.locations.indexOf() {existingLocation in
             existingLocation.id == location.id
         }
     }
-
+    
+    func userIndex(user:User) -> Int? {
+        return DokoDesuKaInMemoryStore.users.indexOf() {existingUser in
+            existingUser.id == user.id
+        }
+    }
+    
     func loadImage(url:String)->UIImage {
         return UIImage(contentsOfFile: (DokoDesuKaCoreDataStore().getDocUrl()?.URLByAppendingPathComponent(url).absoluteString)!)!
     }
@@ -42,6 +68,15 @@ class DokoDesuKaInMemoryStore: DokoDesuKaStore {
             DokoDesuKaInMemoryStore.locations.insert(location, atIndex: updateIndex)
         } else {
             DokoDesuKaInMemoryStore.locations.append(location)
+        }
+    }
+    
+    func saveUser(user: User) {
+        if let updateIndex = self.userIndex(user) {
+            DokoDesuKaInMemoryStore.users.removeAtIndex(updateIndex)
+            DokoDesuKaInMemoryStore.users.insert(user, atIndex: updateIndex)
+        } else {
+            DokoDesuKaInMemoryStore.users.append(user)
         }
     }
     
@@ -65,6 +100,29 @@ class DokoDesuKaInMemoryStore: DokoDesuKaStore {
         for toRemove in removeIndices
         {
             DokoDesuKaInMemoryStore.locations.removeAtIndex(toRemove)
+        }
+    }
+    
+    func syncUsers(users: [User]) {
+        // save all users
+        for user in users {
+            self.saveUser(user)
+        }
+        
+        // remove users not in list
+        var removeIndices = [Int]()
+        for (i, user) in DokoDesuKaInMemoryStore.users.enumerate() {
+            let foundIndex = users.indexOf() {existingUser in
+                existingUser.id == user.id
+            }
+            if foundIndex == nil {
+                removeIndices.append(i)
+            }
+        }
+        removeIndices = removeIndices.sort({$1 < $0})
+        for toRemove in removeIndices
+        {
+            DokoDesuKaInMemoryStore.users.removeAtIndex(toRemove)
         }
     }
 }

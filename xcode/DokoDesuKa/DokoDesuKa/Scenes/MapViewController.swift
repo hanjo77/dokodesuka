@@ -12,9 +12,7 @@ import CoreLocation
 
 class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
-    let webservice = DokoDesuKaAPI(connector: APIConnector())
     var myTabBarController:TabBarController?
-    let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
     @IBOutlet var mapView: MKMapView!
     @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var detailTitle: UILabel!
