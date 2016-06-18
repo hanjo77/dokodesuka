@@ -54,15 +54,14 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
         super.viewWillAppear(animated)
         self.location = nil
         myTabBarController = self.tabBarController as? TabBarController
-        if(imagePicker.isBeingDismissed()) {
-            NSLog("Dismissed picker")
-        }
-        else if(myTabBarController!.selectedLocation >= 0 && myTabBarController!.locations.count > 0) {
+        if(myTabBarController!.selectedLocation >= 0 && myTabBarController!.myLocations.count > 0) {
             self.location = myTabBarController!.myLocations[myTabBarController!.selectedLocation]
-            inputTitle.text = self.location?.title
-            inputDescription.text = self.location?.description
-            if ((self.location?.image) != "") {
-                imgImage.image = DokoDesuKaCoreDataStore().loadImage((location?.image)!)
+            if(!imagePicker.isBeingDismissed()) {
+                inputTitle.text = self.location?.title
+                inputDescription.text = self.location?.description
+                if ((self.location?.image) != "") {
+                    imgImage.image = DokoDesuKaCoreDataStore().loadImage((location?.image)!)
+                }
             }
         }
         else if (myTabBarController!.selectedLocation < 0) {
@@ -104,7 +103,7 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
         }
         loaderView.hidden = false
         var id = -1;
-        if self.location != nil {
+        if (self.location!.id > 0) {
             id = self.location!.id
         }
         myTabBarController!.webservice.saveLocation(id, title:inputTitle.text!, description: inputDescription.text!, image: imgImage.image!, latitude: latitude, longitude: longitude){ result in
@@ -121,8 +120,8 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
                     }
                     DokoDesuKaCoreDataStore().saveImage((self.location?.image)!, imageData: UIImageJPEGRepresentation(self.imgImage.image!, 0.9)!)
                     self.myTabBarController?.selectedLocation = -1
+                    self.myTabBarController?.selectedIndex = 2
                 }
-                self.myTabBarController?.selectedIndex = 2
             case .Failure(let errorMessage):
                 NSLog(errorMessage)
             case .NetworkError:

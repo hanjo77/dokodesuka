@@ -11,7 +11,6 @@ import UIKit
 class LocationListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var imageCache = [UIImage]()
-    var selectedLocation = -1
     var locations:[Location]?
     var myTabBarController:TabBarController?
     
@@ -67,7 +66,6 @@ class LocationListViewController: UIViewController, UITableViewDataSource, UITab
         
         dispatch_async(dispatch_get_main_queue()) {
             () -> Void in
-            self.selectedLocation = indexPath.row
             self.myTabBarController!.selectedLocation = indexPath.row
             self.myTabBarController!.selectedIndex = 1
         }
