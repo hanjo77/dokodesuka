@@ -13,11 +13,11 @@ import CoreLocation
 class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     var myTabBarController:TabBarController?
+    let markerImage = UIImage(named: "marker")
     @IBOutlet var mapView: MKMapView!
     @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var detailTitle: UILabel!
     @IBOutlet weak var detailImage: UIImageView!
-    
     @IBOutlet weak var detailDesc: UITextView!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -31,45 +31,70 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
     
     @IBAction func tappedCloseDetail(sender: AnyObject) {
         detailView.hidden = true;
+        myTabBarController!.selectedLocation = -1
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.mapView.delegate = self
+        myTabBarController = self.tabBarController as? TabBarController
+        myTabBarController!.selectedLocation = -1
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        myTabBarController = self.tabBarController as? TabBarController
-        myTabBarController!.selectedLocation = -1
+        myTabBarController?.selectedIndex = -1
+        myTabBarController?.selectedLocation = -1
         updateMarkers((myTabBarController?.locations)!)
     }
     
     func updateMarkers(locations: [Location]) {
         let annotations = self.mapView.annotations
-        mapView.removeAnnotations(annotations)
+        self.mapView.removeAnnotations(annotations)
+        var minPos = CLLocationCoordinate2D(latitude: 360, longitude: 360)
+        var maxPos = CLLocationCoordinate2D(latitude: -360, longitude: -360)
         for location:Location in locations {
             let annotation = DetailPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2D(
+            let coordinate = CLLocationCoordinate2D(
                 latitude: Double(location.latitude), longitude: Double(location.longitude))
+            annotation.coordinate = coordinate
+            if (coordinate.latitude < minPos.latitude) {
+                minPos.latitude = coordinate.latitude
+            }
+            if (coordinate.longitude < minPos.longitude) {
+                minPos.longitude = coordinate.longitude
+            }
+            if (coordinate.latitude > maxPos.latitude) {
+                maxPos.latitude = coordinate.latitude
+            }
+            if (coordinate.longitude > maxPos.longitude) {
+                maxPos.longitude = coordinate.longitude
+            }
             annotation.title = location.title
             annotation.subtitle = location.description
             annotation.imageName = location.image
             self.mapView.addAnnotation(annotation)
         }
+        var region = MKCoordinateRegion()
+        region.center = CLLocationCoordinate2D(
+            latitude: minPos.latitude+((maxPos.latitude-minPos.latitude)/2),
+            longitude: minPos.longitude+((maxPos.longitude-minPos.longitude)/2)
+        )
+        region.span.latitudeDelta = maxPos.latitude-minPos.latitude;
+        region.span.longitudeDelta = maxPos.longitude-minPos.longitude;
+        self.mapView.region = region;
     }
     
     func mapView (mapView: MKMapView,
         viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
     
-        let pinView:MKPinAnnotationView = MKPinAnnotationView()
-        pinView.annotation = annotation
-        pinView.pinTintColor = UIColor.redColor()
-        pinView.animatesDrop = true
-        pinView.canShowCallout = false
-        
-        return pinView
+        let annotationView:MKAnnotationView = MKPinAnnotationView()
+        annotationView.annotation = annotation
+        annotationView.canShowCallout = false
+        annotationView.image = markerImage
+        annotationView.centerOffset = CGPointMake(0.0, -(annotationView.image?.size.height)!/2);
+        return annotationView
     }
     
     func mapView(mapView: MKMapView,
@@ -79,7 +104,6 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
         detailTitle.text = (annotation.title)!
         detailDesc.text = (annotation.subtitle)!
         detailImage.image = DokoDesuKaCoreDataStore().loadImage((annotation.imageName)!)
-        NSLog("Selected annotation")
     }
     
     override func didReceiveMemoryWarning() {
@@ -92,3 +116,4 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
 class DetailPointAnnotation: MKPointAnnotation {
     var imageName: String!
 }
+

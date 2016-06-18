@@ -3,33 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "DokoDesuKaCoreDataStore.saveUser(User) -&gt; ():DokoDesuKaCoreDataStore.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "user.id">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "DokoDesuKaCoreDataStore.userById(NSNumber) -&gt; User:DokoDesuKaCoreDataStore.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "entity.userName">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "LocationListViewController.viewDidLoad() -&gt; ():LocationListViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "myTabBarController">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "DokoDesuKaAPI.(allLocations((APIResult&lt;[Location]&gt;) -&gt; ()) -&gt; ()).(closure #1):DokoDesuKaAPI.swift">
-      </ContextState>
-      <ContextState
          contextName = "TabBarController.viewDidLoad() -&gt; ():TabBarController.swift">
          <PersistentStrings>
             <PersistentString
@@ -38,18 +11,16 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "LocationListViewController.viewWillAppear(Bool) -&gt; ():LocationListViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "myTabBarController!.selectedIndex">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "AddLocationViewController.tappedSave(AnyObject) -&gt; ():AddLocationViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "DokoDesuKaCoreDataStore.allLocations() -&gt; [Location]:DokoDesuKaCoreDataStore.swift">
+         contextName = "MapViewController.updateMarkers([Location]) -&gt; ():MapViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaAPI.saveLocation(Int, title : String, description : String, image : UIImage, latitude : Float, longitude : Float, completion : (APIResult&lt;Location&gt;) -&gt; ()) -&gt; ():DokoDesuKaAPI.swift">
          <PersistentStrings>
             <PersistentString
-               value = "entity.createdUser">
+               value = "self.convertImageToBase64(image)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -68,7 +39,45 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "DokoDesuKaCoreDataStore.userById(NSNumber) -&gt; User:DokoDesuKaCoreDataStore.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "entity.userName">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaCoreDataStore.allLocations() -&gt; [Location]:DokoDesuKaCoreDataStore.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "entity.createdUser">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaAPI.(allLocations((APIResult&lt;[Location]&gt;) -&gt; ()) -&gt; ()).(closure #1):DokoDesuKaAPI.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaCoreDataStore.userEntityById(NSNumber) -&gt; UserEntity:DokoDesuKaCoreDataStore.swift">
+      </ContextState>
+      <ContextState
+         contextName = "LocationListViewController.viewWillAppear(Bool) -&gt; ():LocationListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "myTabBarController!.selectedIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "LoginViewController.(viewDidLoad() -&gt; ()).(closure #1).(closure #1):LoginViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaCoreDataStore.saveUser(User) -&gt; ():DokoDesuKaCoreDataStore.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "user.id">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "DokoDesuKaAPI.allUsers((APIResult&lt;[User]&gt;) -&gt; ()) -&gt; ():DokoDesuKaAPI.swift">
@@ -79,7 +88,21 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "LocationListViewController.viewDidLoad() -&gt; ():LocationListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "myTabBarController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "DokoDesuKaAPI.user([String : AnyObject]) -&gt; User:DokoDesuKaAPI.swift">
+      </ContextState>
+      <ContextState
+         contextName = "AddLocationViewController.viewWillAppear(Bool) -&gt; ():AddLocationViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DokoDesuKaAPI.(saveLocation(Int, title : String, description : String, image : UIImage, latitude : Float, longitude : Float, completion : (APIResult&lt;Location&gt;) -&gt; ()) -&gt; ()).(closure #1):DokoDesuKaAPI.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

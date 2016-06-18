@@ -16,12 +16,15 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
     var currentLocation:CLLocation?
     var location:Location?
     var myTabBarController:TabBarController?
+    var addText = "Add location"
+    var editText = "Edit location"
     
     @IBOutlet var inputTitle: UITextField!
     @IBOutlet var inputDescription: UITextView!
     @IBOutlet var imgImage: UIImageView!
     @IBOutlet var btnSave: UIButton!
     @IBOutlet weak var loaderView: UIView!
+    @IBOutlet weak var labelTitle: UILabel!
     
     @IBAction func tappedCancel(sender: AnyObject) {
         dispatch_async(dispatch_get_main_queue()) {
@@ -63,11 +66,14 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
                     imgImage.image = DokoDesuKaCoreDataStore().loadImage((location?.image)!)
                 }
             }
+            labelTitle.text = editText;
         }
         else if (myTabBarController!.selectedLocation < 0) {
             inputTitle.text = ""
             inputDescription.text = ""
             imgImage.image = UIImage(named: "placeholder")
+            labelTitle.text = addText;
+
         }
     }
     
