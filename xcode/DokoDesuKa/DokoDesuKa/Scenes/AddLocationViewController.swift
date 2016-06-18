@@ -16,7 +16,6 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
     var currentLocation:CLLocation?
     var location:Location?
     var myTabBarController:TabBarController?
-    let userDefaults = NSUserDefaults.standardUserDefaults()
     
     @IBOutlet var inputTitle: UITextField!
     @IBOutlet var inputDescription: UITextView!
@@ -59,7 +58,7 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
             NSLog("Dismissed picker")
         }
         else if(myTabBarController!.selectedLocation >= 0 && myTabBarController!.locations.count > 0) {
-            self.location = myTabBarController!.locations[myTabBarController!.selectedLocation]
+            self.location = myTabBarController!.myLocations[myTabBarController!.selectedLocation]
             inputTitle.text = self.location?.title
             inputDescription.text = self.location?.description
             if ((self.location?.image) != "") {

@@ -67,7 +67,7 @@ class DokoDesuKaCoreDataStore:DokoDesuKaStore {
     
     func userEntityById(id:NSNumber) -> UserEntity {
         let fetchRequest = NSFetchRequest(entityName: "UserEntity")
-        fetchRequest.predicate = NSPredicate(format: "id = %ld", id)
+        fetchRequest.predicate = NSPredicate(format: "id == \(id)")
         let entities = try! self.context.executeFetchRequest(fetchRequest) as! [UserEntity]
         if (entities.count > 0) {
             return entities[0]

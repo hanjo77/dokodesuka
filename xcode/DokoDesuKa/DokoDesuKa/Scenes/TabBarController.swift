@@ -17,12 +17,18 @@ class TabBarController: UITabBarController {
     var myLocations:[Location] = []
     var images = [String:UIImage]()
     var selectedLocation:Int = -1
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    
+    func syncLocations() {
+        // TODO: sync webservice with datastore
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        myLocations = locations.filter({ (location:Location) -> Bool in
-            return (location.createdUser!.id == 9)
-        })
+        let userId = userDefaults.integerForKey("userId");
+        myLocations = (locations.filter({ (location:Location) -> Bool in
+            return (location.createdUser!.id == userId)
+        }))
     }
     
     override func viewWillAppear(animated: Bool) {

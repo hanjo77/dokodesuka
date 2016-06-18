@@ -29,21 +29,21 @@ class LoginViewController: ViewController, UITextFieldDelegate {
                     for user in users {
                         self.store.saveUser(user)
                     }
-                }
-                self.webservice.allLocations() { result in
-                    switch (result) {
-                    case .Success(let locations):
-                        dispatch_async(dispatch_get_main_queue()) {
-                            () -> Void in
-                            for location in locations {
-                                self.store.saveLocation(location)
+                    self.webservice.allLocations() { result in
+                        switch (result) {
+                        case .Success(let locations):
+                            dispatch_async(dispatch_get_main_queue()) {
+                                () -> Void in
+                                for location in locations {
+                                    self.store.saveLocation(location)
+                                }
+                                self.startup()
                             }
-                            self.startup()
+                        case .Failure(let errorMessage):
+                            NSLog(errorMessage)
+                        case .NetworkError:
+                            NSLog(String(result))
                         }
-                    case .Failure(let errorMessage):
-                        NSLog(errorMessage)
-                    case .NetworkError:
-                        NSLog(String(result))
                     }
                 }
             case .Failure(let errorMessage):

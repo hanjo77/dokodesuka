@@ -12,9 +12,38 @@
       </ContextState>
       <ContextState
          contextName = "DokoDesuKaCoreDataStore.userById(NSNumber) -&gt; User:DokoDesuKaCoreDataStore.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "entity.userName">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LocationListViewController.viewDidLoad() -&gt; ():LocationListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "myTabBarController">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "DokoDesuKaAPI.(allLocations((APIResult&lt;[Location]&gt;) -&gt; ()) -&gt; ()).(closure #1):DokoDesuKaAPI.swift">
+      </ContextState>
+      <ContextState
+         contextName = "TabBarController.viewDidLoad() -&gt; ():TabBarController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "locations">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LocationListViewController.viewWillAppear(Bool) -&gt; ():LocationListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "myTabBarController!.selectedIndex">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "DokoDesuKaCoreDataStore.allLocations() -&gt; [Location]:DokoDesuKaCoreDataStore.swift">

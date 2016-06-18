@@ -12,6 +12,7 @@ class LocationListViewController: UIViewController, UITableViewDataSource, UITab
 
     var imageCache = [UIImage]()
     var selectedLocation = -1
+    var locations:[Location]?
     var myTabBarController:TabBarController?
     
     @IBOutlet weak var tableView: UITableView!
@@ -24,7 +25,6 @@ class LocationListViewController: UIViewController, UITableViewDataSource, UITab
         automaticallyAdjustsScrollViewInsets = true
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -33,7 +33,9 @@ class LocationListViewController: UIViewController, UITableViewDataSource, UITab
         self.tableView.dataSource = self
         myTabBarController = self.tabBarController as? TabBarController
         myTabBarController!.selectedLocation = -1
-        if(myTabBarController!.selectedIndex >= 0 && myTabBarController!.locations.count > 0) {
+        self.myTabBarController!.syncLocations()
+        self.locations = self.myTabBarController?.myLocations
+        if(self.myTabBarController!.selectedIndex >= 0 && locations!.count > 0) {
             self.tableView.reloadData()
         }
     }
@@ -47,13 +49,13 @@ class LocationListViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.myTabBarController!.locations.count
+        return locations!.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "LocationCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! LocationTableViewCell
-        let location = myTabBarController!.locations[indexPath.row]
+        let location = locations![indexPath.row]
         cell.labelTitle.text = location.title
         cell.labelDescription.text = location.description
         cell.imgLocation?.image = DokoDesuKaCoreDataStore().loadImage(location.image)
@@ -108,7 +110,7 @@ class LocationListViewController: UIViewController, UITableViewDataSource, UITab
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segAddLocationView" {
             if let svc = segue.destinationViewController as? AddLocationViewController {
-                svc.location = myTabBarController?.locations[myTabBarController!.selectedLocation]
+                svc.location = locations![myTabBarController!.selectedLocation]
             }
         }
     }
