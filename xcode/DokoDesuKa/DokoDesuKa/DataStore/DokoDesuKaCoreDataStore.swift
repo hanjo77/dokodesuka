@@ -89,6 +89,15 @@ class DokoDesuKaCoreDataStore:DokoDesuKaStore {
         )
     }
     
+    func deleteLocation(location:Location) {
+        let fetchRequest = NSFetchRequest(entityName: "LocationEntity")
+        fetchRequest.predicate = NSPredicate(format: "id = %ld", location.id)
+        let entities = try! self.context.executeFetchRequest(fetchRequest) as! [LocationEntity]
+        for entity in entities {
+            self.context.deleteObject(entity)
+        }
+    }
+    
     func allLocations() -> [Location] {
         let fetchRequest = NSFetchRequest(entityName: "LocationEntity")
         fetchRequest.sortDescriptors = [

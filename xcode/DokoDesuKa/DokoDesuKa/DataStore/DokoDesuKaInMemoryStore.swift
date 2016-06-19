@@ -71,6 +71,10 @@ class DokoDesuKaInMemoryStore: DokoDesuKaStore {
         }
     }
     
+    func deleteLocation(location:Location) {
+        DokoDesuKaInMemoryStore.locations.removeAtIndex(self.locationIndex(location)!)
+    }
+    
     func saveUser(user: User) {
         if let updateIndex = self.userIndex(user) {
             DokoDesuKaInMemoryStore.users.removeAtIndex(updateIndex)

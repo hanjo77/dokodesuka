@@ -136,3 +136,11 @@ class AddLocationView(DokoDesuKaMixin, generic.DetailView):
         location_id = location.pk
         message = self.json_dumps(self.get_location_dict(location))
         return http.HttpResponse(message)
+
+class DeleteLocationView(DokoDesuKaMixin, generic.DetailView):
+    def delete(self, request, *args, **kwargs):
+        deleteData = json.loads(request.body)
+        location = Location.objects.filter(id=int(deleteData.get('id'))).delete()
+        return http.HttpResponse(self.json_dumps({
+                    "status": "OK"
+                }))

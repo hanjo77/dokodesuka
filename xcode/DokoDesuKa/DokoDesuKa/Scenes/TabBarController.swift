@@ -13,14 +13,18 @@ class TabBarController: UITabBarController {
     let webservice = DokoDesuKaAPI(connector: APIConnector())
     let store: DokoDesuKaStore = DokoDesuKaCoreDataStore()
     var user:User?
-    var locations:[Location] = DokoDesuKaCoreDataStore().allLocations()
+    var locations:[Location] = [Location]()
     var myLocations:[Location] = []
     var images = [String:UIImage]()
     var selectedLocation:Int = -1
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
     func syncLocations() {
-        // TODO: sync webservice with datastore
+        locations = self.store.allLocations()
+        myLocations = (locations.filter({ (location:Location) -> Bool in
+            let userId = userDefaults.integerForKey("userId");
+            return (location.createdUser!.id == userId)
+        }))
     }
     
     override func viewDidLoad() {
@@ -33,6 +37,7 @@ class TabBarController: UITabBarController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        syncLocations()
     }
 
     override func didReceiveMemoryWarning() {

@@ -22,7 +22,6 @@ class LocationListViewController: UIViewController, UITableViewDataSource, UITab
         // self.clearsSelectionOnViewWillAppear = false
         
         automaticallyAdjustsScrollViewInsets = true
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
@@ -31,6 +30,10 @@ class LocationListViewController: UIViewController, UITableViewDataSource, UITab
         self.tableView.delegate = self
         self.tableView.dataSource = self
         myTabBarController = self.tabBarController as? TabBarController
+        self.reloadTable()
+    }
+    
+    func reloadTable() {
         myTabBarController!.selectedLocation = -1
         self.myTabBarController!.syncLocations()
         self.locations = self.myTabBarController?.myLocations
@@ -45,7 +48,6 @@ class LocationListViewController: UIViewController, UITableViewDataSource, UITab
     // MARK: - Table view data source
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return locations!.count
     }
     
@@ -83,6 +85,29 @@ class LocationListViewController: UIViewController, UITableViewDataSource, UITab
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
+    }
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?  {
+        // add the action button you want to show when swiping on tableView's cell , in this case add the delete button.
+        let deleteAction = UITableViewRowAction(style: .Default, title: "Delete", handler: { (action , indexPath) -> Void in
+            let deleteLocation = self.locations![indexPath.row]
+            self.myTabBarController!.webservice.deleteLocation(deleteLocation.id) { responseObject in
+                switch (responseObject) {
+                case .Success(_):
+                    self.tableView.editing=false;
+                    self.myTabBarController?.store.deleteLocation(deleteLocation)
+                    self.reloadTable()
+                case .Failure(let errorMessage):
+                    NSLog(errorMessage)
+                case .NetworkError:
+                    NSLog(String(responseObject))
+                }
+            }
+        })
+        // You can set its properties like normal button
+        deleteAction.backgroundColor = UIColor.redColor()
+        
+        return [deleteAction]
     }
     
     /*

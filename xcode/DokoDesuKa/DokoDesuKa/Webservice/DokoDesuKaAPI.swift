@@ -73,20 +73,36 @@ class DokoDesuKaAPI {
         }
     }
     
-    func saveLocation(id:Int, title: String, description: String, image: UIImage?, latitude: Float, longitude: Float, completion:APIResult<Location> -> Void) {        
-            connector.performRequest(targetUrl+"add_location", method: "POST", body: [
-                "id": id,
-                "title": title,
-                "description": description,
-                "latitude": latitude,
-                "longitude": longitude,
-                "image": (image == nil ? "" : self.convertImageToBase64(image!)),
-                "created_user_id": self.userDefaults.integerForKey("userId")
-            ]) { result in
+    func saveLocation(id:Int, title: String, description: String, image: UIImage?, latitude: Float, longitude: Float, completion:APIResult<Location> -> Void) {
+        connector.performRequest(targetUrl+"add_location", method: "POST", body: [
+            "id": id,
+            "title": title,
+            "description": description,
+            "latitude": latitude,
+            "longitude": longitude,
+            "image": (image == nil ? "" : self.convertImageToBase64(image!)),
+            "created_user_id": self.userDefaults.integerForKey("userId")
+        ]) { result in
             switch(result) {
             case .Success(let responseObject):
                 let location = self.location(responseObject as! [String:AnyObject])
                 completion(.Success(location))
+            case .Failure(let errorMessage):
+                completion(.Failure(errorMessage))
+            case .NetworkError(let error):
+                completion(.NetworkError(error))
+            }
+        }
+    }
+    
+    func deleteLocation(id:Int, completion:APIResult<Any> -> Void) {
+        connector.performRequest(targetUrl+"delete_location", method: "DELETE", body: [
+            "id": id,
+            "created_user_id": self.userDefaults.integerForKey("userId")
+        ]) { result in
+            switch(result) {
+            case .Success(let responseObject):
+                completion(.Success(responseObject))
             case .Failure(let errorMessage):
                 completion(.Failure(errorMessage))
             case .NetworkError(let error):

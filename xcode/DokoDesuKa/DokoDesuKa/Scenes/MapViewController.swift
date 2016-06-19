@@ -36,27 +36,26 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        myTabBarController = self.tabBarController as? TabBarController
+        myTabBarController!.selectedLocation = -1
         // Do any additional setup after loading the view.
         self.mapView.delegate = self
         self.mapView.mapType = MKMapType.Hybrid
-        myTabBarController = self.tabBarController as? TabBarController
-        myTabBarController!.selectedLocation = -1
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         myTabBarController?.selectedIndex = -1
         myTabBarController?.selectedLocation = -1
+        myTabBarController?.syncLocations()
         updateMarkers((myTabBarController?.locations)!)
   }
     
     func updateMarkers(locations: [Location]) {
-        dispatch_async(dispatch_get_main_queue()) {
-            () -> Void in
             let annotations = self.mapView.annotations
             self.mapView.removeAnnotations(annotations)
-            var minPos = CLLocationCoordinate2D(latitude: 360, longitude: 360)
-            var maxPos = CLLocationCoordinate2D(latitude: -360, longitude: -360)
+            var minPos = CLLocationCoordinate2D(latitude: 90, longitude: 180)
+            var maxPos = CLLocationCoordinate2D(latitude: -90, longitude: -180)
             for location:Location in locations {
                 let annotation = DetailPointAnnotation()
                 let coordinate = CLLocationCoordinate2D(
@@ -84,10 +83,11 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
                 latitude: minPos.latitude+((maxPos.latitude-minPos.latitude)/2),
                 longitude: minPos.longitude+((maxPos.longitude-minPos.longitude)/2)
             )
-            region.span.latitudeDelta = maxPos.latitude-minPos.latitude;
-            region.span.longitudeDelta = maxPos.longitude-minPos.longitude;
-            self.mapView.region = region;
-        }
+            if (locations.count > 0) {
+                region.span.latitudeDelta = maxPos.latitude-minPos.latitude;
+                region.span.longitudeDelta = maxPos.longitude-minPos.longitude;
+                self.mapView.region = region;
+            }
     }
     
     func mapView (mapView: MKMapView,

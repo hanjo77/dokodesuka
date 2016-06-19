@@ -14,6 +14,7 @@ protocol DokoDesuKaStore {
     func allUsers() -> [User]
     func userById(id:NSNumber) -> User
     func saveLocation(location: Location)
+    func deleteLocation(location:Location)
     func saveUser(user: User)
     func syncLocations(locations: [Location])
     func syncUsers(users: [User])

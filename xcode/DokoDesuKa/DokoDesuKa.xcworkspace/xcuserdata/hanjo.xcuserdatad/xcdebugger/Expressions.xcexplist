@@ -55,6 +55,9 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "LocationListViewController.(tableView(UITableView, editActionsForRowAtIndexPath : NSIndexPath) -&gt; [UITableViewRowAction]?).(closure #1).(closure #1):LocationListViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "MapViewController.updateMarkers([Location]) -&gt; ():MapViewController.swift">
       </ContextState>
       <ContextState
@@ -89,6 +92,9 @@
                value = "locations">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MapViewController.(updateMarkers([Location]) -&gt; ()).(closure #1):MapViewController.swift">
       </ContextState>
       <ContextState
          contextName = "APIConnector.(performRequest(String, method : String, body : AnyObject?, completion : (APIResult&lt;protocol&lt;&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1):APIConnector.swift">
@@ -135,7 +141,23 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "LocationListViewController.(tableView(UITableView, editActionsForRowAtIndexPath : NSIndexPath) -&gt; [UITableViewRowAction]?).(closure #1):LocationListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "DokoDesuKaAPI.user([String : AnyObject]) -&gt; User:DokoDesuKaAPI.swift">
+      </ContextState>
+      <ContextState
+         contextName = "TabBarController.(syncLocations() -&gt; ()).(closure #1).(closure #1):TabBarController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "store.locations">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

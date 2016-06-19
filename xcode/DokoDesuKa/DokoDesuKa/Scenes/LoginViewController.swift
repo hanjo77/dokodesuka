@@ -34,9 +34,7 @@ class LoginViewController: ViewController, UITextFieldDelegate {
                         case .Success(let locations):
                             dispatch_async(dispatch_get_main_queue()) {
                                 () -> Void in
-                                for location in locations {
-                                    self.store.saveLocation(location)
-                                }
+                                self.store.syncLocations(locations)
                                 self.startup()
                             }
                         case .Failure(let errorMessage):
@@ -55,21 +53,18 @@ class LoginViewController: ViewController, UITextFieldDelegate {
     }
     
     func startup() {
-        let userId = userDefaults.integerForKey("userId")
-        let rememberMe = userDefaults.boolForKey("rememberMe")
-        if (rememberMe && userId > 0) {
-            dispatch_async(dispatch_get_main_queue()) {
-                () -> Void in
-                self.performSegueWithIdentifier("segMapView", sender: nil)
-            }
-        }
-        if (!rememberMe) {
-            userDefaults.setBool(self.toggleRememberMe.on, forKey: "rememberMe");
-        }
         let newImg: UIImage? = UIImage(named: "dokodesuka-logo")
         imageView.image = newImg
         inputUsername.delegate = self
         inputPassword.delegate = self
+        let userId = userDefaults.integerForKey("userId")
+        let rememberMe = userDefaults.boolForKey("rememberMe")
+        if (rememberMe && userId > 0) {
+            self.performSegueWithIdentifier("segMapView", sender: nil)
+        }
+        if (!rememberMe) {
+            userDefaults.setBool(self.toggleRememberMe.on, forKey: "rememberMe");
+        }
     }
 
     override func didReceiveMemoryWarning() {
