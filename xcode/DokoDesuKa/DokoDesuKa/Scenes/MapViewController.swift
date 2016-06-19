@@ -107,7 +107,9 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
         detailView.hidden = false;
         detailTitle.text = (annotation.title)!
         detailDesc.text = (annotation.subtitle)!
-        detailImage.image = DokoDesuKaCoreDataStore().loadImage((annotation.imageName)!)
+        detailImage.image = resizeImage(
+            DokoDesuKaCoreDataStore().loadImage((annotation.imageName)!),
+            size: CGSize(width: 560, height: 330))
     }
     
     func mapView (manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {

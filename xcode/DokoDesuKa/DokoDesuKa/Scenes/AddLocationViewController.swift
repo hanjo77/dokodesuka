@@ -26,12 +26,11 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
     @IBOutlet var btnSave: UIButton!
     @IBOutlet weak var btnUpdatePicture: UIButton!
     @IBOutlet weak var loaderView: UIView!
-    @IBOutlet weak var labelTitle: UILabel!
     
     @IBAction func tappedCancel(sender: AnyObject) {
         dispatch_async(dispatch_get_main_queue()) {
             () -> Void in
-            self.tabBarController?.selectedIndex = 0
+            self.tabBarController?.selectedIndex = 2
         }
     }
     
@@ -44,6 +43,7 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
             imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
             imagePicker.cameraCaptureMode = .Photo
             imagePicker.modalPresentationStyle = .FullScreen
+            imagePicker.allowsEditing = true
         }
         else {
             imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
@@ -69,17 +69,17 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
                 inputTitle.text = self.location?.title
                 inputDescription.text = self.location?.description
                 if ((self.location?.image) != "") {
-                    imgImage.image = DokoDesuKaCoreDataStore().loadImage((location?.image)!)
+                    imgImage.image = self.resizeImage(
+                        DokoDesuKaCoreDataStore().loadImage((location?.image)!),
+                        size: CGSize(width: 560, height: 560))
                 }
             }
-            labelTitle.text = editText;
             btnUpdatePicture.hidden = true;
         }
         else if (myTabBarController!.selectedLocation < 0 && !imagePicker.isBeingDismissed()) {
             inputTitle.text = ""
             inputDescription.text = ""
             imgImage.image = UIImage(named: "placeholder")
-            labelTitle.text = addText;
         }
     }
     
@@ -93,8 +93,7 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            self.imgImage.contentMode = .ScaleAspectFit
-            self.imgImage.image = pickedImage
+            self.imgImage.image = resizeImage(pickedImage, size: CGSize(width: 560, height: 330))
         }
         
         dismissViewControllerAnimated(true, completion: nil)
@@ -123,7 +122,7 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
             id = self.location!.id
         }
         var img:UIImage? = nil
-        if (updatedImage) {
+        if (self.location == nil) {
             img = imgImage.image
         }
         myTabBarController!.webservice.saveLocation(id, title:inputTitle.text!, description: inputDescription.text!, image: img, latitude: latitude, longitude: longitude){ result in
@@ -139,7 +138,6 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
                         self.myTabBarController?.locations[(self.myTabBarController?.selectedLocation)!] = location
                     }
                     DokoDesuKaCoreDataStore().saveImage((self.location?.image)!, imageData: UIImageJPEGRepresentation(self.imgImage.image!, 0.9)!)
-                    self.myTabBarController?.syncLocations()
                     self.myTabBarController?.selectedLocation = -1
                     self.myTabBarController?.selectedIndex = 2
                 }
