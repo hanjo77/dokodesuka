@@ -91,12 +91,12 @@ class LocationListViewController: UIViewController, UITableViewDataSource, UITab
         // add the action button you want to show when swiping on tableView's cell , in this case add the delete button.
         let deleteAction = UITableViewRowAction(style: .Default, title: "Delete", handler: { (action , indexPath) -> Void in
             let deleteLocation = self.locations![indexPath.row]
+            self.myTabBarController?.store.deleteLocation(deleteLocation)
+            self.reloadTable()
             self.myTabBarController!.webservice.deleteLocation(deleteLocation.id) { responseObject in
                 switch (responseObject) {
                 case .Success(_):
                     self.tableView.editing=false;
-                    self.myTabBarController?.store.deleteLocation(deleteLocation)
-                    self.reloadTable()
                 case .Failure(let errorMessage):
                     NSLog(errorMessage)
                 case .NetworkError:

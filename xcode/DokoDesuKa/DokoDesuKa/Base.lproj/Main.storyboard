@@ -592,6 +592,7 @@
                     <tabBarItem key="tabBarItem" title="Add" image="icon-add-marker" id="fbg-vA-gfK" userLabel="Add Location"/>
                     <connections>
                         <outlet property="btnSave" destination="VKe-N9-b3t" id="0l5-mP-yl9"/>
+                        <outlet property="btnUpdatePicture" destination="6fp-kB-e76" id="cfW-Sc-OOe"/>
                         <outlet property="imgImage" destination="ffZ-q5-KRn" id="69M-FA-AL5"/>
                         <outlet property="inputDescription" destination="CGi-3g-Pwa" id="fJf-Oq-2TO"/>
                         <outlet property="inputTitle" destination="k43-UJ-zJ4" id="BJv-HG-FoA"/>

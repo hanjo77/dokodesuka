@@ -24,6 +24,7 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
     @IBOutlet var inputDescription: UITextView!
     @IBOutlet var imgImage: UIImageView!
     @IBOutlet var btnSave: UIButton!
+    @IBOutlet weak var btnUpdatePicture: UIButton!
     @IBOutlet weak var loaderView: UIView!
     @IBOutlet weak var labelTitle: UILabel!
     
@@ -56,6 +57,7 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        btnUpdatePicture.hidden = false;
         self.location = nil
         if (imagePicker.isBeingDismissed()) {
             updatedImage = true
@@ -71,13 +73,13 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
                 }
             }
             labelTitle.text = editText;
+            btnUpdatePicture.hidden = true;
         }
-        else if (myTabBarController!.selectedLocation < 0) {
+        else if (myTabBarController!.selectedLocation < 0 && !imagePicker.isBeingDismissed()) {
             inputTitle.text = ""
             inputDescription.text = ""
             imgImage.image = UIImage(named: "placeholder")
             labelTitle.text = addText;
-
         }
     }
     
@@ -103,17 +105,21 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
     }
     
     @IBAction func tappedSave(sender: AnyObject) {
-        // Display loading animation
+        // U
         var latitude:Float = 46.7598823
         var longitude:Float = 7.6237494
         
-        if (currentLocation != nil) {
+        if (self.location != nil) {
+            latitude = (location?.latitude)!
+            longitude = (location?.longitude)!
+        }
+        else if (currentLocation != nil) {
             latitude = Float((currentLocation?.coordinate.latitude)!)
             longitude = Float((currentLocation?.coordinate.longitude)!)
         }
         loaderView.hidden = false
         var id = -1;
-        if (self.location!.id > 0) {
+        if (self.location != nil && self.location!.id > 0) {
             id = self.location!.id
         }
         var img:UIImage? = nil
@@ -133,6 +139,7 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
                         self.myTabBarController?.locations[(self.myTabBarController?.selectedLocation)!] = location
                     }
                     DokoDesuKaCoreDataStore().saveImage((self.location?.image)!, imageData: UIImageJPEGRepresentation(self.imgImage.image!, 0.9)!)
+                    self.myTabBarController?.syncLocations()
                     self.myTabBarController?.selectedLocation = -1
                     self.myTabBarController?.selectedIndex = 2
                 }
