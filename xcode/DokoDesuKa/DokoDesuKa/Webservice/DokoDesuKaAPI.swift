@@ -73,16 +73,16 @@ class DokoDesuKaAPI {
         }
     }
     
-    func saveLocation(id:Int, title: String, description: String, image: UIImage, latitude: Float, longitude: Float, completion:APIResult<Location> -> Void) {
-        connector.performRequest(targetUrl+"add_location", method: "POST", body: [
-            "id": id,
-            "title": title,
-            "description": description,
-            "latitude": latitude,
-            "longitude": longitude,
-            "image": self.convertImageToBase64(image),
-            "created_user_id": self.userDefaults.integerForKey("userId")
-        ]) { result in
+    func saveLocation(id:Int, title: String, description: String, image: UIImage?, latitude: Float, longitude: Float, completion:APIResult<Location> -> Void) {        
+            connector.performRequest(targetUrl+"add_location", method: "POST", body: [
+                "id": id,
+                "title": title,
+                "description": description,
+                "latitude": latitude,
+                "longitude": longitude,
+                "image": (image == nil ? "" : self.convertImageToBase64(image!)),
+                "created_user_id": self.userDefaults.integerForKey("userId")
+            ]) { result in
             switch(result) {
             case .Success(let responseObject):
                 let location = self.location(responseObject as! [String:AnyObject])

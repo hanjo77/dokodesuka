@@ -16,8 +16,9 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
     var currentLocation:CLLocation?
     var location:Location?
     var myTabBarController:TabBarController?
-    var addText = "Add location"
-    var editText = "Edit location"
+    let addText = "Add location"
+    let editText = "Edit location"
+    var updatedImage = false;
     
     @IBOutlet var inputTitle: UITextField!
     @IBOutlet var inputDescription: UITextView!
@@ -56,6 +57,9 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.location = nil
+        if (imagePicker.isBeingDismissed()) {
+            updatedImage = true
+        }
         myTabBarController = self.tabBarController as? TabBarController
         if(myTabBarController!.selectedLocation >= 0 && myTabBarController!.myLocations.count > 0) {
             self.location = myTabBarController!.myLocations[myTabBarController!.selectedLocation]
@@ -112,7 +116,11 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
         if (self.location!.id > 0) {
             id = self.location!.id
         }
-        myTabBarController!.webservice.saveLocation(id, title:inputTitle.text!, description: inputDescription.text!, image: imgImage.image!, latitude: latitude, longitude: longitude){ result in
+        var img:UIImage? = nil
+        if (updatedImage) {
+            img = imgImage.image
+        }
+        myTabBarController!.webservice.saveLocation(id, title:inputTitle.text!, description: inputDescription.text!, image: img, latitude: latitude, longitude: longitude){ result in
             switch (result) {
             case .Success(let location):
                 if (self.location == nil) {

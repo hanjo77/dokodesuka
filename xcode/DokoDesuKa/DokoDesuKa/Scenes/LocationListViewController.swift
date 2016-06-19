@@ -34,9 +34,7 @@ class LocationListViewController: UIViewController, UITableViewDataSource, UITab
         myTabBarController!.selectedLocation = -1
         self.myTabBarController!.syncLocations()
         self.locations = self.myTabBarController?.myLocations
-        if(self.myTabBarController!.selectedIndex >= 0 && locations!.count > 0) {
-            self.tableView.reloadData()
-        }
+        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

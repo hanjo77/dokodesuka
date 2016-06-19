@@ -38,6 +38,7 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.mapView.delegate = self
+        self.mapView.mapType = MKMapType.Hybrid
         myTabBarController = self.tabBarController as? TabBarController
         myTabBarController!.selectedLocation = -1
     }
@@ -47,52 +48,55 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
         myTabBarController?.selectedIndex = -1
         myTabBarController?.selectedLocation = -1
         updateMarkers((myTabBarController?.locations)!)
-    }
+  }
     
     func updateMarkers(locations: [Location]) {
-        let annotations = self.mapView.annotations
-        self.mapView.removeAnnotations(annotations)
-        var minPos = CLLocationCoordinate2D(latitude: 360, longitude: 360)
-        var maxPos = CLLocationCoordinate2D(latitude: -360, longitude: -360)
-        for location:Location in locations {
-            let annotation = DetailPointAnnotation()
-            let coordinate = CLLocationCoordinate2D(
-                latitude: Double(location.latitude), longitude: Double(location.longitude))
-            annotation.coordinate = coordinate
-            if (coordinate.latitude < minPos.latitude) {
-                minPos.latitude = coordinate.latitude
+        dispatch_async(dispatch_get_main_queue()) {
+            () -> Void in
+            let annotations = self.mapView.annotations
+            self.mapView.removeAnnotations(annotations)
+            var minPos = CLLocationCoordinate2D(latitude: 360, longitude: 360)
+            var maxPos = CLLocationCoordinate2D(latitude: -360, longitude: -360)
+            for location:Location in locations {
+                let annotation = DetailPointAnnotation()
+                let coordinate = CLLocationCoordinate2D(
+                    latitude: Double(location.latitude), longitude: Double(location.longitude))
+                annotation.coordinate = coordinate
+                if (coordinate.latitude < minPos.latitude) {
+                    minPos.latitude = coordinate.latitude
+                }
+                if (coordinate.longitude < minPos.longitude) {
+                    minPos.longitude = coordinate.longitude
+                }
+                if (coordinate.latitude > maxPos.latitude) {
+                    maxPos.latitude = coordinate.latitude
+                }
+                if (coordinate.longitude > maxPos.longitude) {
+                    maxPos.longitude = coordinate.longitude
+                }
+                annotation.title = location.title
+                annotation.subtitle = location.description
+                annotation.imageName = location.image
+                self.mapView.addAnnotation(annotation)
             }
-            if (coordinate.longitude < minPos.longitude) {
-                minPos.longitude = coordinate.longitude
-            }
-            if (coordinate.latitude > maxPos.latitude) {
-                maxPos.latitude = coordinate.latitude
-            }
-            if (coordinate.longitude > maxPos.longitude) {
-                maxPos.longitude = coordinate.longitude
-            }
-            annotation.title = location.title
-            annotation.subtitle = location.description
-            annotation.imageName = location.image
-            self.mapView.addAnnotation(annotation)
+            var region = MKCoordinateRegion()
+            region.center = CLLocationCoordinate2D(
+                latitude: minPos.latitude+((maxPos.latitude-minPos.latitude)/2),
+                longitude: minPos.longitude+((maxPos.longitude-minPos.longitude)/2)
+            )
+            region.span.latitudeDelta = maxPos.latitude-minPos.latitude;
+            region.span.longitudeDelta = maxPos.longitude-minPos.longitude;
+            self.mapView.region = region;
         }
-        var region = MKCoordinateRegion()
-        region.center = CLLocationCoordinate2D(
-            latitude: minPos.latitude+((maxPos.latitude-minPos.latitude)/2),
-            longitude: minPos.longitude+((maxPos.longitude-minPos.longitude)/2)
-        )
-        region.span.latitudeDelta = maxPos.latitude-minPos.latitude;
-        region.span.longitudeDelta = maxPos.longitude-minPos.longitude;
-        self.mapView.region = region;
     }
     
     func mapView (mapView: MKMapView,
         viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
     
-        let annotationView:MKAnnotationView = MKPinAnnotationView()
+        let annotationView:MKAnnotationView = MKAnnotationView()
+        annotationView.image = markerImage
         annotationView.annotation = annotation
         annotationView.canShowCallout = false
-        annotationView.image = markerImage
         annotationView.centerOffset = CGPointMake(0.0, -(annotationView.image?.size.height)!/2);
         return annotationView
     }
@@ -106,11 +110,14 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
         detailImage.image = DokoDesuKaCoreDataStore().loadImage((annotation.imageName)!)
     }
     
+    func mapView (manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        updateMarkers((myTabBarController?.locations)!)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 }
 
 class DetailPointAnnotation: MKPointAnnotation {
