@@ -16,12 +16,12 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
     var currentLocation:CLLocation?
     var location:Location?
     var myTabBarController:TabBarController?
-    let addText = "Add location"
-    let editText = "Edit location"
     var updatedImage = false
+    let defaultTitle = "Enter a title"
+    let defaultDesc = "Describe this location"
     
-    @IBOutlet var inputTitle: UITextField!
-    @IBOutlet var inputDescription: UITextView!
+    @IBOutlet var inputTitle: TextField!
+    @IBOutlet var inputDescription: TextView!
     @IBOutlet var imgImage: UIImageView!
     @IBOutlet var btnSave: UIButton!
     @IBOutlet weak var btnUpdatePicture: UIButton!
@@ -76,11 +76,18 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
             btnUpdatePicture.hidden = true;
         }
         else if (myTabBarController!.selectedLocation < 0 && !imagePicker.isBeingDismissed()) {
-            inputTitle.text = ""
-            inputDescription.text = ""
+            inputTitle.text = defaultTitle
+            inputDescription.text = defaultDesc
             imgImage.image = UIImage(named: "placeholder")
         }
+        inputTitle.setup(UIColor.redColor(),
+                         placeholderText: defaultTitle,
+                         placeholderColor: UIColor.orangeColor())
+        
+        inputDescription.setPlaceholder(defaultDesc);
     }
+    
+    @IBOutlet weak var titleEditingChanged: TextField!
     
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) { // Updated to current array syntax [AnyObject] rather than AnyObject[]
         currentLocation = locations.last
@@ -106,7 +113,7 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
     }
     
     @IBAction func tappedSave(sender: AnyObject) {
-        // U
+
         var latitude:Float = 46.7598823
         var longitude:Float = 7.6237494
         
@@ -127,6 +134,7 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
         if (self.location == nil) {
             img = imgImage.image
         }
+        if (inputTitle.text! != defaultTitle && inputDescription.text! != defaultDesc) {
         myTabBarController!.webservice.saveLocation(id, title:inputTitle.text!, description: inputDescription.text!, image: img, latitude: latitude, longitude: longitude){ result in
             switch (result) {
             case .Success(let location):
@@ -150,6 +158,7 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
             }
             // Hide loading animation
             self.loaderView.hidden = true
+        }
         }
     }
 }

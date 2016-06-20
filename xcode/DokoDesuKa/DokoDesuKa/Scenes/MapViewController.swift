@@ -53,6 +53,7 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
     
     func updateMarkers(locations: [Location]) {
             let annotations = self.mapView.annotations
+            let padding = Double(0.03)
             self.mapView.removeAnnotations(annotations)
             var minPos = CLLocationCoordinate2D(latitude: 90, longitude: 180)
             var maxPos = CLLocationCoordinate2D(latitude: -90, longitude: -180)
@@ -84,8 +85,8 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
                 longitude: minPos.longitude+((maxPos.longitude-minPos.longitude)/2)
             )
             if (locations.count > 0) {
-                region.span.latitudeDelta = maxPos.latitude-minPos.latitude;
-                region.span.longitudeDelta = maxPos.longitude-minPos.longitude;
+                region.span.latitudeDelta = (maxPos.latitude-minPos.latitude)+(2*padding);
+                region.span.longitudeDelta = maxPos.longitude-minPos.longitude+(2*padding);
                 self.mapView.region = region;
             }
     }
