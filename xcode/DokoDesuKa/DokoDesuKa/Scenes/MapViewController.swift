@@ -109,7 +109,7 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
         detailDesc.text = (annotation.subtitle)!
         detailImage.image = resizeImage(
             DokoDesuKaCoreDataStore().loadImage((annotation.imageName)!),
-            size: CGSize(width: 560, height: 330))
+            size: CGSize(width: imageWidth, height: imageHeight))
     }
     
     func mapView (manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {

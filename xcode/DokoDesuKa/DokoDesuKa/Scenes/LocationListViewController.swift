@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LocationListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class LocationListViewController: ViewController, UITableViewDataSource, UITableViewDelegate {
 
     var imageCache = [UIImage]()
     var locations:[Location]?

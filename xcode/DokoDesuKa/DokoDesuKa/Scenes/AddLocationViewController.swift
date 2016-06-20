@@ -18,15 +18,14 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
     var myTabBarController:TabBarController?
     let addText = "Add location"
     let editText = "Edit location"
-    var updatedImage = false;
+    var updatedImage = false
     
     @IBOutlet var inputTitle: UITextField!
     @IBOutlet var inputDescription: UITextView!
     @IBOutlet var imgImage: UIImageView!
     @IBOutlet var btnSave: UIButton!
     @IBOutlet weak var btnUpdatePicture: UIButton!
-    @IBOutlet weak var loaderView: UIView!
-    
+    @IBOutlet weak var loaderView: UIView!    
     @IBAction func tappedCancel(sender: AnyObject) {
         dispatch_async(dispatch_get_main_queue()) {
             () -> Void in
@@ -71,7 +70,7 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
                 if ((self.location?.image) != "") {
                     imgImage.image = self.resizeImage(
                         DokoDesuKaCoreDataStore().loadImage((location?.image)!),
-                        size: CGSize(width: 560, height: 560))
+                        size: CGSize(width: imageWidth, height: imageHeight))
                 }
             }
             btnUpdatePicture.hidden = true;
@@ -93,7 +92,10 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            self.imgImage.image = resizeImage(pickedImage, size: CGSize(width: 560, height: 330))
+            self.imgImage.image = resizeImage(pickedImage,
+                                              size: CGSize(
+                                                width: imageWidth,
+                                                height: imageHeight))
         }
         
         dismissViewControllerAnimated(true, completion: nil)

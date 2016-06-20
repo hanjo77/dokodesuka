@@ -38,6 +38,7 @@
 		57599EAE1CDCF12A006E1588 /* DokoDesuKaInMemoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599EAD1CDCF12A006E1588 /* DokoDesuKaInMemoryStore.swift */; };
 		57599EB01CDCF139006E1588 /* DokoDesuKaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599EAF1CDCF139006E1588 /* DokoDesuKaStore.swift */; };
 		57599EBA1CDE0584006E1588 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57599EB91CDE0584006E1588 /* CoreDataStack.swift */; };
+		57B87FD01D186E4A00BF28CA /* LogoutOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B87FCF1D186E4A00BF28CA /* LogoutOverlay.swift */; };
 		57DBFAC31CDE9A9C00766FE2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DBFAC21CDE9A9C00766FE2 /* MapKit.framework */; };
 		7556A3DD1D7A3DE4E312B498 /* Pods_DokoDesuKaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373EB01072ACD8295DCA4016 /* Pods_DokoDesuKaUITests.framework */; };
 		B1154D35A090746A1BD78B7E /* Pods_DokoDesuKaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5983F5296DAC7C27B7AC7933 /* Pods_DokoDesuKaTests.framework */; };
@@ -100,6 +101,7 @@
 		57599EAD1CDCF12A006E1588 /* DokoDesuKaInMemoryStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DokoDesuKaInMemoryStore.swift; sourceTree = "<group>"; };
 		57599EAF1CDCF139006E1588 /* DokoDesuKaStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DokoDesuKaStore.swift; sourceTree = "<group>"; };
 		57599EB91CDE0584006E1588 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		57B87FCF1D186E4A00BF28CA /* LogoutOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogoutOverlay.swift; path = Util/LogoutOverlay.swift; sourceTree = "<group>"; };
 		57DBFAC21CDE9A9C00766FE2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5983F5296DAC7C27B7AC7933 /* Pods_DokoDesuKaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DokoDesuKaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67680A114A4D79AF41BFE480 /* Pods-DokoDesuKaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokoDesuKaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DokoDesuKaTests/Pods-DokoDesuKaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				572BC7871CE9E1FF004DFA9D /* TextField.swift */,
 				572BC7881CE9E1FF004DFA9D /* ViewController.swift */,
 				572BC7851CE9E1B4004DFA9D /* TextView.swift */,
+				57B87FCF1D186E4A00BF28CA /* LogoutOverlay.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 			files = (
 				57599E991CDCED71006E1588 /* APIResult.swift in Sources */,
 				57599E921CDCE28A006E1588 /* APIConnector.swift in Sources */,
+				57B87FD01D186E4A00BF28CA /* LogoutOverlay.swift in Sources */,
 				57599EB01CDCF139006E1588 /* DokoDesuKaStore.swift in Sources */,
 				572BC7861CE9E1B4004DFA9D /* TextView.swift in Sources */,
 				570B5FC21CE7F9BC004C284D /* UserEntity.swift in Sources */,

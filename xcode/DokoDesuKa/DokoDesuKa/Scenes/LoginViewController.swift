@@ -21,6 +21,8 @@ class LoginViewController: ViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        inputUsername.delegate = self
+        inputPassword.delegate = self
         self.webservice.allUsers() { userResult in
             switch (userResult) {
             case .Success(let users):
@@ -52,11 +54,13 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         }
     }
     
-    func startup() {
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         let newImg: UIImage? = UIImage(named: "dokodesuka-logo")
         imageView.image = newImg
-        inputUsername.delegate = self
-        inputPassword.delegate = self
+    }
+    
+    func startup() {
         let userId = userDefaults.integerForKey("userId")
         let rememberMe = userDefaults.boolForKey("rememberMe")
         if (rememberMe && userId > 0) {

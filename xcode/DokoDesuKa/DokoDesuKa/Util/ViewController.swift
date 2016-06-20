@@ -11,6 +11,9 @@ import UIKit
 
 class ViewController:UIViewController {
     
+    let imageHeight = 560
+    let imageWidth = 330
+    
     func resizeImage(image: UIImage, size: CGSize) -> UIImage? {
         var returnImage: UIImage?
         

@@ -33,6 +33,14 @@ class TabBarController: UITabBarController {
         myLocations = (locations.filter({ (location:Location) -> Bool in
             return (location.createdUser!.id == userId)
         }))
+        let logoutSelector : Selector = #selector(TabBarController.logout(_:))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: logoutSelector)
+        rightSwipe.direction = UISwipeGestureRecognizerDirection.Right
+        view.addGestureRecognizer(rightSwipe)
+        let hideLogoutSelector : Selector = #selector(TabBarController.hideLogout(_:))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: hideLogoutSelector)
+        leftSwipe.direction = UISwipeGestureRecognizerDirection.Left
+        view.addGestureRecognizer(leftSwipe)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -47,6 +55,14 @@ class TabBarController: UITabBarController {
     
     override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
 
+    }
+    
+    @IBAction func logout(sender: AnyObject) {
+        LogoutOverlay.shared.showOverlay(self)
+    }
+    
+    @IBAction func hideLogout(sender: AnyObject) {
+        LogoutOverlay.shared.hideOverlayView()
     }
     
     /*
