@@ -19,6 +19,7 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
     var updatedImage = false
     let defaultTitle = "Enter a title"
     let defaultDesc = "Describe this location"
+    var imageDefined:Bool = false
     
     @IBOutlet var inputTitle: TextField!
     @IBOutlet var inputDescription: TextView!
@@ -71,6 +72,7 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
                     imgImage.image = self.resizeImage(
                         DokoDesuKaCoreDataStore().loadImage((location?.image)!),
                         size: CGSize(width: imageWidth, height: imageHeight))
+                    imageDefined = true
                 }
             }
             btnUpdatePicture.hidden = true;
@@ -103,8 +105,8 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
                                               size: CGSize(
                                                 width: imageWidth,
                                                 height: imageHeight))
+            imageDefined = true
         }
-        
         dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -114,8 +116,8 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
     
     @IBAction func tappedSave(sender: AnyObject) {
 
-        var latitude:Float = 46.7598823
-        var longitude:Float = 7.6237494
+        var latitude:Float? = nil
+        var longitude:Float? = nil
         
         if (self.location != nil) {
             latitude = (location?.latitude)!
@@ -125,7 +127,6 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
             latitude = Float((currentLocation?.coordinate.latitude)!)
             longitude = Float((currentLocation?.coordinate.longitude)!)
         }
-        loaderView.hidden = false
         var id = -1;
         if (self.location != nil && self.location!.id > 0) {
             id = self.location!.id
@@ -134,31 +135,40 @@ class AddLocationViewController: ViewController, UIImagePickerControllerDelegate
         if (self.location == nil) {
             img = imgImage.image
         }
-        if (inputTitle.text! != defaultTitle && inputDescription.text! != defaultDesc) {
-        myTabBarController!.webservice.saveLocation(id, title:inputTitle.text!, description: inputDescription.text!, image: img, latitude: latitude, longitude: longitude){ result in
-            switch (result) {
-            case .Success(let location):
-                if (self.location == nil) {
-                    self.location = location
-                }
-                dispatch_async(dispatch_get_main_queue()) {
-                    () -> Void in
-                    self.myTabBarController?.store.saveLocation(location)
-                    if (self.myTabBarController?.selectedLocation > -1) {
-                        self.myTabBarController?.locations[(self.myTabBarController?.selectedLocation)!] = location
+        if (imageDefined
+            && latitude != nil
+            && longitude != nil
+            && inputTitle.text! != defaultTitle
+            && inputDescription.text! != defaultDesc
+            ) {
+            loaderView.hidden = false
+            myTabBarController!.webservice.saveLocation(id, title:inputTitle.text!, description: inputDescription.text!, image: img, latitude: latitude!, longitude: longitude!){ result in
+                switch (result) {
+                case .Success(let location):
+                    if (self.location == nil) {
+                        self.location = location
                     }
-                    DokoDesuKaCoreDataStore().saveImage((self.location?.image)!, imageData: UIImageJPEGRepresentation(self.imgImage.image!, 0.9)!)
-                    self.myTabBarController?.selectedLocation = -1
-                    self.myTabBarController?.selectedIndex = 2
+                    dispatch_async(dispatch_get_main_queue()) {
+                        () -> Void in
+                        self.myTabBarController?.store.saveLocation(location)
+                        if (self.myTabBarController?.selectedLocation > -1) {
+                            self.myTabBarController?.locations[(self.myTabBarController?.selectedLocation)!] = location
+                        }
+                        DokoDesuKaCoreDataStore().saveImage((self.location?.image)!, imageData: UIImageJPEGRepresentation(self.imgImage.image!, 0.9)!)
+                        self.myTabBarController?.selectedLocation = -1
+                        self.myTabBarController?.selectedIndex = 2
+                    }
+                case .Failure(let errorMessage):
+                    NSLog(errorMessage)
+                case .NetworkError:
+                    NSLog(String(result))
                 }
-            case .Failure(let errorMessage):
-                NSLog(errorMessage)
-            case .NetworkError:
-                NSLog(String(result))
+                // Hide loading animation
+                self.loaderView.hidden = true
             }
-            // Hide loading animation
-            self.loaderView.hidden = true
         }
+        else {
+            displayAlertWithMessage("Please check your input and make sure you activated the permission to view your location")
         }
     }
 }

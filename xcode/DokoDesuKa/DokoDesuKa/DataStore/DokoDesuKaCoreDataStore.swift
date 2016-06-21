@@ -115,7 +115,8 @@ class DokoDesuKaCoreDataStore:DokoDesuKaStore {
                 longitude:Float(entity.longitude!),
                 image:entity.image!,
                 users: [User](),
-                createdUser: (Int(entity.createdUser!) > 0 ? userById(entity.createdUser!) : nil)
+                createdUser: (Int(entity.createdUser!) > 0 ? userById(entity.createdUser!) : nil),
+                createdDate: ((entity.createdDate != nil) ? entity.createdDate! : nil)
             )
             locations.append(location)
             downloadImage(entity.image!, locationEntity: entity)
@@ -163,6 +164,7 @@ class DokoDesuKaCoreDataStore:DokoDesuKaStore {
         entity.longitude = location.longitude
         entity.image = location.image
         entity.createdUser = location.createdUser!.id
+        entity.createdDate = location.createdDate
         downloadImage(location.image, locationEntity: entity)
         try! context.save()
     }

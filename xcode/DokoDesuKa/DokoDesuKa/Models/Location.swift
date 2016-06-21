@@ -18,4 +18,5 @@ struct Location {
     let image:String
     var users:Array<User>?
     var createdUser:User?
+    var createdDate:NSDate?
 }

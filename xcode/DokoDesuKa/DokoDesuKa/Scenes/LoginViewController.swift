@@ -87,12 +87,6 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         }
     }
     
-    func displayAlertWithMessage(message:String) {
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-        super.presentViewController(alert, animated: false, completion: nil)
-    }
-    
     @IBAction func tappedLogin(sender: AnyObject) {
         webservice.loginUser(self.inputUsername.text!, password: self.inputPassword.text!) { result in
             switch (result) {

@@ -25,6 +25,7 @@ class DokoDesuKaMixin(object):
     def get_location_dict(self, obj):
         request = None
         _dict = model_to_dict(obj, exclude="picture")
+        _dict["date_created"] = self.date_handler(obj.created_date)
         _dict["picture"] = obj.picture.name.replace("./", "")
         _dict["created_user"] = self.get_user_dict(User.objects.get(id=obj.created_user_id))
         return _dict
@@ -121,6 +122,7 @@ class AddLocationView(DokoDesuKaMixin, generic.DetailView):
             location.description=postData.get('description', '')
             location.latitude=postData.get('latitude', '')
             location.longitude=postData.get('longitude', '')
+            location.created_date=postData.get('created_date', '')
         else:
             location = Location(
                 title=postData.get('title', ''), 

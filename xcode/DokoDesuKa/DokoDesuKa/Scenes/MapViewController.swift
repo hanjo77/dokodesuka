@@ -52,43 +52,43 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
   }
     
     func updateMarkers(locations: [Location]) {
-            let annotations = self.mapView.annotations
-            let padding = Double(0.03)
-            self.mapView.removeAnnotations(annotations)
-            var minPos = CLLocationCoordinate2D(latitude: 90, longitude: 180)
-            var maxPos = CLLocationCoordinate2D(latitude: -90, longitude: -180)
-            for location:Location in locations {
-                let annotation = DetailPointAnnotation()
-                let coordinate = CLLocationCoordinate2D(
-                    latitude: Double(location.latitude), longitude: Double(location.longitude))
-                annotation.coordinate = coordinate
-                if (coordinate.latitude < minPos.latitude) {
-                    minPos.latitude = coordinate.latitude
-                }
-                if (coordinate.longitude < minPos.longitude) {
-                    minPos.longitude = coordinate.longitude
-                }
-                if (coordinate.latitude > maxPos.latitude) {
-                    maxPos.latitude = coordinate.latitude
-                }
-                if (coordinate.longitude > maxPos.longitude) {
-                    maxPos.longitude = coordinate.longitude
-                }
-                annotation.title = location.title
-                annotation.subtitle = location.description
-                annotation.imageName = location.image
-                self.mapView.addAnnotation(annotation)
+        let annotations = self.mapView.annotations
+        let padding = Double(0.03)
+        self.mapView.removeAnnotations(annotations)
+        var minPos = CLLocationCoordinate2D(latitude: 90, longitude: 180)
+        var maxPos = CLLocationCoordinate2D(latitude: -90, longitude: -180)
+        for location:Location in locations {
+            let annotation = DetailPointAnnotation()
+            let coordinate = CLLocationCoordinate2D(
+                latitude: Double(location.latitude), longitude: Double(location.longitude))
+            annotation.coordinate = coordinate
+            if (coordinate.latitude < minPos.latitude) {
+                minPos.latitude = coordinate.latitude
             }
-            var region = MKCoordinateRegion()
-            region.center = CLLocationCoordinate2D(
-                latitude: minPos.latitude+((maxPos.latitude-minPos.latitude)/2),
-                longitude: minPos.longitude+((maxPos.longitude-minPos.longitude)/2)
-            )
-            if (locations.count > 0) {
-                region.span.latitudeDelta = (maxPos.latitude-minPos.latitude)+(2*padding);
-                region.span.longitudeDelta = maxPos.longitude-minPos.longitude+(2*padding);
-                self.mapView.region = region;
+            if (coordinate.longitude < minPos.longitude) {
+                minPos.longitude = coordinate.longitude
             }
+            if (coordinate.latitude > maxPos.latitude) {
+                maxPos.latitude = coordinate.latitude
+            }
+            if (coordinate.longitude > maxPos.longitude) {
+                maxPos.longitude = coordinate.longitude
+            }
+            annotation.title = location.title + " by " + (location.createdUser?.userName)!
+            annotation.subtitle = location.createdDate!.shortDate + ": " + location.description
+            annotation.imageName = location.image
+            self.mapView.addAnnotation(annotation)
+        }
+        var region = MKCoordinateRegion()
+        region.center = CLLocationCoordinate2D(
+            latitude: minPos.latitude+((maxPos.latitude-minPos.latitude)/2),
+            longitude: minPos.longitude+((maxPos.longitude-minPos.longitude)/2)
+        )
+        if (locations.count > 0) {
+            region.span.latitudeDelta = (maxPos.latitude-minPos.latitude)+(2*padding);
+            region.span.longitudeDelta = maxPos.longitude-minPos.longitude+(2*padding);
+            self.mapView.region = region;
+        }
     }
     
     func mapView (mapView: MKMapView,

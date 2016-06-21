@@ -1,6 +1,6 @@
 ##DokoDesuKa (どこですか)
 
-iPhone app to share and discover unknown and interesting locations.
+iPhone app to share and discover snapshots of locations.
 
 ###How to use:
 

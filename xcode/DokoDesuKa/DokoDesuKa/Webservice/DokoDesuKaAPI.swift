@@ -26,6 +26,7 @@ class DokoDesuKaAPI {
     
     func location(representation:[String: AnyObject]) -> Location {
         let userObj = (representation["created_user"] as! [String: AnyObject])
+        let dateString = (representation["date_created"] as? String)!
         let location = Location(id:representation["id"] as! Int,
                                 title: representation["title"] as! String,
                                 description: representation["description"] as! String,
@@ -33,7 +34,8 @@ class DokoDesuKaAPI {
                                 longitude: representation["longitude"] as! Float,
                                 image: representation["picture"] as! String,
                                 users: [User](),
-                                createdUser: self.user(userObj))
+                                createdUser: self.user(userObj),
+                                createdDate: dateString.toDateTime())
         return location
     }
     

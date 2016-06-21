@@ -56,7 +56,7 @@ class LocationListViewController: ViewController, UITableViewDataSource, UITable
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! LocationTableViewCell
         let location = locations![indexPath.row]
         cell.labelTitle.text = location.title
-        cell.labelDescription.text = location.description
+        cell.labelDescription.text = location.createdDate!.shortDate + ": " + location.description
         cell.imgLocation?.image = DokoDesuKaCoreDataStore().loadImage(location.image)
         return cell
     }
@@ -136,3 +136,4 @@ class LocationListViewController: ViewController, UITableViewDataSource, UITable
         }
     }
 }
+

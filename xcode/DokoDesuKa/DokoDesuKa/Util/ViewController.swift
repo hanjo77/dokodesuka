@@ -14,6 +14,12 @@ class ViewController:UIViewController {
     let imageHeight = 560
     let imageWidth = 330
     
+    func displayAlertWithMessage(message:String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+        super.presentViewController(alert, animated: false, completion: nil)
+    }
+    
     func resizeImage(image: UIImage, size: CGSize) -> UIImage? {
         var returnImage: UIImage?
         
@@ -55,5 +61,37 @@ class ViewController:UIViewController {
         UIGraphicsEndImageContext()
         
         return returnImage
+    }
+    
+}
+
+extension NSDateFormatter {
+    convenience init(dateFormat: String) {
+        self.init()
+        self.dateFormat = dateFormat
+    }
+}
+
+extension NSDate {
+    struct Date {
+        static let formatterShortDate = NSDateFormatter(dateFormat: "yyyy年MM月dd日")
+    }
+    var shortDate: String {
+        return Date.formatterShortDate.stringFromDate(self)
+    }
+}
+
+extension String
+{
+    func toDateTime() -> NSDate
+    {
+        var _:NSDate
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+        guard dateFormatter.dateFromString(self) != nil else {
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+            return dateFormatter.dateFromString(self)!
+        }
+        return dateFormatter.dateFromString(self)!
     }
 }
