@@ -18,8 +18,7 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
     @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var detailTitle: UILabel!
     @IBOutlet weak var detailImage: UIImageView!
-    @IBOutlet weak var detailDesc: UITextView!
-    
+    @IBOutlet weak var detailDesc: UILabel!
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
@@ -74,8 +73,8 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
             if (coordinate.longitude > maxPos.longitude) {
                 maxPos.longitude = coordinate.longitude
             }
-            annotation.title = location.title + " by " + (location.createdUser?.userName)!
-            annotation.subtitle = location.createdDate!.shortDate + ": " + location.description
+            annotation.title = (location.createdUser?.userName)! + " の " + location.title
+            annotation.subtitle = location.createdDate!.shortDate + "\n" + location.description
             annotation.imageName = location.image
             self.mapView.addAnnotation(annotation)
         }
@@ -108,9 +107,10 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
         detailView.hidden = false;
         detailTitle.text = (annotation.title)!
         detailDesc.text = (annotation.subtitle)!
+        detailDesc.sizeToFit()
         detailImage.image = resizeImage(
             DokoDesuKaCoreDataStore().loadImage((annotation.imageName)!),
-            size: CGSize(width: imageWidth, height: imageHeight))
+                size: CGSize(width: imageWidth, height: imageHeight))
     }
     
     func mapView (manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {

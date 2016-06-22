@@ -37,6 +37,7 @@ class TextView: UITextView, UITextViewDelegate {
         self.placeholderText = placeholderText
         self.placeholderColor = placeholderColor
         self.mainColor = mainColor
+        self.font = UIFont(name: "System", size: 180)
         updateColor();
     }
     

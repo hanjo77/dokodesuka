@@ -78,8 +78,10 @@ class AddUserViewController: ViewController, UITextFieldDelegate {
                     self.performSegueWithIdentifier("segLoginView", sender: nil)
                 }
             case .Failure(let errorMessage):
+                self.displayAlertWithMessage("Please check your input. All fields are mandatory.")
                 NSLog(errorMessage)
             case .NetworkError:
+                self.displayAlertWithMessage("Network error, please try again later.")
                 NSLog(String(result))
             }
         }

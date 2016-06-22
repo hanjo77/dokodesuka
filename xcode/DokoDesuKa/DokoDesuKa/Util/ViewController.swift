@@ -12,7 +12,7 @@ import UIKit
 class ViewController:UIViewController {
     
     let imageHeight = 560
-    let imageWidth = 330
+    let imageWidth = 560
     
     func displayAlertWithMessage(message:String) {
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .Alert)

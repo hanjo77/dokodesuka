@@ -97,8 +97,10 @@ class LoginViewController: ViewController, UITextFieldDelegate {
                     self.performSegueWithIdentifier("segMapView", sender: nil)
                 }
             case .Failure(let errorMessage):
+                self.displayAlertWithMessage("Please check your input.")
                 NSLog(errorMessage)
             case .NetworkError:
+                self.displayAlertWithMessage("Network error, please try again later.")
                 NSLog(String(result))
             }
         }
