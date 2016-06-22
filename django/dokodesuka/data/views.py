@@ -120,9 +120,6 @@ class AddLocationView(DokoDesuKaMixin, generic.DetailView):
             location = location.first()
             location.title=postData.get('title', '')
             location.description=postData.get('description', '')
-            location.latitude=postData.get('latitude', '')
-            location.longitude=postData.get('longitude', '')
-            location.created_date=postData.get('created_date', '')
         else:
             location = Location(
                 title=postData.get('title', ''), 
@@ -130,10 +127,10 @@ class AddLocationView(DokoDesuKaMixin, generic.DetailView):
                 latitude=postData.get('latitude', ''),
                 longitude=postData.get('longitude', ''),
                 created_user_id=postData.get('created_user_id', ''))
-        base64img = postData.get('image', '')
-        if base64img != '':
-            image_data = b64decode(base64img)
-            location.picture.save(location.title+'.jpg', ContentFile(image_data), save=False)
+            base64img = postData.get('image', '')
+            if base64img != '':
+                image_data = b64decode(base64img)
+                location.picture.save(location.title+'.jpg', ContentFile(image_data), save=False)
         location.save()
         location_id = location.pk
         message = self.json_dumps(self.get_location_dict(location))
