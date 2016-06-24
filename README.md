@@ -16,7 +16,7 @@ iPhone app to share and discover snapshots of locations.
 					Click "Add user" to add a user or use credentials of previously created user to login
 				</li>
 				<li>
-					Activate "Remember me" to store your login data and login automatically |
+					Activate "Remember me" to store your login data and login automatically
 				</li>
 			</ul>
 		</td>
